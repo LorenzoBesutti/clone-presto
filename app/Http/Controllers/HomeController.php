@@ -38,9 +38,12 @@ class HomeController extends Controller
         $a = new Add();
         $a->title=$request->input('title');
         $a->description=$request->input('description');
+        $a->category_id=$request->input('category');
         $a->save();
 
         return redirect('/')->with('add.create.success','ok');
     }
+
+   /*  commento prova */
 
 }
