@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Add;
 use Illuminate\Http\Request;
+use App\Http\Requests\AddRequest;
 
 class HomeController extends Controller
 {
@@ -25,4 +27,20 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function newAdd(){
+
+        return view('add.new');
+    }
+
+    public function createAdd(AddRequest $request){
+
+        $a = new Add();
+        $a->title=$request->input('title');
+        $a->description=$request->input('description');
+        $a->save();
+
+        return redirect('/')->with('add.create.success','ok');
+    }
+
 }
