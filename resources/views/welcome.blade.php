@@ -62,23 +62,22 @@
     </div>
 </div>
  --}}
-<div class="container my-5 py-5">
-  <div class="row">
-    @foreach ($adds as $add)
-    <div class="cards">
 
-      <div class="card">
+  @foreach ($adds as $add)
+    
+    <div class="cards d-inline mx-5 px-4">
+
+      <div class="card my-5 mx-3">
         <div class="card__image-holder">
           <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
         </div>
         <div class="card-title">
-          <a href="#" class="toggle-info btn">
+          <a href="#" class="{{-- toggle-info btn --}}">
             <span class="left"></span>
             <span class="right"></span>
           </a>
-          <h2>
+          <h2 class="text-center">
               {{$add->title}}
-              
           </h2>
         </div>
         <div class="card-flap flap1">
@@ -86,27 +85,25 @@
           {{$add->description}}
          </div>
           <div class="card-flap flap2">
-            <div class="card-footer">
-              <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}" class="nav-link">{{$add->category->name}}</a></strong>
-              <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a>
-            </div>
+              <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+              <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
           </div>
         </div>
       </div>
-    @endforeach
-  </div>
-</div>
+    </div>
+  @endforeach
+ 
  
 
 
-<h1>Slider | <a href="http://creaticode.com/blog">Creaticode</a></h1>
+<h1 class="text-center my-5">Slider | </h1>
 <!-- ==================================== 
 Contenedor Slider 
 =======================================-->
-<section id="slider" class="container">
+<section id="slider" class="container-slider">
   <ul class="slider-wrapper">
   <li class="current-slide">
-    <img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="">
+    <img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="" >
 
     <div class="caption">
       <h2 class="slider-title">Diseño web</h2>
@@ -149,10 +146,7 @@ Contenedor Slider
 </section>
 
 
-<!-- Imagenes Copyright -->
-<p class="authors">
-  Las imagenes usadas en esta demostracíon no son de mi propiedad. <a href="https://www.flickr.com/photos/flickr/galleries/72157645330786244/">Autores de las Imagenes</a>
-</p>
+
 
 
 
