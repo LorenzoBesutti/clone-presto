@@ -194,7 +194,7 @@ p {
 }
 .sfondo_link{
     background-color: rgba(247, 247, 153, 0.687);
-    text-align: left;
+    text-align: center;
     
 }
 .dropdown-menu {
@@ -235,10 +235,10 @@ p {
 /** ---------------------------------------
  * Slider 
  ----------------------------------------*/
-// .container {
-// 	width: 800px;
-// 	margin: 40px auto 0;
-// }
+.container-slider {
+	width: 800px;
+	margin: 40px auto 0;
+}
 
 .slider-wrapper {
 	z-index: 500;
@@ -379,7 +379,7 @@ p {
  * Responsive 
  ----------------------------------------*/
  @media only screen and (max-width: 825px) {
- 	.container {
+ 	.container-slider {
  		width: 500px;
  	}
 
@@ -388,8 +388,8 @@ p {
  	}
  }
 
- @media only screen and (max-width: 535px) {
- 	.container {
+/*  @media only screen and (max-width: 535px) {
+ 	.container-slider {
  		padding: 5px;
  		width: 100%;
  		margin: 40px 0 0 0;
@@ -403,7 +403,7 @@ p {
  		display: none;
  	}
 
- }
+ } */
 
  @media only screen and (max-width: 410px) {
  	.slider-wrapper {
@@ -424,35 +424,35 @@ p {
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
 
 
-// colour stuff
+ // colour stuff
 
 
-// a.btn {
-//   background: teal;
-//   border-radius: 4px;
-// 	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-//   color: white;
-//   display: inline-block;
-//   padding: 6px 30px 8px;
-//   position: relative;
-//   text-decoration: none;
-// 	transition: all 0.1s 0s ease-out;
-// }
+a.btn {
+  background: teal;
+  border-radius: 4px;
+	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+  color: white;
+  display: inline-block;
+  padding: 6px 30px 8px;
+  position: relative;
+  text-decoration: none;
+	transition: all 0.1s 0s ease-out;
+}
 
-// .no-touch a.btn:hover {
-//   background: lighten(teal,2.5);
-//   box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
-//   transform: translateY(-2px);
-//   transition: all 0.25s 0s ease-out;
-// }
+.no-touch a.btn:hover {
+  background: lighten(teal,2.5);
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out;
+}
 
-// .no-touch a.btn:active,
-// a.btn:active {
-//   background: darken(teal,2.5);
-//   box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
-//   transform: translate3d(0,1px,0);
-//   transition: all 0.025s 0s ease-out;
-// }
+.no-touch a.btn:active,
+a.btn:active {
+  background: darken(teal,2.5);
+  box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
+  transform: translate3d(0,1px,0);
+  transition: all 0.025s 0s ease-out;
+} 
 
 div.cards {
   margin: 80px auto;
@@ -460,10 +460,10 @@ div.cards {
   text-align: center;
 }
 
-div.card {
+div.Card {
   background: white;
   display: inline-block;
-  margin: 8px;
+  margin: 2€px;
   max-width: 300px;
   perspective: 1000;
   position: relative;
@@ -564,7 +564,7 @@ div.card {
 }
 
 div.cards.showing {
-  div.card {
+  div.Card {
     cursor: pointer;
     opacity: 0.6;
     transform: scale(0.88);
@@ -572,13 +572,13 @@ div.cards.showing {
 }
 
 .no-touch  div.cards.showing {
-  div.card:hover {
+  div.Card:hover {
     opacity: 0.94;
     transform: scale(0.92);
   }
 }
 
-div.card.show {
+div.Card.show {
   opacity: 1 !important;
   transform: scale(1) !important;
 
@@ -609,4 +609,164 @@ div.card.show {
 }
 
 
- 
+
+.input#password.bordo_password{
+  background-color: transparent !important;
+}
+
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: white !important;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-left: none !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: 3px solid yellow !important;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.bg-image {
+  background-image: url('/media/pexels.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-heading {
+  font-weight: 300;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  border-radius: 2rem;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+  height: auto;
+  border-radius: 2rem;
+}
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  cursor: text;
+  /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+.login,.image {
+  min-height: 100vh;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+.h_costum{
+  height: 700px;
+}

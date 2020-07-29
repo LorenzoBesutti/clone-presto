@@ -1,13 +1,42 @@
 @extends('layouts.app')
+@section('style')
+<style>
+    body{
+        background: url('/media/mare.jpg');
+        background-size:cover;
+        background-position-y: 20%;
+        
+    }
+  
+    .bordo1_password{
+        border:none;
+        border-bottom: 3px solid yellow !important;
+        color: white;
+    }
+    .card-wrap{
+        background-color: rgba(0, 0,0, 0.3);
+        
+    }
+
+    .form-control{
+        background-color: transparent !important;
+        color: white;
+    }
+    .bianco{
+        color: white
+    }
+</style>
+    
+@endsection
 
 @section('content')
-<div class="container">
+<div class="container mt-5 pt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="card-wrap">
+                <div class="card-header text-white">{{ __('Register') }}</div>
 
-                <div class="card-body">
+                <div class="card-body text-white">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 

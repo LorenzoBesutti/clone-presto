@@ -20,7 +20,7 @@
     <div class="col-12 col-md-4 offset-md-4 ">
       <ul class="sfondo_link">
         <li class="nav-item dropdown lista_puntini">
-          <a id="categoriesDropDown" class="nav-link dropdown-toggle text-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+          <a id="categoriesDropDown" class="nav-link dropdown-toggle text-center mr-4" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
              Seleziona la categoria
           </a>
 
@@ -63,22 +63,21 @@
 </div>
  --}}
 
-<div class="container my-5">
-  <div class="row justify-content-center">
-    @foreach ($adds as $add)
-    <div class="col-12 col-md-6 col-lg-4 mx-lg-0">
-    <div class="cards">
-      <div class="card">
+  @foreach ($adds as $add)
+    
+    <div class="cards d-inline mx-5 px-4">
+
+      <div class="Card my-5 mx-3">
         <div class="card__image-holder">
           <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
         </div>
         <div class="card-title">
-          <a href="#" class="toggle-info btn">
+          <a href="#" class="{{-- toggle-info btn --}}">
             <span class="left"></span>
             <span class="right"></span>
           </a>
-          <h2>
-              {{$add->title}}  
+          <h2 class="text-center">
+              {{$add->title}}
           </h2>
         </div>
         <div class="card-flap flap1">
@@ -86,32 +85,28 @@
           {{$add->description}}
          </div>
           <div class="card-flap flap2">
-            <div class="card-footer">
-              <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}" class="nav-link">{{$add->category->name}}</a></strong>
-              <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a>
-            </div>
+              <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+              <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
           </div>
         </div>
       </div>
     </div>
-  </div>
   @endforeach
-</div>
-</div>
+ 
  
 
 
-<h1>Slider | <a href="http://creaticode.com/blog">Creaticode</a></h1>
+<h1 class="text-center my-5"> le pagine più visitate </h1>
 <!-- ==================================== 
 Contenedor Slider 
 =======================================-->
-<section id="slider" class="container">
+<section id="slider" class="container-slider h_costum">
   <ul class="slider-wrapper">
   <li class="current-slide">
-    <img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="">
+    <img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="" >
 
     <div class="caption">
-      <h2 class="slider-title">Diseño web</h2>
+      <h2 class="slider-title">offerta del 50% </h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat est. Alias illo hic quo nobis, aspernatur iste ut voluptate.</p>
     </div>
   </li>
@@ -120,7 +115,7 @@ Contenedor Slider
     <img src="http://i9.photobucket.com/albums/a88/creaticode/2_zps6ccd36bd.jpg" title="" alt="">
 
     <div class="caption">
-      <h2 class="slider-title">Diseño Responsive</h2>
+      <h2 class="slider-title"> 10% cashback</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto placeat aliquid tempore harum, similique!</p>
     </div>
   </li>
@@ -129,7 +124,7 @@ Contenedor Slider
     <img src="http://i9.photobucket.com/albums/a88/creaticode/4_zps611bc9f9.jpg" title="" alt="">
 
     <div class="caption">
-      <h2 class="slider-title">Identidad Corporativa</h2>
+      <h2 class="slider-title">sfoglia il catalogo</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta laudantium voluptatem minima! Dolorum tempore dolores excepturi omnis provident. Commodi quis aperiam maiores, dolore a perferendis!</p>
     </div>
   </li>
@@ -138,7 +133,7 @@ Contenedor Slider
     <img src="http://i9.photobucket.com/albums/a88/creaticode/3_zps70e4fcc5.jpg" title="" alt="">
 
     <div class="caption">
-      <h2 class="slider-title">Desarrollo Web</h2>
+      <h2 class="slider-title">offerte in scadenza</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore dignissimos laudantium.</p>
     </div>
   </li>
@@ -151,10 +146,7 @@ Contenedor Slider
 </section>
 
 
-<!-- Imagenes Copyright -->
-<p class="authors">
-  Las imagenes usadas en esta demostracíon no son de mi propiedad. <a href="https://www.flickr.com/photos/flickr/galleries/72157645330786244/">Autores de las Imagenes</a>
-</p>
+
 
 
 

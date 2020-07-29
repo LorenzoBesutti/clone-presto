@@ -30,8 +30,8 @@ class HomeController extends Controller
     }
 
     public function newAdd(){
-
-        return view('add.new');
+             $user=Auth::user();
+        return view('add.new', ['user'=>$user]);
     }
 
     public function createAdd(AddRequest $request){
