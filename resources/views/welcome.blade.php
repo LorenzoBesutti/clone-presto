@@ -62,11 +62,12 @@
     </div>
 </div>
  --}}
-<div class="container my-5 py-5">
-  <div class="row">
-    @foreach ($adds as $add)
-    <div class="cards">
 
+<div class="container my-5">
+  <div class="row justify-content-center">
+    @foreach ($adds as $add)
+    <div class="col-12 col-md-6 col-lg-4 mx-lg-0">
+    <div class="cards">
       <div class="card">
         <div class="card__image-holder">
           <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
@@ -77,8 +78,7 @@
             <span class="right"></span>
           </a>
           <h2>
-              {{$add->title}}
-              
+              {{$add->title}}  
           </h2>
         </div>
         <div class="card-flap flap1">
@@ -93,8 +93,10 @@
           </div>
         </div>
       </div>
-    @endforeach
+    </div>
   </div>
+  @endforeach
+</div>
 </div>
  
 

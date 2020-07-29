@@ -111,7 +111,7 @@ $(document).ready(function(){
     var zindex = 10;
     
     $("div.card").click(function(e){
-      e.preventDefault();
+    //   e.preventDefault();
   
       var isShowing = false;
   
@@ -132,7 +132,7 @@ $(document).ready(function(){
           // this card isn't showing - get in with it
           $(this)
             .css({zIndex: zindex})
-            .addClass("show");
+            //.addClass("show");
   
         }
   
