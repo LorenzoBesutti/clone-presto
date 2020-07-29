@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Add;
 use Illuminate\Http\Request;
 use App\Http\Requests\AddRequest;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -35,10 +36,12 @@ class HomeController extends Controller
 
     public function createAdd(AddRequest $request){
 
+        
         $a = new Add();
         $a->title=$request->input('title');
         $a->description=$request->input('description');
         $a->category_id=$request->input('category');
+        $a->user_id=Auth::id();
         $a->save();
 
         return redirect('/')->with('add.create.success','ok');
