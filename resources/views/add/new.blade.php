@@ -4,7 +4,7 @@
      .bordo2_password{
         border:none;
         border-bottom: 2px solid blue !important;
-        color: white;
+        color: black !important;
         border-radius: 0;
     }
 </style>
