@@ -62,12 +62,14 @@
     </div>
 </div>
  --}}
-<div class="container my-5 py-5">
-  <div class="row">
-    @foreach ($adds as $add)
-    <div class="cards">
 
-      <div class="card">
+    @foreach ($adds as $add)
+    
+
+     
+    <div class="cards d-inline mx-5 px-4 box-shadow">
+
+      <div class="card box-shadow">
         <div class="card__image-holder">
           <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
         </div>
@@ -94,8 +96,8 @@
         </div>
       </div>
     @endforeach
-  </div>
-</div>
+  
+  
  
 
 
