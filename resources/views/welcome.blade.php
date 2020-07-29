@@ -67,7 +67,7 @@
     
     <div class="cards d-inline mx-5 px-4">
 
-      <div class="card my-5 mx-3">
+      <div class="Card my-5 mx-3">
         <div class="card__image-holder">
           <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
         </div>

@@ -37431,7 +37431,7 @@ $(function () {
 });
 $(document).ready(function () {
   var zindex = 10;
-  $("div.card").click(function (e) {
+  $("div.Card").click(function (e) {
     /* e.preventDefault(); */
     var isShowing = false;
 
@@ -37441,7 +37441,7 @@ $(document).ready(function () {
 
     if ($("div.cards").hasClass("showing")) {
       // a card is already in view
-      $("div.card.show").removeClass("show");
+      $("div.Card.show").removeClass("show");
 
       if (isShowing) {
         // this card was showing - reset the grid
@@ -37485,8 +37485,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/andregp91/wa/hackademy_16/laravel/prestoSimpleCode/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/andregp91/wa/hackademy_16/laravel/prestoSimpleCode/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/lorenzobesutti/presto_simplecode/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/lorenzobesutti/presto_simplecode/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -110,7 +110,7 @@ $(function() {
 $(document).ready(function(){
     var zindex = 10;
     
-    $("div.card").click(function(e){
+    $("div.Card").click(function(e){
       /* e.preventDefault(); */
   
       var isShowing = false;
@@ -121,7 +121,7 @@ $(document).ready(function(){
   
       if ($("div.cards").hasClass("showing")) {
         // a card is already in view
-        $("div.card.show")
+        $("div.Card.show")
           .removeClass("show");
   
         if (isShowing) {
