@@ -4,7 +4,7 @@
     body{
         background: url('/media/mare.jpg');
         background-size:cover;
-        background-position: center;
+        background-position-y: 20%;
      background-repeat: no-repeat;
     }
   
@@ -31,8 +31,8 @@
 
 @section('content')
 
-<div class="container my-5 py-5">
-    <div class="row justify-content-center">
+<div class="container my-5 py-5 ">
+    <div class="row justify-content-center mt-5 pt-5">
         <div class="col-md-8">
             <div class="card-wrap">
                 <div class="card-header text-white">{{ __('Login') }}</div>

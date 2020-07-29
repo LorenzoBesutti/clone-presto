@@ -4,7 +4,8 @@
     body{
         background: url('/media/mare.jpg');
         background-size:cover;
-        background-position: center;
+        background-position-y: 20%;
+        
     }
   
     .bordo1_password{

@@ -20,7 +20,7 @@
     <div class="col-12 col-md-4 offset-md-4 ">
       <ul class="sfondo_link">
         <li class="nav-item dropdown lista_puntini">
-          <a id="categoriesDropDown" class="nav-link dropdown-toggle text-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+          <a id="categoriesDropDown" class="nav-link dropdown-toggle text-center mr-4" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
              Seleziona la categoria
           </a>
 
@@ -96,17 +96,17 @@
  
 
 
-<h1 class="text-center my-5">Slider | </h1>
+<h1 class="text-center my-5"> le pagine più visitate </h1>
 <!-- ==================================== 
 Contenedor Slider 
 =======================================-->
-<section id="slider" class="container-slider">
+<section id="slider" class="container-slider h_costum">
   <ul class="slider-wrapper">
   <li class="current-slide">
     <img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="" >
 
     <div class="caption">
-      <h2 class="slider-title">Diseño web</h2>
+      <h2 class="slider-title">offerta del 50% </h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat est. Alias illo hic quo nobis, aspernatur iste ut voluptate.</p>
     </div>
   </li>
@@ -115,7 +115,7 @@ Contenedor Slider
     <img src="http://i9.photobucket.com/albums/a88/creaticode/2_zps6ccd36bd.jpg" title="" alt="">
 
     <div class="caption">
-      <h2 class="slider-title">Diseño Responsive</h2>
+      <h2 class="slider-title"> 10% cashback</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto placeat aliquid tempore harum, similique!</p>
     </div>
   </li>
@@ -124,7 +124,7 @@ Contenedor Slider
     <img src="http://i9.photobucket.com/albums/a88/creaticode/4_zps611bc9f9.jpg" title="" alt="">
 
     <div class="caption">
-      <h2 class="slider-title">Identidad Corporativa</h2>
+      <h2 class="slider-title">sfoglia il catalogo</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta laudantium voluptatem minima! Dolorum tempore dolores excepturi omnis provident. Commodi quis aperiam maiores, dolore a perferendis!</p>
     </div>
   </li>
@@ -133,7 +133,7 @@ Contenedor Slider
     <img src="http://i9.photobucket.com/albums/a88/creaticode/3_zps70e4fcc5.jpg" title="" alt="">
 
     <div class="caption">
-      <h2 class="slider-title">Desarrollo Web</h2>
+      <h2 class="slider-title">offerte in scadenza</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore dignissimos laudantium.</p>
     </div>
   </li>
