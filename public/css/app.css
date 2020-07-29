@@ -11176,7 +11176,7 @@ p {
  * Slider 
  ----------------------------------------*/
 
-.container {
+.container-slider {
   width: 800px;
   margin: 40px auto 0;
 }
@@ -11372,7 +11372,7 @@ div.cards {
 div.card {
   background: white;
   display: inline-block;
-  margin: 8px;
+  margin: 2€px;
   max-width: 300px;
   perspective: 1000;
   position: relative;
