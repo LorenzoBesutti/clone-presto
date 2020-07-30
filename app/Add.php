@@ -13,4 +13,8 @@ class Add extends Model
     public function user(){
         return $this->belongsTo('App\User');
     }
+
+    static public function ToBeRevisionedCount(){
+        return Add::where('is_accepted', null)->count();
+    }
 }

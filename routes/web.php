@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* CHIUNQUE */
+
 Route::get('/', 'PublicController@index')->name('public.index');
 Route::get('/category/{name}/{id}/adds', 'PublicController@addsByCategory')->name('public.adds.category');
 Route::get('/add/{add}/detail', 'PublicController@addDetail')->name('public.detail');
+
+/* USER LOGGATI */
 
 Auth::routes();
 
@@ -24,4 +28,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adds/new' , 'HomeController@newAdd')->name('add.new');
 Route::post('/adds/create', 'HomeController@createAdd')->name('add.create');
 
+/* REVISORE */
+
 Route::get('/revisor/home', 'RevisorController@index')->name('revisor.home');
+Route::post('/revisor/adds/{id}/accept', 'RevisorController@accept')->name('revisor.accept');
+Route::post('/revisor/adds/{id}/reject', 'RevisorController@reject')->name('revisor.reject');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Add;
 use Illuminate\Http\Request;
 
 class RevisorController extends Controller
@@ -13,14 +14,13 @@ class RevisorController extends Controller
 
     public function index(){
 
-        dd('solo per revisori');
-        /* $add = Add::where('is_accepted', null)->orderBy('created_at','desc')->first(); */
+       $add = Add::where('is_accepted', null)->orderBy('created_at', 'desc')->first();
 
-        return view('revisor.home', /* compact('add') */);
+        return view('revisor.home', compact('add'));
 
     }
 
-   /*  private function setAccepted($add_id, $value){
+    private function setAccepted($add_id, $value){
         $add = Add::find($add_id);
         $add->is_accepted=$value;
         $add->save();
@@ -29,10 +29,10 @@ class RevisorController extends Controller
     }
 
     public function accept($add_id){
-        return $this->setAccepted($add_id,true);
+        return $this->setAccepted($add_id, true);
     }
 
     public function reject($add_id){
-        return $this->setAccepted($add_id,false);
-    } */
+        return $this->setAccepted($add_id, false);
+    }
 }
