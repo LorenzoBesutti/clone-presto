@@ -87,7 +87,7 @@
           <div class="card-flap flap2">
               <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
               <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
-         <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block  mt-3">Dettaglio</a>
+         <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block mt-3">Dettaglio</a>
 
           </div>
         </div>

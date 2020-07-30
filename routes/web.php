@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PublicController@index')->name('public.index');
 Route::get('/category/{name}/{id}/adds', 'PublicController@addsByCategory')->name('public.adds.category');
+Route::get('/add/{add}/detail', 'PublicController@addDetail')->name('public.detail');
 
 Auth::routes();
 
