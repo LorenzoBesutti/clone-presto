@@ -21,7 +21,7 @@
       <ul class="sfondo_link">
         <li class="nav-item dropdown lista_puntini">
           <a id="categoriesDropDown" class="nav-link dropdown-toggle text-center mr-4" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-             Seleziona la categoria
+             Seleziona la categoria <i class="fas fa-caret-right ml-5"></i>
           </a>
 
           <div class="dropdown-menu dropdown-toggle " aria-labelledby="categoriesDropDown">
@@ -87,6 +87,8 @@
           <div class="card-flap flap2">
               <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
               <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+         <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block  mt-3">Dettaglio</a>
+
           </div>
         </div>
       </div>

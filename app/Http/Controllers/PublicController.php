@@ -19,8 +19,14 @@ class PublicController extends Controller
     public function addsByCategory($name,$category_id){
 
         $category = Category::find($category_id);
-        $adds = $category->adds()->paginate(5);
+        $adds = $category->adds()->orderBy('created_at','desc')->paginate(5);
 
         return view('adds', compact('category','adds'));
+    }
+
+    public function addDetail(Add $add){
+
+        
+        return view('detail', compact('add'));
     }
 }
