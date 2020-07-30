@@ -17,9 +17,9 @@
 
 <div class="container mt-5 pt-5">
   <div class="row ">
-    <div class="col-12 col-md-4 offset-md-4 ">
+    <div class="col-12 col-md-4 offset-md-4 dropdown">
       <ul class="sfondo_link">
-        <li class="nav-item dropdown lista_puntini">
+        <li class="nav-item  lista_puntini">
           <a id="categoriesDropDown" class="nav-link dropdown-toggle text-center mr-4" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
              Seleziona la categoria <i class="fas fa-caret-right ml-5"></i>
           </a>
