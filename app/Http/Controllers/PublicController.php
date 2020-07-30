@@ -23,4 +23,10 @@ class PublicController extends Controller
 
         return view('adds', compact('category','adds'));
     }
+
+    public function addDetail(Add $add){
+
+        
+        return view('detail', compact('add'));
+    }
 }
