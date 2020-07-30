@@ -37485,13 +37485,8 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-__webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
 __webpack_require__(/*! /Users/andregp91/wa/hackademy_16/laravel/prestoSimpleCode/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/andregp91/wa/hackademy_16/laravel/prestoSimpleCode/resources/sass/app.scss */"./resources/sass/app.scss");
->>>>>>> 8b64e6e3e14fc2dd521070069a2b705ba99d718c
 
 
 /***/ })
