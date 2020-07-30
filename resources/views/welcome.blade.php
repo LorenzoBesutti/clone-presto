@@ -8,6 +8,12 @@
     </div>
     
 @endif
+@if (session('access.denied'))
+    <div class="alert alert-danger">
+        Accesso non consentito - solo per revisori!
+    </div>
+    
+@endif
 
 
 @include('components.headerHome')
@@ -15,17 +21,30 @@
 
 
 
-<div class="container mt-5 pt-5 ">
-  <div class="row mr-5 pr-5">
-    <div class="col-12 col-md-4 offset-md-4 mr-5 pr-5">
-      <ul class="display_inline" >
+<div class="container mt-5 pt-5 sfondo_research">
+  <div class="row mr-5 pr-5 d_flex">
+    <div class="col-12 col-md-4 offset-md-4 mr-5 pr-5 inline_form1">
+     
+        <div class="form-group ">
+           <form class="inline_form" action="{{route('search')}}" method="GET">
+
+            <input name="q" class="p-2 px-5 text-center mr-2"   type="text" placeholder="  motori,cucina..." name="search">
+            <button class="py-2 px-4" type="submit"><i class="fa fa-search "></i></button>
+     
+          </form> 
+          
+          
+        </div>
+     
+        
+      
+      <ul>
+      
         
         <li class="none" >
 
-         <form action="{{route('search')}}" method="GET">
-            <input name="q" class="p-2 px-5 text-center mr-2"   type="text" placeholder="  motori,cucina..." name="search">
-            <button class="ml-2" type="submit"><i class="fa fa-search "></i></button>
-          </form>
+         
+        
         </li>
       
         <li class="nav-item dropdown lista_puntini sfondo_link">

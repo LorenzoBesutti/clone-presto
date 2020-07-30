@@ -29,6 +29,14 @@
                         </li>
                     @endif
                 @else
+                    @if(Auth::user()->is_revisor)
+                    <li class="nav-item">
+                       <a href="{{route('revisor.home')}}" class="nav-link">
+                          Revisor Home
+                           <span class="badge badge-pill badge-warning">{{\App\Add::ToBeRevisionedCount()}}</span>
+                        </a>
+                    </li>
+                    @endif
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
