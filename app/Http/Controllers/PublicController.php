@@ -29,4 +29,10 @@ class PublicController extends Controller
         
         return view('detail', compact('add'));
     }
+    public function search(Request $request){
+        $q=$request->input('q');
+        $adds=Add::search($q)->get();
+
+        return view('search',compact('q','adds'));
+    }
 }

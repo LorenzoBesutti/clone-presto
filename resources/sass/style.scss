@@ -193,13 +193,33 @@ p {
     border-left: 0.3em solid transparent;
 }
 .sfondo_link{
-    background-color: rgba(247, 247, 153, 0.687);
+    background-color:#3373bc ;
     text-align: center;
+    color:white !important;
     
+    
+}
+.seleziona_categoria{
+  text-decoration: none;
+  color: white !important;
 }
 .dropdown-menu {
     width: 100%; 
 }
+
+@media screen and (max-width: 600px) {
+  .titolo{
+    font-size: 70px;
+  }
+  
+}
+@media screen and (max-width: 600px) {
+  .sottotitolo{
+    font-size: 30px;
+  }
+  
+}
+
 
 
 
@@ -471,6 +491,7 @@ div.Card {
   transition: all 0.3s 0s ease-in;
   width: 300px;
   z-index: 1;
+  cursor:pointer;
 
   img {
     max-width: 300px;
@@ -769,4 +790,17 @@ div.Card.show {
 }
 .h_costum{
   height: 700px;
+}
+
+.hover_card:hover{
+  transform: scale(1.1);
+ 
+
+}
+.none{
+  list-style: none;
+  
+}
+.display_inline{
+ display: flex;
 }
