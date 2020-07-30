@@ -21,12 +21,34 @@
 
 
 
-<div class="container mt-5 pt-5">
-  <div class="row ">
-    <div class="col-12 col-md-4 offset-md-4 dropdown">
-      <ul class="sfondo_link">
-        <li class="nav-item  lista_puntini">
-          <a id="categoriesDropDown" class="nav-link dropdown-toggle text-center mr-4" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+<div class="container mt-5 pt-5 sfondo_research">
+  <div class="row mr-5 pr-5 d_flex">
+    <div class="col-12 col-md-4 offset-md-4 mr-5 pr-5 inline_form1">
+     
+        <div class="form-group ">
+           <form class="inline_form" action="{{route('search')}}" method="GET">
+
+            <input name="q" class="p-2 px-5 text-center mr-2"   type="text" placeholder="  motori,cucina..." name="search">
+            <button class="py-2 px-4" type="submit"><i class="fa fa-search "></i></button>
+     
+          </form> 
+          
+          
+        </div>
+     
+        
+      
+      <ul>
+      
+        
+        <li class="none" >
+
+         
+        
+        </li>
+      
+        <li class="nav-item dropdown lista_puntini sfondo_link">
+          <a id="categoriesDropDown" class="nav-link dropdown-toggle text-center mr-4 seleziona_categoria" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
              Seleziona la categoria <i class="fas fa-caret-right ml-5"></i>
           </a>
 
@@ -37,6 +59,8 @@
               @endforeach
            </div>
       </li>
+  
+
       </ul>
     </div>
   </div>
@@ -73,7 +97,7 @@
     
     <div class="cards d-inline mx-5 px-4">
 
-      <div class="Card my-5 mx-3">
+      <div class="Card my-5 mx-3 hover_card">
         <div class="card__image-holder">
           <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
         </div>

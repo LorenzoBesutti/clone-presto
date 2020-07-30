@@ -11156,12 +11156,30 @@ p {
 }
 
 .sfondo_link {
-  background-color: rgba(247, 247, 153, 0.687);
+  background-color: #3373bc;
   text-align: center;
+  color: white !important;
+}
+
+.seleziona_categoria {
+  text-decoration: none;
+  color: white !important;
 }
 
 .dropdown-menu {
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .titolo {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sottotitolo {
+    font-size: 30px;
+  }
 }
 
 .clearfix:after {
@@ -11381,6 +11399,7 @@ div.Card {
   transition: all 0.3s 0s ease-in;
   width: 300px;
   z-index: 1;
+  cursor: pointer;
 }
 
 div.Card img {
@@ -11716,5 +11735,48 @@ div.Card.show div.flap2 {
 
 .h_costum {
   height: 700px;
+}
+
+.hover_card:hover {
+  transform: scale(1.1);
+}
+
+.none {
+  list-style: none;
+}
+
+.inline_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline_form1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .inline_form1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inline_form {
+    margin-left: 100px;
+    margin-bottom: 25px;
+  }
+}
+
+.sfondo_research {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 300px;
+}
+
+.d_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
