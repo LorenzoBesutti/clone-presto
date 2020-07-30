@@ -801,6 +801,37 @@ div.Card.show {
   list-style: none;
   
 }
-.display_inline{
- display: flex;
+
+.inline_form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inline_form1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .inline_form1 {
+    display: flex;
+    flex-direction: column; 
+    
+  }
+  .inline_form{
+    margin-left: 100px;
+    margin-bottom: 25px;
+  }
+}
+
+.sfondo_research{
+  background-color: rgba(0, 0,0, 0.3);;
+ 
+  height: 300px;
+}
+.d_flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
