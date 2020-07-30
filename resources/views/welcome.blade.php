@@ -8,6 +8,12 @@
     </div>
     
 @endif
+@if (session('access.denied'))
+    <div class="alert alert-danger">
+        Accesso non consentito - solo per revisori!
+    </div>
+    
+@endif
 
 
 @include('components.headerHome')
