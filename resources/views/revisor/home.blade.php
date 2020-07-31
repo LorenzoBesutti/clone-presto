@@ -1,10 +1,45 @@
 @extends('layouts.app')
+@section('style')
+    <style>
+        body {
+          background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('/media/sfondoRevisore.jpeg') no-repeat center center fixed;
+          -webkit-background-size: cover;
+         -moz-background-size: cover;
+          background-size: cover;
+         -o-background-size: cover;
+}
+.form-signin {
+  width: 100%;
+}
 
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: none;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.hrRevisor{
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(184, 184, 184) 30%,white);
+
+}
+
+.bgAnnuncio{
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    color:white;
+}
+
+    </style>
+@endsection
 @section('content')
 
 
 @if($add)
-
+{{-- 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -96,6 +131,93 @@
         </div>
     </div>
 </div>
+ --}}
+<div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+        
+        <form class="form-signin">
+            <div class="card-header bgAnnuncio">
+                <div class="text-md-right ">Annuncio # {{$add->id}}</div>
+                </div>
+          <div class="card-body">
+            
+           
+              
+
+            <div class="row mt-5">
+                <label class="col-md-4">
+                    <h5 class="text-right ml-5">Utente</h5>
+                </label>
+                <div class="col-md-8">
+                    # {{$add->user->id}},
+                    {{$add->user->name}},
+                    {{$add->user->email}},
+                    <hr class="hrRevisor">
+                </div>
+            </div>
+              
+              
+
+              <div class="row">
+                <div class="col-md-4">
+                    <h5 class="text-right ml-5">Titolo<h5>
+                </div>
+                <div class="col-md-8">
+                    {{$add->title}}
+                    <hr class="hrRevisor">
+                </div>
+            </div>
+              
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="text-right ml-5">Descrizione<h5>
+                </div>
+                <div class="col-md-8">
+                    {{$add->description}}
+                    <hr class="hrRevisor">
+                </div>
+            </div>
+
+
+            <div class="row mt-4">
+                
+                <div class="col-md-4 text-right">
+                    <form action="{{route('revisor.reject', $add->id)}}" method="POST">
+                        @csrf
+                          <button type="submit" class="btn btn-danger my-3 position-sticky">Reject</button>
+                    </form>
+                    <form action="{{route('revisor.accept', $add->id)}}" method="POST">
+                        @csrf
+                          <button type="submit" class="btn btn-success  position-sticky">Accept</button>
+                    </form>
+                </div>
+                <div class="col-12 col-md-8 ">
+                    <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5">  
+                </div>
+               
+
+            </div>
+
+          <div class="container mt-5">
+           <div class="row">
+            <div class="col-12">
+            
+            </div>
+            </div>
+          </div>
+              
+            
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 @else
     
