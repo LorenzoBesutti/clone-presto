@@ -14,6 +14,20 @@
                 <li class="nav-item">
                 <a href="{{route('add.new')}}" class="nav-link">Inserisci Annuncio</a>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a id="categoriesDropDown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                       Seleziona la categoria <i class="fas fa-caret-right ml-2"></i>
+                    </a>
+          
+                    <div class="dropdown-menu dropdown-toggle " aria-labelledby="categoriesDropDown">
+                        @foreach($categories as $category)
+                    <a href="{{route('public.adds.category', [$category->name, $category->id])}}" class="nav-link">
+                    {{$category->name}}</a>
+                        @endforeach
+                     </div>
+                </li>
+                
             </ul>
 
             <!-- Right Side Of Navbar -->

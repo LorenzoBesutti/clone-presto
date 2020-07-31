@@ -34,6 +34,7 @@ class PublicController extends Controller
         $q=$request->input('q');
         $adds=Add::search($q)->get();
 
+
         return view('search',compact('q','adds'));
     }
 }

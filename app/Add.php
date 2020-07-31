@@ -19,8 +19,7 @@ class Add extends Model
             'description'=>$this->description,
             'altro'=>'annunci',
             'adds'=>$adds,
-
-
+            
         ];
 
         // Customize array...

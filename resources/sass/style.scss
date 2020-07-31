@@ -201,7 +201,6 @@ p {
 }
 .seleziona_categoria{
   text-decoration: none;
-  color: white !important;
 }
 .dropdown-menu {
     width: 100%; 
@@ -475,7 +474,7 @@ a.btn:active {
 } 
 
 div.cards {
-  margin: 80px auto;
+  margin: 20px auto;
   max-width: 960px;
   text-align: center;
 }
@@ -483,7 +482,7 @@ div.cards {
 div.Card {
   background: white;
   display: inline-block;
-  margin: 2€px;
+  margin: 2px;
   max-width: 300px;
   perspective: 1000;
   position: relative;
@@ -555,7 +554,7 @@ div.Card {
   }
 
   div.card-description {
-    padding: 0 15px 10px;
+    padding: 0 0px 10px;
     position: relative;
     font-size: 14px;
   }
@@ -825,13 +824,71 @@ div.Card.show {
   }
 }
 
-.sfondo_research{
-  background-color: rgba(0, 0,0, 0.3);;
+// .sfondo_research{
+//   background-color: rgba(0, 0,0, 0.3);;
  
-  height: 300px;
-}
+//   height: 300px;
+// }
 .d_flex{
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.padding-custom{
+  padding-right: 80px !important;
+  padding-left: 80px !important;
+  border: 1px solid black !important;
+}
+
+@media screen and (max-width: 600px) {
+  .padding-custom {
+    width: 250px !important;
+  }
+}
+
+.rounded-custom{
+  border-radius: 30px;
+  border: 1px solid black !important;
+}
+
+.search:hover{
+  background-color: #1196BF;
+  color: white;
+
+}
+
+// hr{
+//   width:33%;
+//   height:2px;
+//   background:linear-gradient(90deg,white,red,white)
+//   }
+
+  .title-hr hr {
+    display: inline-block;
+    width: 30%;
+    margin: 4px 5px;
+    background: linear-gradient(90deg, rgba(17,150,191,0), rgba(17,150,191,1),rgba(17,150,191,0));
+    height: 5px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  @media screen and (max-width: 1205px) {
+    .title-hr hr {
+      width: 20%;
+    }
+  }
+  
+  @media screen and (max-width: 780px) {
+    .title-hr hr {
+      width: 10%;
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    .title-hr hr {
+      display: none;
+    }
+  }
+  
