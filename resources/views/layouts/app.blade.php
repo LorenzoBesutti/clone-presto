@@ -21,10 +21,18 @@
 </head>
 <body>
     <div id="app">
-      @include('components.navbar')
-        <main class="">
+     
+    @if(Route::currentRouteName()!= 'public.index')
+         @include('components.navbar')
+       
             @yield('content')
-        </main>
+    @else
+         @include('components.navbar')
+       
+            @yield('content')
+            
+         @include('components.footer')
+    @endif
     </div>
 
     <!-- Scripts -->
