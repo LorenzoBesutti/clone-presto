@@ -9,7 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -28,7 +27,7 @@
             @yield('content')
     @else
          @include('components.navbar')
-       
+         @include('components.headerHome')
             @yield('content')
             
          @include('components.footer')

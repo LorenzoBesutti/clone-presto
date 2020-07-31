@@ -1,7 +1,11 @@
-<nav id="navbar" class="navbar navbar-expand-md navbar-light  shadow-sm fixed-top">
+<nav id="navbar" class="navbar navbar-expand-md navbar-light shadow fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        {{-- <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
+        </a> --}}
+        <a class="navbar-brand p-0" href="{{route('public.index')}}">
+            <h2 class="font-weight-bold">prest<span><img id="logo" class="iconLogo mr-1"
+                        src="/media/helm.png" alt=""></span></h2>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -11,12 +15,12 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 
-                <li class="nav-item">
-                <a href="{{route('add.new')}}" class="nav-link">Inserisci Annuncio</a>
+                <li class="nav-item ml-3">
+                <a href="{{route('add.new')}}" class="btn btn-info rounded"><img src="/media/plus.png" alt="" height="24px"> Inserisci Annuncio</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a id="categoriesDropDown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="categoriesDropDown" class="nav-link dropdown-toggle ml-4" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                        Seleziona la categoria <i class="fas fa-caret-right ml-2"></i>
                     </a>
           

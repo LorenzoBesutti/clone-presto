@@ -15,16 +15,13 @@
     
 @endif
 
-
-@include('components.headerHome')
-
 <div class="container my-5">
   <div class="row">
     <div class="col-12">
-      <form class="inline_form" action="{{route('search')}}" method="GET">
+      <form class="text-center" action="{{route('search')}}" method="GET">
         
       <div class="form-group">
-        <h4 class="mb-4">Cerca tra i nostri annunci</h4>
+        <h4 class="mb-4 mr-5 pr-4">Cerca tra i nostri annunci</h4>
          <input name="q" class="p-2 text-center padding-custom rounded-pill mr-2 shadow"   type="text" placeholder="motori, cucina..." name="search">
          <button class="py-2 px-4 rounded-custom search shadow" type="submit"><i class="fa fa-search "></i></button>
   
@@ -79,8 +76,6 @@
     </div>
   </div>
 </div> --}}
-
-     <h1 class="text-center mt-5 pt-5"> </h1>
 
 {{-- <div class="container my-5 py-5">
     <div class="row">
@@ -179,13 +174,12 @@
   @endforeach --}}
  
  
+ <h2 class="title-hr text-center my-5 sparisci"><hr class="mr-2">le pagine più visitate<hr class="ml-2"></h2>
 
-
-<h1 class="text-center my-5"> le pagine più visitate </h1>
 <!-- ==================================== 
 Contenedor Slider 
 =======================================-->
-<section id="slider" class="container-slider h_costum">
+<section id="slider" class="container-slider h_costum sparisci">
   <ul class="slider-wrapper">
   <li class="current-slide">
     <img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="" >

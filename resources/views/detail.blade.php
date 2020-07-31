@@ -1,15 +1,114 @@
 @extends('layouts.app')
+
+@section('style')
+
+<style>
+
+  body {
+  background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+    
+@endsection
 @section('content')
+
+<div style="height: 100px"></div>
+    
+<div class="container my-5">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3 class="display-4">First Slide</h3>
+              <p class="lead">This is a description for the first slide.</p>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3 class="display-4">Second Slide</h3>
+              <p class="lead">This is a description for the second slide.</p>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/O7fzqFEfLlo/1920x1080')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3 class="display-4">Third Slide</h3>
+              <p class="lead">This is a description for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+      </div>
+    </div>
+    <div class="py-5">
+      <div class="container">
+      <h2 class="font-weight-light">{{$add->title}}</h2>
+        <p class="lead">{{$add->description}}</p>
+        <hr>
+        <h4>Categoria: 
+          <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+          <i class="float-right">Caricato il: {{$add->created_at->format('d/m/Y')}}<br>Da: {{$add->user->name}}</i></a> 
+        </h4>
+
+      </div>
+    </div>
+    @guest
+    <button class="btn btn-success w-25 mx-auto mb-5">Contatta il venditore</button>
+    @endguest
+
+    @if (Auth::user()->name == $add->user->name)
+
+      <div class="d-flex justify-content-center">
+      <button class="btn btn-warning w-25 mb-5 mr-4 float-left">Modifica annuncio</button>
+      <button class="btn btn-danger w-25 mb-5 float-right">Rimuovi annuncio</button>
+      </div>  
+
+    @endif
+ 
     
 
+  </div>
+</div>
+
+{{-- 
 <div class="container">
 
-    <!-- Portfolio Item Heading -->
+  
     <h1 class="my-4">Page Heading
       <small>Secondary Text</small>
     </h1>
   
-    <!-- Portfolio Item Row -->
+
     <div class="row">
   
       <div class="col-md-8">
@@ -25,9 +124,7 @@
       </div>
   
     </div>
-    <!-- /.row -->
-  
-    <!-- Related Projects Row -->
+
     <h3 class="my-4">Altre Immagini</h3>
   
     <div class="row">
@@ -57,10 +154,9 @@
       </div>
   
     </div>
-    <!-- /.row -->
   
-  </div>
-  <!-- /.container -->
+  </div> --}}
+
 
 
 

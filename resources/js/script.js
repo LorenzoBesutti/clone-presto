@@ -154,11 +154,31 @@ $(document).ready(function(){
 
 
   document.addEventListener('scroll', ()=>{
-    let navbar =document.querySelector('#navbar')
+	let navbar =document.querySelector('#navbar')
 
     if(window.scrollY>430){
-        navbar.classList.add('bg-light')
+		navbar.classList.add('bg-light')
+		navbar.classList.add('navbar-border')
     }else{
-        navbar.classList.remove('bg-light')
+		navbar.classList.remove('bg-light')
+		navbar.classList.remove('navbar-border')
+    }
+})
+
+
+
+//logo presto che routa
+
+let logo = document.querySelector("#logo")
+
+document.addEventListener('scroll', () => {
+    logo.style.transform = "rotateZ(" + window.scrollY / 6 + "deg)"
+
+    if (window.scrollY > 250) {
+        navbar.classList.add("navbarDesktop")
+    }
+
+    else {
+        navbar.classList.remove("navbarDesktop")
     }
 })

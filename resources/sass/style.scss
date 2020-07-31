@@ -5,6 +5,10 @@
   transition: 0.5s linear;
 }
 
+.navbar-border{
+  border-bottom: 2px solid rgba(0,172,193,1);
+}
+
 
 
 body {
@@ -119,6 +123,12 @@ p {
   align-items: center;
   justify-content: center;
 }
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    margin-left: -40px;;
+  }
+}
 .in_offerta{
     height: 200px;
     width: 100%;
@@ -217,12 +227,14 @@ p {
 @media screen and (max-width: 600px) {
   .titolo{
     font-size: 70px;
+    // margin-left: -20px;
   }
   
 }
 @media screen and (max-width: 600px) {
   .sottotitolo{
     font-size: 30px;
+    // margin-left: -20px;
   }
   
 }
@@ -455,7 +467,7 @@ p {
 
 
 a.btn {
-  background: teal;
+  // background: teal;
   border-radius: 4px;
 	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
   color: white;
@@ -1104,3 +1116,22 @@ footer {
 
 
  /* footer */
+
+
+ .iconLogo{
+  height: 40px;
+}
+
+.sparisci{
+
+}
+
+@media only screen and (max-width: 500px) {
+  .sparisci {
+    display: none;
+  }
+}
+
+.text-bianco{
+  color: white !important;
+}
