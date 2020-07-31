@@ -1,5 +1,12 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
+
+#navbar{
+  transition: 0.5s linear;
+}
+
+
+
 body {
   margin:0;
   background-color: white!important;
@@ -934,10 +941,10 @@ footer {
 .footer-list-header {
   padding: 10px 0 5px 0;
   color: #fff;
-  font: 2.3vw "Oswald", sans-serif
+  font: 2vw "Oswald", sans-serif
 }
 .footer-list-anchor {
-  font: 1.3em "Open Sans", sans-serif
+  font: 1em "Open Sans", sans-serif
 }
 .footer-social-section {
   width: 100%;

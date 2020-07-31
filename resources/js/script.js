@@ -151,3 +151,14 @@ $(document).ready(function(){
       
     });
   });
+
+
+  document.addEventListener('scroll', ()=>{
+    let navbar =document.querySelector('#navbar')
+
+    if(window.scrollY>430){
+        navbar.classList.add('bg-light')
+    }else{
+        navbar.classList.remove('bg-light')
+    }
+})

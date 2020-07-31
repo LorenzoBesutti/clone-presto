@@ -15,11 +15,11 @@
     <ul class="footer-list-top list-custom">
       <li id='help'>
         <h4 class="footer-list-header textFooter">Help</h4></li>
-      <li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTATTI</a></li>
-      <li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
-      <li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">DOVE SIAMO</a></li>
-      <li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEWSLETTER</a></li>
-      <li id='order-tracking'><a href='/shop/order-status' itemprop="significantLink" class="generic-anchor footer-list-anchor">STATO DEGLI ORDINI</a></li>
+      <li><a href='/shop/about-contact' class=" generic-anchor footer-list-anchor" itemprop="significantLink">CONTATTI</a></li>
+      <li><a href='/faq.html' class=" generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
+      <li id='find-a-store'><a href='/shop/store-locator' class=" generic-anchor footer-list-anchor" itemprop="significantLink">DOVE SIAMO</a></li>
+      <li id='user-registration'><a href='/shop/user-registration?URL=' class=" generic-anchor footer-list-anchor" itemprop="significantLink">NEWSLETTER</a></li>
+      <li id='order-tracking'><a href='/shop/order-status' itemprop="significantLink" class=" generic-anchor footer-list-anchor">STATO DEGLI ORDINI</a></li>
     </ul>
     <section class="footer-social-section flex-rw">
         <span class="footer-social-overlap footer-social-connect h4">
@@ -35,13 +35,11 @@
         </span>
     </section>
     <section class="footer-bottom-section flex-rw">
-  <div class="footer-bottom-wrapper">   
-  <i class="fa fa-copyright" role="copyright">
+  <div class="footer-bottom-wrapper mx-auto">   
+  <i class="fa fa-copyright fa-xs" role="copyright">
    
-  </i> 2020 Presto.it <address class="footer-address" role="company address">P.IVA - 123456789</address><span class="footer-bottom-rights"> - S1mpl3C0d3 | All Rights Reserved - </span>
+  </i> <span class="h6">2020 Presto.it </span><address class="footer-address h6" role="company address">P.IVA - 123456789</address><span class="h6"> - S1mpl3C0d3 | All Rights Reserved - </span>
       </div>
-      <div class="footer-bottom-wrapper">
-      <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
-        </div>
+     
     </section>
   </footer>
