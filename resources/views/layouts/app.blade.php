@@ -22,9 +22,9 @@
 <body>
     <div id="app">
       @include('components.navbar')
-        <main class="">
+       
             @yield('content')
-        </main>
+       @include('components.footer')
     </div>
 
     <!-- Scripts -->
