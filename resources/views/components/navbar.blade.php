@@ -20,10 +20,9 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a id="categoriesDropDown" class="nav-link ml-4" href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre data-toggle="modal" data-target="#exampleModal">
-                       
-                        Seleziona la categoria <i class="fas fa-caret-right ml-2"></i>
-                       </a>
+                    <a id="categoriesDropDown" class="nav-link dropdown-toggle ml-4 text-bianco text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                       Seleziona la categoria <i class="fas fa-caret-right ml-2"></i>
+                    </a>
           
                   
                 </li>
@@ -34,28 +33,28 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('public.contact') }}">Contatti</a>
+                    <a class="nav-link text-bianco text-white" href="{{ route('public.contact') }}">Contatti</a>
                 </li>
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link text-bianco text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link text-bianco text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
                 @else
                     @if(Auth::user()->is_revisor)
                     <li class="nav-item">
-                       <a href="{{route('revisor.home')}}" class="nav-link">
+                       <a href="{{route('revisor.home')}}" class="nav-link text-bianco text-white">
                           Revisor Home
                            <span class="badge badge-pill badge-warning">{{\App\Add::ToBeRevisionedCount()}}</span>
                         </a>
                     </li>
                     @endif
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-bianco text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 

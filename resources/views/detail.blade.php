@@ -82,20 +82,104 @@
 
       </div>
     </div>
-    @guest
+    
     <button class="btn btn-success w-25 mx-auto mb-5">Contatta il venditore</button>
-    @endguest
+    
+
     @auth
+
     @if (Auth::user()->name == $add->user->name)
 
-      <div class="d-flex justify-content-center">
-      <button class="btn btn-warning w-25 mb-5 mr-4 float-left">Modifica annuncio</button>
-      <button class="btn btn-danger w-25 mb-5 float-right">Rimuovi annuncio</button>
-      </div>  
+    <div class="d-flex justify-content-center">
+    <button class="btn btn-warning w-25 mb-5 mr-4 float-left">Modifica annuncio</button>
+    <button class="btn btn-danger w-25 mb-5 float-right">Rimuovi annuncio</button>
+    </div>  
 
-    @endif
+  @endif
+        
     @endauth
+
+
+
+
+    <div class="container my-5">
+      <h3 class="text-center">Altri annunci dello stesso utente:</h3>
+
+      <div class="row justify-content-center">
+       @foreach ($adds as $add)
+       <div class="cards">
+        <div class="col-12 col-md-6 col-lg-4">
+         <div class="Card mx-3 hover_card shadow d-block mx-auto">
+           <div class="card__image-holder">
+             <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+           </div>
+           <div class="card-title">
+             <a href="#" class="">
+               <span class="left"></span>
+               <span class="right"></span>
+             </a>
+             <h2 class="text-center">
+                 {{$add->title}}
+             </h2>
+           </div>
+           <div class="card-flap flap1">
+             <div class="card-description">
+             {{$add->description}}
+            </div>
+             <div class="card-flap flap2">
+                 <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+                 <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+            <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block mt-3">Dettaglio</a>
+   
+             </div>
+           </div>
+         </div>
+   
+        </div>
+       </div>
+        @endforeach
+      </div>
+    </div>
     
+   {{--  <div class="container my-5">
+      <h3 class="text-center text-dark">Potrebbero interessarti anche:</h3>
+      <div class="row justify-content-center">
+        @foreach ($adds as $add)
+        <div class="cards">
+          <div class="col-12 col-md-6 col-lg-4">
+           <div class="Card mx-3 hover_card shadow d-block mx-auto">
+             <div class="card__image-holder">
+               <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+             </div>
+             <div class="card-title">
+               <a href="#" class="">
+                 <span class="left"></span>
+                 <span class="right"></span>
+               </a>
+               <h2 class="text-center">
+                   {{$add->title}}
+               </h2>
+             </div>
+             <div class="card-flap flap1">
+               <div class="card-description">
+               {{$add->description}}
+              </div>
+               <div class="card-flap flap2">
+                   <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+                   <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+              <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block mt-3">Dettaglio</a>
+     
+               </div>
+             </div>
+           </div>
+     
+          </div>
+         </div>
+            
+        @endforeach
+      </div>
+    </div> --}}
+
 
   </div>
 </div>

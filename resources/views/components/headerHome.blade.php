@@ -11,7 +11,7 @@
     <div class="wrapper">
       <div class="typing-demo">
      <h1 class="font-weight-bold titolo">PRESTO</h1>
-     <h3  class="sottotitolo">un <span class="h3 text-warning sottotiolo"> mare</span> di annunci </h3>
+     <h3 class="sottotitolo">un<span class="h3 text-warning sottotiolo"> mare</span> di annunci</h3>
      
       </div>
   </div>

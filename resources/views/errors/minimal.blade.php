@@ -9,9 +9,9 @@
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+         @yield('style404')
         <!-- Styles -->
-        <style>
+        {{-- <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -45,8 +45,8 @@
             .message {
                 font-size: 18px;
                 text-align: center;
-            }
-        </style>
+            } --}}
+        {{-- </style> --}}
     </head>
     <body>
         <div class="flex-center position-ref full-height">

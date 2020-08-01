@@ -8,6 +8,7 @@ use App\Contact;
 use App\Category;
 use App\Mail\RequestContact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
@@ -29,15 +30,16 @@ class PublicController extends Controller
     }
 
     public function addDetail(Add $add){
-
+ 
+        $user = User::find($add->user_id);
+        $adds = $user->adds()->where('id','!=', $add->id)->orderBy('created_at','desc')->paginate(3);
         
-        return view('detail', compact('add'));
+        return view('detail', compact('add','adds','user'/* ,'categories' */));
     }
     public function search(Request $request){
         
         $q=$request->input('q');
         $adds=Add::search($q)->where('is_accepted', true)->get();
-
 
         return view('search',compact('q','adds'));
     }
