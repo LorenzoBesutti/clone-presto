@@ -33,14 +33,14 @@ class RevisorController extends Controller
     }
 
     public function reject($add_id){
-        $add = Add::find($add_id);
-        $add->delete();
+        
         return $this->setAccepted($add_id, false);
     }
 
     public function undo($add_id){
 
-       $add = Add::withTrashed()->find($add_id)->restore();
+        $add = Add::where('id',$add_id)->onlyTrashed()->restore();
+        
 
         
 

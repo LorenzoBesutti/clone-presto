@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddSoftDeleteColumnToAdds extends Migration
+class AddDeletedAtColumnToAdds extends Migration
 {
     /**
      * Run the migrations.
@@ -26,7 +26,7 @@ class AddSoftDeleteColumnToAdds extends Migration
     public function down()
     {
         Schema::table('adds', function (Blueprint $table) {
-            $table->dropColumn('deleted_at');
+            $table->dropSoftDeletes();
         });
     }
 }

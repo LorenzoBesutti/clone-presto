@@ -132,7 +132,7 @@
     </div>
 </div>
  --}}
-<div class="container">
+<div class="container mt-5">
     <div class="row">
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card card-signin flex-row my-5">
@@ -202,7 +202,7 @@
     </div>
   </div>
    
-   <div class="row justify-content-center mt-5">
+   <div class="row justify-content-center mt-1">
        <div class="col-md-4">
         <form action="{{route('revisor.reject', $add->id)}}" method="POST">
             @csrf
