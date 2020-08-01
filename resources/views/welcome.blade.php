@@ -14,6 +14,12 @@
     </div>
     
 @endif
+@if (session('thankyou'))
+    <div class="alert alert-warning">
+        Grazie per averci contattati, riceverai una risposta il prima possibile!
+    </div>
+    
+@endif
 
 <div class="container my-5">
   <div class="row">
@@ -38,6 +44,12 @@
     
   </div>
 </div>
+
+
+
+
+
+
 
 
 {{-- <div class="container mt-5 pt-5 sfondo_research">

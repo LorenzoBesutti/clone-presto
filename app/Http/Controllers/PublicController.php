@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Add;
+use App\User;
+use App\Contact;
 use App\Category;
+use App\Mail\RequestContact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
 {
@@ -36,5 +40,24 @@ class PublicController extends Controller
 
 
         return view('search',compact('q','adds'));
+    }
+
+    public function contact(){
+        return view('contact');
+    }
+
+    public function contactSubmit(Request $request){
+       
+        $contact = new Contact();
+        $name=$request->input('name');
+        $email=$request->input('mail');
+        $mobile=$request->input('phone');
+        $description=$request->input('description');
+
+        $contact = compact('name','email','mobile','description');
+
+        Mail::to($email)->send(new RequestContact($contact));
+
+        return redirect(route('public.index'))->with('thankyou','thank-you');
     }
 }

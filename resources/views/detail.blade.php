@@ -85,7 +85,7 @@
     @guest
     <button class="btn btn-success w-25 mx-auto mb-5">Contatta il venditore</button>
     @endguest
-
+    @auth
     @if (Auth::user()->name == $add->user->name)
 
       <div class="d-flex justify-content-center">
@@ -94,7 +94,7 @@
       </div>  
 
     @endif
- 
+    @endauth
     
 
   </div>

@@ -37507,8 +37507,8 @@ document.addEventListener('scroll', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/andregp91/wa/hackademy_16/laravel/prestoSimpleCode/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/andregp91/wa/hackademy_16/laravel/prestoSimpleCode/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

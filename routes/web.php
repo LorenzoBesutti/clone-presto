@@ -20,6 +20,9 @@ Route::get('/', 'PublicController@index')->name('public.index');
 Route::get('/category/{name}/{id}/adds', 'PublicController@addsByCategory')->name('public.adds.category');
 Route::get('/add/{add}/detail', 'PublicController@addDetail')->name('public.detail');
 Route::get('/search','PublicController@search')->name('search');
+Route::get('/contact', 'PublicController@contact')->name('public.contact');
+Route::post('/contact/send', 'PublicController@contactSubmit')->name('public.submit');
+
 
 /* USER LOGGATI */
 
@@ -34,3 +37,4 @@ Route::post('/adds/create', 'HomeController@createAdd')->name('add.create');
 Route::get('/revisor/home', 'RevisorController@index')->name('revisor.home');
 Route::post('/revisor/adds/{id}/accept', 'RevisorController@accept')->name('revisor.accept');
 Route::post('/revisor/adds/{id}/reject', 'RevisorController@reject')->name('revisor.reject');
+Route::post('/revisor/adds/{id}/undo', 'RevisorController@undo')->name('revisor.undo');

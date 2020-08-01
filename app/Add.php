@@ -4,11 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Add extends Model
 {
 
-
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];  
     use Searchable;
     public function toSearchableArray()
     {

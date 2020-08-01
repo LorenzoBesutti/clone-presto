@@ -20,16 +20,12 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a id="categoriesDropDown" class="nav-link dropdown-toggle ml-4" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                       Seleziona la categoria <i class="fas fa-caret-right ml-2"></i>
-                    </a>
+                    <a id="categoriesDropDown" class="nav-link ml-4" href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre data-toggle="modal" data-target="#exampleModal">
+                       
+                        Seleziona la categoria <i class="fas fa-caret-right ml-2"></i>
+                       </a>
           
-                    <div class="dropdown-menu dropdown-toggle " aria-labelledby="categoriesDropDown">
-                        @foreach($categories as $category)
-                    <a href="{{route('public.adds.category', [$category->name, $category->id])}}" class="nav-link">
-                    {{$category->name}}</a>
-                        @endforeach
-                     </div>
+                  
                 </li>
                 
             </ul>
@@ -37,6 +33,9 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('public.contact') }}">Contatti</a>
+                </li>
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -77,3 +76,25 @@
         </div>
     </div>
 </nav>
+
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-body">
+            @foreach($categories as $category)
+            <a href="{{route('public.adds.category', [$category->name, $category->id])}}" class="nav-link text-center modalCustom">
+            {{$category->name}}</a>
+                @endforeach
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>

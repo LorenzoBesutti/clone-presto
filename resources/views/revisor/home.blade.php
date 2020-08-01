@@ -183,16 +183,7 @@
 
             <div class="row mt-4">
                 
-                <div class="col-md-4 text-right">
-                    <form action="{{route('revisor.reject', $add->id)}}" method="POST">
-                        @csrf
-                          <button type="submit" class="btn btn-danger my-3 position-sticky">Reject</button>
-                    </form>
-                    <form action="{{route('revisor.accept', $add->id)}}" method="POST">
-                        @csrf
-                          <button type="submit" class="btn btn-success  position-sticky">Accept</button>
-                    </form>
-                </div>
+               
                 <div class="col-12 col-md-8 ">
                     <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5">  
                 </div>
@@ -200,13 +191,8 @@
 
             </div>
 
-          <div class="container mt-5">
-           <div class="row">
-            <div class="col-12">
-            
-            </div>
-            </div>
-          </div>
+          
+          
               
             
           </div>
@@ -215,13 +201,40 @@
       </div>
     </div>
   </div>
+   
+   <div class="row justify-content-center mt-5">
+       <div class="col-md-4">
+        <form action="{{route('revisor.reject', $add->id)}}" method="POST">
+            @csrf
+              <button type="submit" class="btn btn-danger">Reject</button>
+        </form>
+       </div>
+       <div class="col-md-4 text-center">
+        <form action="{{route('revisor.undo', $add->id)}}" method="POST">
+            @csrf
+              <button type="submit" class="btn btn-warning">UNDO</button>
+        </form>
+       </div>
+       <div class="col-md-4 text-right">
+        <form action="{{route('revisor.accept', $add->id)}}" method="POST">
+            @csrf
+              <button type="submit" class="btn btn-success  position-sticky">Accept</button>
+        </form>
+       </div>
+   </div>
+    
+    
 
 
+  
 
 
 @else
-    
-    <h3 class="text-center mt-5">Non ci sono annunci da revisionare!</h3>
 
+  <div class="container mt-5">
+      <div class="row justify-content-center">
+    <h3 class="text-center text-white mt-5">Non ci sono annunci da revisionare!</h3>
+     </div>
+ </div>
 @endif    
 @endsection
