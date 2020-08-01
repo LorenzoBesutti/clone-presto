@@ -48,5 +48,11 @@ class HomeController extends Controller
     }
 
    /*  commento prova */
+    public function userProfile(){
 
+        $user=Auth::user();
+        $adds = $user->adds()->orderBy('created_at','desc')->get();
+
+        return view('profile', compact('user','adds'));
+    }
 }

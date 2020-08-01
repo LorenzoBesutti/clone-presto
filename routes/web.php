@@ -31,6 +31,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adds/new' , 'HomeController@newAdd')->name('add.new');
 Route::post('/adds/create', 'HomeController@createAdd')->name('add.create');
+Route::get('/user/profile', 'HomeController@userProfile')->name('profile');
 
 /* REVISORE */
 
