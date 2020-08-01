@@ -5,7 +5,7 @@
 <style>
 
   body {
-  background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+  background: url('/media/detail.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -102,7 +102,7 @@
 
 
 
-    <div class="container my-5">
+    <div class="container mt-5">
       <h3 class="text-center">Altri annunci dello stesso utente:</h3>
 
       <div class="row justify-content-center">
@@ -141,10 +141,10 @@
       </div>
     </div>
     
-   {{--  <div class="container my-5">
+    <div class="container my-5">
       <h3 class="text-center text-dark">Potrebbero interessarti anche:</h3>
       <div class="row justify-content-center">
-        @foreach ($adds as $add)
+        @foreach ($announcements as $announcement)
         <div class="cards">
           <div class="col-12 col-md-6 col-lg-4">
            <div class="Card mx-3 hover_card shadow d-block mx-auto">
@@ -157,16 +157,16 @@
                  <span class="right"></span>
                </a>
                <h2 class="text-center">
-                   {{$add->title}}
+                   {{$announcement->title}}
                </h2>
              </div>
              <div class="card-flap flap1">
                <div class="card-description">
-               {{$add->description}}
+               {{$announcement->description}}
               </div>
                <div class="card-flap flap2">
-                   <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
-                   <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+                   <a href="{{route('public.adds.category', [$announcement->category->name,$announcement->category->id])}}">{{$announcement->category->name}}</a></strong>
+                   <i>{{$announcement->created_at->format('d/m/Y')}} - {{$announcement->user->name}}</i></a> 
               <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block mt-3">Dettaglio</a>
      
                </div>
@@ -178,9 +178,9 @@
             
         @endforeach
       </div>
-    </div> --}}
+    </div> 
 
-
+ 
   </div>
 </div>
 

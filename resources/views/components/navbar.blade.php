@@ -20,7 +20,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a id="categoriesDropDown" class="nav-link dropdown-toggle ml-4 text-bianco text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="categoriesDropDown" class="nav-link  ml-4 text-bianco text-white" href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre data-toggle="modal" data-target="#exampleModal">
                        Seleziona la categoria <i class="fas fa-caret-right ml-2"></i>
                     </a>
           
@@ -97,3 +97,5 @@
       </div>
     </div>
   </div>
+
+  

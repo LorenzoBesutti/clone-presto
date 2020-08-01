@@ -33,8 +33,24 @@ class PublicController extends Controller
  
         $user = User::find($add->user_id);
         $adds = $user->adds()->where('id','!=', $add->id)->orderBy('created_at','desc')->paginate(3);
+
+        $announcements = Add::where('category_id', '=', $add->category->id)->paginate(3);
+
+          
+        /* $related_category_ids = $announcements->category()->pluck('name');
+
+
+        $related_posts = Add::whereHas('categories', function ($q) use($related_category_ids) {
+        $q->whereIn('category_id', $related_category_ids)
+        })
+    ->where('id', '<>', $post->id)
+    ->take(3)
+    ->get(); */
+
+
+
         
-        return view('detail', compact('add','adds','user'/* ,'categories' */));
+        return view('detail', compact('add','adds','user','announcements'));
     }
     public function search(Request $request){
         
