@@ -12,13 +12,13 @@ class Add extends Model
     use Searchable;
     public function toSearchableArray()
     {
-        $adds=$this->category->pluck('name')->join(', ');
+        $category=$this->category()->pluck('name')->join(', ');
         $array = [
             'id'=>$this->id,
             'title'=>$this->title,
             'description'=>$this->description,
             'altro'=>'annunci',
-            'adds'=>$adds,
+            'category'=>$category,
             
         ];
 

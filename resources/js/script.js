@@ -153,15 +153,18 @@ $(document).ready(function(){
   });
 
 
+
   document.addEventListener('scroll', ()=>{
 	let navbar =document.querySelector('#navbar')
 
     if(window.scrollY>430){
 		navbar.classList.add('bg-light')
 		navbar.classList.add('navbar-border')
+		document.querySelectorAll('.text-bianco').forEach(e => e.classList.remove('text-white'));
     }else{
 		navbar.classList.remove('bg-light')
 		navbar.classList.remove('navbar-border')
+		document.querySelectorAll('.text-bianco').forEach(e => e.classList.add('text-white'))
     }
 })
 

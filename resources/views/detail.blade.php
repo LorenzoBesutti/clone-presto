@@ -86,16 +86,18 @@
     <button class="btn btn-success w-25 mx-auto mb-5">Contatta il venditore</button>
     @endguest
 
+    @auth
+
     @if (Auth::user()->name == $add->user->name)
 
-      <div class="d-flex justify-content-center">
-      <button class="btn btn-warning w-25 mb-5 mr-4 float-left">Modifica annuncio</button>
-      <button class="btn btn-danger w-25 mb-5 float-right">Rimuovi annuncio</button>
-      </div>  
+    <div class="d-flex justify-content-center">
+    <button class="btn btn-warning w-25 mb-5 mr-4 float-left">Modifica annuncio</button>
+    <button class="btn btn-danger w-25 mb-5 float-right">Rimuovi annuncio</button>
+    </div>  
 
-    @endif
- 
-    
+  @endif
+        
+    @endauth
 
   </div>
 </div>

@@ -37470,9 +37470,15 @@ document.addEventListener('scroll', function () {
   if (window.scrollY > 430) {
     navbar.classList.add('bg-light');
     navbar.classList.add('navbar-border');
+    document.querySelectorAll('.text-bianco').forEach(function (e) {
+      return e.classList.remove('text-white');
+    });
   } else {
     navbar.classList.remove('bg-light');
     navbar.classList.remove('navbar-border');
+    document.querySelectorAll('.text-bianco').forEach(function (e) {
+      return e.classList.add('text-white');
+    });
   }
 }); //logo presto che routa
 
