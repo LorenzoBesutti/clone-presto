@@ -1,4 +1,4 @@
-<footer class="flex-rw">
+{{-- <footer class="flex-rw">
   
     <ul class="footer-list-top list-custom">
       <li>
@@ -42,4 +42,54 @@
       </div>
      
     </section>
-  </footer>
+  </footer> --}}
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 text-center mt-5 mb-2">
+            <h4 class="footer-list-header textFooter">Navigazione</h4>
+          <p><a href='' class="generic-anchor footer-list-anchor">CHI SIAMO</a></p>
+          <p><a href='' class="generic-anchor footer-list-anchor">OFFERTE</a></p>
+          <p><a href='' class="generic-anchor footer-list-anchor">DIVENTA UN REVISORE</a></p>
+          <p><a href='' class="generic-anchor footer-list-anchor">LAVORA CON NOI</a></p>
+      </div>
+      <div class="col-12 col-md-4 text-center mt-5 mb-2">
+        <img src="/media/logo.png" alt="" class=""  height="200">
+      </div>
+      <div class="col-12 col-md-4 text-center mt-5 mb-2">
+        <h4 class="footer-list-header textFooter">Help</h4></li>
+        <p><a href='' class="generic-anchor footer-list-anchor">CONTATTI</a></p>
+        <p><a href='' class="generic-anchor footer-list-anchor">FAQ</a></p>
+        <p><a href='' class="generic-anchor footer-list-anchor">DOVE SIAMO</a></p>
+        <p><a href='' class="generic-anchor footer-list-anchor">NEWSLETTER</a></p>
+        <p><a href='' class="generic-anchor footer-list-anchor">STATO DEGLI ORDINI</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-social-section flex-rw">
+          <span class="footer-social-overlap footer-social-connect h4">CONNECT <span class="footer-social-small h4">with</span> US
+          </span>
+          <span class="footer-social-overlap footer-social-icons-wrapper">
+          <a href="" class="generic-anchor" target="_blank"><i class="fa fa-pinterest"></i></a>
+          <a href="" class="generic-anchor" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="" class="generic-anchor" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="" class="generic-anchor" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="" class="generic-anchor" target="_blank"><i class="fa fa-youtube"></i></a>
+          <a href="" class="generic-anchor" target="_blank"><i class="fa fa-google-plus"></i></a>
+          </span>
+        </div>
+        <div class="footer-bottom-section flex-rw">
+          <div class="footer-bottom-wrapper mx-auto">   
+            <i class="fa fa-copyright fa-xs">
+            </i> <span class="h6">2020 Presto.it </span><address class="footer-address h6">P.IVA - 123456789</address><span class="h6"> - S1mpl3C0d3 | All Rights Reserved - </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
