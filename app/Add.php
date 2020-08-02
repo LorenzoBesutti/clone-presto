@@ -15,13 +15,14 @@ class Add extends Model
     public function toSearchableArray()
     {
         $category=$this->category()->pluck('name')->join(', ');
+        $user=$this->user()->pluck('name')->join(', ');
         $array = [
             'id'=>$this->id,
             'title'=>$this->title,
             'description'=>$this->description,
             'altro'=>'annunci',
             'category'=>$category,
-            
+            'user'=>$user
         ];
 
         // Customize array...

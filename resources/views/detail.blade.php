@@ -105,6 +105,7 @@
         
     @endauth
 
+    @if ($adds->isNotEmpty())
     <div class="container mt-5">
       <h3 class="text-center">Altri annunci dello stesso utente:</h3>
 
@@ -143,7 +144,7 @@
         @endforeach
       </div>
     </div>
-
+    @endif
     @if ($announcements->isNotEmpty())
 
     <div class="container my-5">
