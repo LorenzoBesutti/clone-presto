@@ -6,6 +6,7 @@
         background-size:cover;
         background-position-y: 20%;
      background-repeat: no-repeat;
+     height: 100vh;
     }
   
     .bordo1_password{

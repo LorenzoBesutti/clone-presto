@@ -5,7 +5,7 @@
         background: url('/media/mare.jpg');
         background-size:cover;
         background-position-y: 20%;
-        
+        height:100vh;
     }
   
     .bordo1_password{
@@ -31,7 +31,7 @@
 
 @section('content')
 <div class="container mt-5 pt-5">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-5 pt-5">
         <div class="col-md-8">
             <div class="card-wrap">
                 <div class="card-header text-white">{{ __('Register') }}</div>
