@@ -808,7 +808,13 @@ div.Card.show {
   }
 }
 .h_costum{
-  height: 700px;
+  height: 500px;
+}
+
+@media screen and (max-width: 825px) {
+  .h_costum{
+    height: 400px;
+  }
 }
 
 .hover_card:hover{
@@ -953,8 +959,9 @@ footer {
 .footer-list-header {
   padding: 10px 0 5px 0;
   color: #fff;
-  font: 2vw "Oswald", sans-serif
+  font: 4vh "Oswald", sans-serif
 }
+
 .footer-list-anchor {
   font: 1em "Open Sans", sans-serif
 }
@@ -991,7 +998,7 @@ footer {
   padding: 0px 20px
 }
 .footer-social-overlap > a {
-  font-size: 5vh
+  font-size: 3vh
 }
 .footer-social-overlap > a:not(:first-child) {
   margin-left: 0.38em
@@ -1013,94 +1020,7 @@ footer {
   display: inline;
   font-style: normal
 }
-@media only screen and (max-width: 768px) {
-  .footer-list-header {
-    font-size: 2em
-  }
-  .footer-list-anchor {
-    font-size: 1.1em
-  }
-  .footer-social-connect {
-    font-size: 2.5em
-  }
-  .footer-social-overlap > a {
-    font-size: 2.24em
-  }
-  .footer-bottom-wrapper {
-    font-size: 1.3em
-  }
-}
-@media only screen and (max-width: 568px) {
-  main {
-    font-size: 5em
-  }
-  .footer-list-top {
-    width: 100%
-  }
-  .footer-list-header {
-    font-size: 3em;
-  }
-  .footer-list-anchor {
-    font-size: 1.5em
-  }
-  .footer-social-section {
-    justify-content: center
-  }
-  .footer-social-section::after {
-    top: 25%
-  }
-  .footer-social-connect {
-    margin-bottom: 10px;
-    padding: 0 10px
-  }
-  .footer-social-overlap {
-    display: flex;
-    justify-content: center;
-  }
-  .footer-social-icons-wrapper {
-    width: 100%;
-    padding: 0
-  }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 20px;
-  }
-  .footer-bottom-section {
-    padding: 0 5px 10px 5px
-  }
-  .footer-bottom-wrapper {
-    text-align: center;
-    width: 100%;
-    margin-top: 10px
-  }
-}
-@media only screen and (max-width: 480px) {
-  .footer-social-overlap > a {
-    margin: auto
-  }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 0;
-  }
-  .footer-bottom-rights {
-    display: block
-  }
-}
-@media only screen and (max-width: 320px) {
-  .footer-list-header {
-    font-size: 2.2em
-  }
-  .footer-list-anchor {
-    font-size: 1.2em
-  }
-  .footer-social-connect {
-    font-size: 2.4em
-  }
-  .footer-social-overlap > a {
-    font-size: 2.24em
-  }
-  .footer-bottom-wrapper {
-    font-size: 1.3em
-  }
-}
+
 
 .list-custom{
   list-style: none;
@@ -1120,11 +1040,7 @@ footer {
   height: 40px;
 }
 
-.sparisci{
-
-}
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   .sparisci {
     display: none;
   }

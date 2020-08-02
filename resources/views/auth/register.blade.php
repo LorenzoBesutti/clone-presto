@@ -5,7 +5,7 @@
         background: url('/media/mare.jpg');
         background-size:cover;
         background-position-y: 20%;
-        height:100vh;
+        height: 100vh;
     }
   
     .bordo1_password{

@@ -47,11 +47,6 @@
 
 
 
-
-
-
-
-
 {{-- <div class="container mt-5 pt-5 sfondo_research">
   <div class="row mr-5 pr-5 d_flex">
     <div class="col-12 col-md-4 offset-md-4 mr-5 pr-5 inline_form">
@@ -235,12 +230,6 @@ Contenedor Slider
   <!-- Controles de Navegacion -->
   <ul id="control-buttons" class="control-buttons"></ul>
 </section>
-
-
-
-
-
-
 
 
 @endsection

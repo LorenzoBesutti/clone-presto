@@ -5,8 +5,8 @@
         background: url('/media/mare.jpg');
         background-size:cover;
         background-position-y: 20%;
-     background-repeat: no-repeat;
-     height: 100vh;
+        background-repeat: no-repeat;
+        height: 100vh;
     }
   
     .bordo1_password{
@@ -15,7 +15,7 @@
         color: white;
     }
     .card-wrap{
-        background-color: rgba(0, 0,0, 0.3);
+        background-color: rgba(0, 0, 0, 0.3);
         
     }
 
