@@ -32,6 +32,43 @@
     background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
     color:white;
 }
+.blocco{
+    position: fixed !important;
+    right:450px;
+    display: flex;
+  }
+  /* .blocco1{
+    position: fixed !important;
+    z-index: 999;
+    
+  } */
+.reject{
+    position:absolute;
+    position: fixed;
+    left:380px;
+    top: 420px;
+}
+.accept{
+    position:absolute;
+    position: fixed;
+    right:380px;
+    top: 420px;
+}
+
+@media screen and (max-width:700px){
+    .reject{
+    position:absolute;
+    position: fixed;
+    left:77%;
+    top: 40%;
+}
+.accept{
+    position:absolute;
+    position: fixed;
+    right:5%;
+    top: 30%;
+}
+}
 
     </style>
 @endsection
@@ -133,7 +170,7 @@
 </div>
  --}}
 <div class="container mt-5">
-    <div class="row">
+    <div class="row position-relative">
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card card-signin flex-row my-5">
         
@@ -147,10 +184,10 @@
               
 
             <div class="row mt-5">
-                <label class="col-md-4">
-                    <h5 class="text-right ml-5">Utente</h5>
+                <label class="col-md-2">
+                    <h5 class="text-center">Utente</h5>
                 </label>
-                <div class="col-md-8">
+                <div class="col-md-10">
                     # {{$add->user->id}},
                     {{$add->user->name}},
                     {{$add->user->email}},
@@ -160,37 +197,49 @@
               
               
 
-              <div class="row">
-                <div class="col-md-4">
-                    <h5 class="text-right ml-5">Titolo<h5>
+              <div class="row ">
+                <div class="col-md-2">
+                    <h5 class="text-center">Titolo<h5>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-10">
                     {{$add->title}}
                     <hr class="hrRevisor">
                 </div>
             </div>
               
             <div class="row">
-                <div class="col-md-4">
-                    <h5 class="text-right ml-5">Descrizione<h5>
+                <div class="col-md-2">
+                    <h5 class="text-center">Descrizione<h5>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-10">
                     {{$add->description}}
                     <hr class="hrRevisor">
                 </div>
             </div>
 
-
-            <div class="row mt-4">
+          <div class="container">
+            <div class="row mt-4 mx-auto">
                 
                
-                <div class="col-12 col-md-8 ">
-                    <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5">  
+                <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+                    <div class="col-12 col-md-6 ">
+                        <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
+                        <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
+                        <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
+                        <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
+                        <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
+                        <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
+                        <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
+                        <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
+                    </div>
+                    
+                    
+                   
                 </div>
                
 
             </div>
-
+        </div>
           
           
               
@@ -202,27 +251,30 @@
     </div>
   </div>
    
-   <div class="row justify-content-center mt-1">
-       <div class="col-md-4">
-        <form action="{{route('revisor.reject', $add->id)}}" method="POST">
+   {{--  <div class="row justify-content-center mt-1"> --}}
+      <div class="blocco1">
+       <div class="col-md-4 reject">
+         <form action="{{route('revisor.reject', $add->id)}}" method="POST">
             @csrf
-              <button type="submit" class="btn btn-danger">Reject</button>
-        </form>
+              <button type="submit" class="btn btn-danger px-3">Reject</button>
+        </form> 
        </div>
-       <div class="col-md-4 text-center">
+    </div>  
+       {{-- <div class="col-md-4 text-center">
         <form action="{{route('revisor.undo', $add->id)}}" method="POST">
             @csrf
               <button type="submit" class="btn btn-warning">UNDO</button>
         </form>
-       </div>
-       <div class="col-md-4 text-right">
+       </div> --}}
+    <div>
+     <div class="col-md-4 text-right accept">
         <form action="{{route('revisor.accept', $add->id)}}" method="POST">
             @csrf
               <button type="submit" class="btn btn-success  position-sticky">Accept</button>
         </form>
        </div>
    </div>
-    
+     
     
 
 
