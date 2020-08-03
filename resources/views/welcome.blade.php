@@ -111,32 +111,42 @@
 
  <h2 class="title-hr text-center mb-5"><hr class="mr-2">ultimi annunci<hr class="ml-2"></h2>
  
- <div class="card  col-12 col-md-3 my-5 offset-md-1 p-0 shadow-lg" style="border-radius:50px 0px; " >
-  <img class="card-img-top img-fluid  position-relative" style="border-radius:50px 0px 0px 0px;"src="https://picsum.photos/200/100" alt="Card image cap">
-  <i class="fa fa-heart fa-2x text-warning position-absolute " style="margin-left: 270px; margin-top:20px;"></i> 
-   <div class="card-body" style="background-color: rgba(250, 250, 3, 0.05);">
-   <h5 class="card-title p-0">Cercasi Programmatore Full-Stack</h5>
-    <div class="row mb-4 mt-2">
-      <div class="col-6 text-left text-secondary">Lavoro</div>
-        
-      <div class="col-6 text-right text-primary font-weight-bold">
-        $ 20,00
-      </div>
-
-    </div>
+ {{-- <div class="container">
+   <div class="row justify-content-center">
+     @foreach($adds as $add)
+     <div class="card  col-12 col-md-3 my-5 offset-md-1 p-0 shadow-lg" style="border-radius:50px 0px; " >
+      <img class="card-img-top img-fluid  position-relative" style="border-radius:50px 0px 0px 0px;"src="https://picsum.photos/200/100" alt="Card image cap">
+      <i class="fa fa-heart fa-2x text-warning position-absolute " style="margin-left: 270px; margin-top:20px;"></i> 
+       <div class="card-body" style="background-color: rgba(250, 250, 3, 0.05);">
+       <h5 class="card-title p-0">{{$add->title}}</h5>
+        <div class="row mb-4 mt-2">
+          <div class="col-6 text-left text-secondary">
+            <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+            <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+          </div>
+            
+          <div class="col-6 text-right text-primary font-weight-bold">
+            $ 20,00
+          </div>
     
-    <div class="col-12 my-4 pl-0">
-      <i class="fas fa-star text-warning"></i>
-      <i class="fas fa-star text-warning"></i>
-      <i class="fas fa-star text-warning"></i>
-      <i class="fas fa-star text-warning"></i>
-      <i class="fas fa-star text-light"></i>
-    </div>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn border-primary w-100 text-center text-primary mb-5">Scopri di più</a>
-  </div>
+        </div>
+        
+        <div class="col-12 my-4 pl-0">
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-light"></i>
+        </div>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="{{route('public.detail', compact('add'))}}" class="btn border-primary w-100 text-center text-primary mb-5">Scopri di più</a>
+      </div>
+     </div>
+     @endforeach
+   </div>
+ 
 </div>
-
+ --}}
  <div class="container">
    <div class="row justify-content-center">
     @foreach ($adds as $add)
@@ -172,7 +182,7 @@
     </div>
      @endforeach
    </div>
- </div>
+ </div> 
 
   {{-- @foreach ($adds as $add)
     

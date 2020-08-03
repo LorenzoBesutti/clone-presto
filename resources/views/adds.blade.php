@@ -1,23 +1,20 @@
 @extends('layouts.app')
 @section('style')
-<<<<<<< HEAD
 <style>
-.card-header {
+/* .card-header {
     padding: 0.75rem 1.25rem !important;
     margin-bottom: 0 !important;
     background-color: rgba(250, 250, 3, 0.05) !important;
     border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;
-  }
-</style>
-=======
-    <style>
+  } */
+
+  
       body{
         background: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
         background-repeat: no-repeat;
         height: 100vh;
       }
     </style>
->>>>>>> d96fe0fa3b5b362bcfca9818bdaec9615dec191a
 @endsection
 @section('content')
 
@@ -29,7 +26,7 @@
         </div>
     </div>
 </div>
-<div class=" container mt-5">
+{{-- <div class=" container mt-5">
 <div class="row col-12m">
 <div class="container col-12 col-md-4 float-left mb-5">
     <div class="row justify-content-center" >
@@ -115,7 +112,6 @@
         <i class="fab fa-instagram-square fa-2x text-primary"></i>
         <i class="fab fa-linkedin fa-2x text-primary"></i>
 
-<<<<<<< HEAD
         </p>
     </div>
     <div class="container col-12 col-md-4 float-left position-sticky mb-5">
@@ -152,7 +148,7 @@
 </div>
 </div>
 </div>
-
+ --}}
 
 
 
@@ -162,12 +158,10 @@
 
 
 <!--non so che codice é questo!-->
+{{-- </div>
 </div>
-</div>
-</div>
-=======
+</div> --}}
 @if($adds->isNotEmpty())
->>>>>>> d96fe0fa3b5b362bcfca9818bdaec9615dec191a
 <div class="container my-5 py-5">
     <div class="row">
         @foreach ($adds as $add)
