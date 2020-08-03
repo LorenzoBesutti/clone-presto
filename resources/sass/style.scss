@@ -1075,3 +1075,75 @@ footer {
 .captionCustom{
   background-color:rgba(0,0,0,0.3) !important;
 }
+
+.bgCard{
+  background:linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
+  width:18rem;
+  border:2px solid black;
+}
+
+.sposta{
+  transition: 0.5;
+}
+
+.sposta:hover{
+  transform:scale(1.1);
+}
+
+.buttonProfile {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+.pulse {
+  --color: rgba(0,172,193,1);
+  --hover: rgba(0,172,193,1);
+}
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .imgProfilo{
+    margin-bottom: 500px !important;
+   
+  }
+  .bgCard{
+  background:white;
+  width:18rem;
+  border:2px solid black;
+  
+  }
+
+  .cardMia{
+
+    margin-bottom:500px;
+  }
+  .custom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+}
