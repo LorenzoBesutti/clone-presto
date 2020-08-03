@@ -24,7 +24,7 @@ class PublicController extends Controller
     public function addsByCategory($name,$category_id){
 
         $category = Category::find($category_id);
-        $adds = $category->adds()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(5);
+        $adds = $category->adds()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(6);
 
         return view('adds', compact('category','adds'));
     }
@@ -41,7 +41,7 @@ class PublicController extends Controller
     public function search(Request $request){
         
         $q=$request->input('q');
-        $adds=Add::search($q)->where('is_accepted', true)->get();
+        $adds=Add::search($q)->where('is_accepted', true)->orderBy('created_at','desc')->get();
 
         return view('search',compact('q','adds'));
     }

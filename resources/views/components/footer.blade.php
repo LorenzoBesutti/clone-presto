@@ -55,8 +55,12 @@
           <p><a href='' class="generic-anchor footer-list-anchor">DIVENTA UN REVISORE</a></p>
           <p><a href='' class="generic-anchor footer-list-anchor">LAVORA CON NOI</a></p>
       </div>
-      <div class="col-12 col-md-4 text-center mt-5 mb-2">
-        <img src="/media/logo.png" alt="" class=""  height="200">
+      <div class="col-12 col-md-4 text-center my-auto mb-2">
+        
+          <h2 class="font-weight-bold text-white display-4" >prest<span><img id="logo" class="mr-1"
+               height="70"      src="/media/helm.png" alt=""></span></h2>
+      
+        {{-- <img src="/media/logo.png" alt="" class=""  height="200"> --}}
       </div>
       <div class="col-12 col-md-4 text-center mt-5 mb-2">
         <h4 class="footer-list-header textFooter">Help</h4></li>
