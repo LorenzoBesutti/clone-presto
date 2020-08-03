@@ -13,8 +13,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
+   <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('style')
 </head>
@@ -38,5 +37,10 @@
     <script src="https://kit.fontawesome.com/5f18af2e46.js" crossorigin="anonymous"></script>
 
     <script src="{{ asset('js/app.js') }}"></script>
+
+     <!--FontAwsome-->
+
+     <script src="https://kit.fontawesome.com/08e7b077b9.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>
