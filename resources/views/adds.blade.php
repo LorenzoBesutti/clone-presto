@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('style')
+<<<<<<< HEAD
 <style>
 .card-header {
     padding: 0.75rem 1.25rem !important;
@@ -8,6 +9,15 @@
     border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;
   }
 </style>
+=======
+    <style>
+      body{
+        background: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
+        background-repeat: no-repeat;
+        height: 100vh;
+      }
+    </style>
+>>>>>>> d96fe0fa3b5b362bcfca9818bdaec9615dec191a
 @endsection
 @section('content')
 
@@ -105,6 +115,7 @@
         <i class="fab fa-instagram-square fa-2x text-primary"></i>
         <i class="fab fa-linkedin fa-2x text-primary"></i>
 
+<<<<<<< HEAD
         </p>
     </div>
     <div class="container col-12 col-md-4 float-left position-sticky mb-5">
@@ -154,6 +165,9 @@
 </div>
 </div>
 </div>
+=======
+@if($adds->isNotEmpty())
+>>>>>>> d96fe0fa3b5b362bcfca9818bdaec9615dec191a
 <div class="container my-5 py-5">
     <div class="row">
         @foreach ($adds as $add)
@@ -181,7 +195,15 @@
         </div>
     </div>
 </div>
-
+@else
+<div class="container my-5 py-5">
+  <div class="row">
+    <div class="col-12">
+    <div class="h2 text-center">non ci sono risultati per la categoria "{{$category->name}}"</div>
+    </div>
+  </div>
+</div>
+@endif
 
 
 

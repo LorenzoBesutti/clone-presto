@@ -47,11 +47,6 @@
 
 
 
-
-
-
-
-
 {{-- <div class="container mt-5 pt-5 sfondo_research">
   <div class="row mr-5 pr-5 d_flex">
     <div class="col-12 col-md-4 offset-md-4 mr-5 pr-5 inline_form">
@@ -210,9 +205,40 @@
       </div>
     </div>
   @endforeach --}}
+
+
+  <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">Articoli<hr class="ml-2"></h2>
+
+  <div class="container my-5 py-5">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <img src="/media/articolo.jpg" alt="articolo" class="img-fluid w-100">
+      </div>
+      <div class="col-12 col-md-6">
+        <p class="mt-5 text-left">
+          PRESTO MAGAZINE
+        </p>
+        <h3 class="text-left font-weight-bold">CI MERITIAMO UNA SECONDA OCCASIONE</h3>
+        <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugiat tempora ullam voluptatum magnam, cum, dolorem culpa esse, qui perspiciatis sed eum iusto odio quam! Harum tenetur neque voluptate cum!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5 banner">
+    <div class="row">
+      <div class="col-12 mt-5 pt-5">
+      <div class="ml-md-5 pl-3 pl-md-5">
+        <h3 class=" ml-5 pl-md-2 text-left">Prova presto da mobile</h3>
+        <a href="https://play.google.com/store/search?q=presto&c=apps" class="ml-5 mt-md-1"><img src="/media/google-play-badge.png" alt="" height="55px"></a>
+        <a href="https://www.apple.com/it/ios/app-store/" class="ml-2 mt-md-1"><img src="/media/appstore.png" alt="" height="40px"></a>
+      </div>
+       
+      </div>
+    </div>
+  </div>
  
  
- <h2 class="title-hr text-center my-5 sparisci"><hr class="mr-2">le pagine più visitate<hr class="ml-2"></h2>
+ <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">le pagine più visitate<hr class="ml-2"></h2>
 
 <!-- ==================================== 
 Contenedor Slider 
@@ -220,38 +246,38 @@ Contenedor Slider
 <section id="slider" class="container-slider h_costum sparisci">
   <ul class="slider-wrapper">
   <li class="current-slide">
-    <img src="http://i9.photobucket.com/albums/a88/creaticode/1_zpsc6871490.jpg" title="" alt="" >
+    <a href="" class=""><img src="/media/50off.jpeg" title="" alt="50off"></a>
 
     <div class="caption">
       <h2 class="slider-title">offerta del 50% </h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat est. Alias illo hic quo nobis, aspernatur iste ut voluptate.</p>
+      <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat est. Alias illo hic quo nobis, aspernatur iste ut voluptate.</p>
     </div>
   </li>
 
   <li>
-    <img src="http://i9.photobucket.com/albums/a88/creaticode/2_zps6ccd36bd.jpg" title="" alt="">
+    <a href="" class=""><img src="/media/cashback.jpeg" title="" alt="cashback"></a>
 
     <div class="caption">
       <h2 class="slider-title"> 10% cashback</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto placeat aliquid tempore harum, similique!</p>
+      <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto placeat aliquid tempore harum, similique!</p>
     </div>
   </li>
 
   <li>
-    <img src="http://i9.photobucket.com/albums/a88/creaticode/4_zps611bc9f9.jpg" title="" alt="">
+    <a href="" class=""><img src="/media/reso.jpeg" title="" alt="reso" width="800"></a>
 
     <div class="caption">
-      <h2 class="slider-title">sfoglia il catalogo</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta laudantium voluptatem minima! Dolorum tempore dolores excepturi omnis provident. Commodi quis aperiam maiores, dolore a perferendis!</p>
+      <h2 class="slider-title">istruzioni per il reso</h2>
+      <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta laudantium voluptatem minima! Dolorum tempore dolores excepturi omnis provident. Commodi quis aperiam maiores, dolore a perferendis!</p>
     </div>
   </li>
 
   <li>
-    <img src="http://i9.photobucket.com/albums/a88/creaticode/3_zps70e4fcc5.jpg" title="" alt="">
+    <a href="" class=""><img src="/media/inscadenza.jpeg" title="" alt="inscadenza" width="900" class=""></a>
 
     <div class="caption">
       <h2 class="slider-title">offerte in scadenza</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore dignissimos laudantium.</p>
+      <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore dignissimos laudantium.</p>
     </div>
   </li>
   </ul>
@@ -261,12 +287,6 @@ Contenedor Slider
   <!-- Controles de Navegacion -->
   <ul id="control-buttons" class="control-buttons"></ul>
 </section>
-
-
-
-
-
-
 
 
 @endsection

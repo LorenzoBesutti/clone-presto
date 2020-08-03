@@ -51,7 +51,7 @@ class HomeController extends Controller
     public function userProfile(){
 
         $user=Auth::user();
-        $adds = $user->adds()->orderBy('created_at','desc')->get();
+        $adds = $user->adds()->orderBy('created_at','desc')->paginate(6);
 
         return view('profile', compact('user','adds'));
     }

@@ -7,6 +7,9 @@
         color: black !important;
         border-radius: 0;
     }
+    .bg-custom{
+        background: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
+    }
 </style>
     
 @endsection
@@ -75,9 +78,9 @@
 <div class="container-fluid h-100">
     <div class="row no-gutter">
       <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-      <div class="col-md-8 col-lg-6">
+      <div class="col-md-8 col-lg-6 bg-custom">
         <div class="login d-flex align-items-center py-5">
-          <div class="container">
+          <div class="container ">
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
                 <h3 class="login-heading mb-4"> {{$user->name}}, inserisci il tuo annuncio!</h3>

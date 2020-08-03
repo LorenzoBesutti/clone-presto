@@ -24,7 +24,7 @@ class PublicController extends Controller
     public function addsByCategory($name,$category_id){
 
         $category = Category::find($category_id);
-        $adds = $category->adds()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(5);
+        $adds = $category->adds()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(6);
 
         return view('adds', compact('category','adds'));
     }
@@ -34,28 +34,14 @@ class PublicController extends Controller
         $user = User::find($add->user_id);
         $adds = $user->adds()->where('id','!=', $add->id)->orderBy('created_at','desc')->paginate(3);
 
-        $announcements = Add::where('category_id', '=', $add->category->id)->paginate(3);
-
-          
-        /* $related_category_ids = $announcements->category()->pluck('name');
-
-
-        $related_posts = Add::whereHas('categories', function ($q) use($related_category_ids) {
-        $q->whereIn('category_id', $related_category_ids)
-        })
-    ->where('id', '<>', $post->id)
-    ->take(3)
-    ->get(); */
-
-
-
+        $announcements = Add::where('category_id', '=', $add->category->id)->where('id','!=', $add->id)->paginate(3);
         
         return view('detail', compact('add','adds','user','announcements'));
     }
     public function search(Request $request){
         
         $q=$request->input('q');
-        $adds=Add::search($q)->where('is_accepted', true)->get();
+        $adds=Add::search($q)->where('is_accepted', true)->orderBy('created_at','desc')->get();
 
         return view('search',compact('q','adds'));
     }

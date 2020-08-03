@@ -4,7 +4,7 @@
             {{ config('app.name', 'Laravel') }}
         </a> --}}
         <a class="navbar-brand p-0" href="{{route('public.index')}}">
-            <h2 class="font-weight-bold">prest<span><img id="logo" class="iconLogo mr-1"
+            <h2 class="font-weight-bold text-white text-bianco">prest<span><img id="logo" class="iconLogo mr-1"
                         src="/media/helm.png" alt=""></span></h2>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -92,7 +92,7 @@
                 @endforeach
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Chiudi</button>
           
         </div>
       </div>
