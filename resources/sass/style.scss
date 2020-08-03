@@ -1077,7 +1077,8 @@ footer {
 }
 
 .bgCard{
-  background:linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
+  background-color:rgba(0,0,0,0.3);
+  color:white;
   width:18rem;
   border:2px solid black;
 }
@@ -1123,27 +1124,11 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  .imgProfilo{
-    margin-bottom: 500px !important;
-   
-  }
-  .bgCard{
-  background:white;
-  width:18rem;
-  border:2px solid black;
   
-  }
+  
 
-  .cardMia{
-
-    margin-bottom:500px;
-  }
-  .custom{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  
+  
   
 
 }
