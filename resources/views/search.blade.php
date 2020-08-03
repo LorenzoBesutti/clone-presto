@@ -1,7 +1,23 @@
 @extends('layouts.app')
+@section('style')
+    <style>
+      body{
+        background: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
+        height: 100vh;
+      }
+    </style>
+@endsection
 @section('content')
-<h2> risultati di ricerca per: {{$q}}</h2>
 
+<div class="container my-5 py-5">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="text-center"> Risultati di ricerca per: <span class="font-weight-bold h2">{{$q}}</span></h3>
+    </div>
+  </div>
+</div>
+
+@if($adds->isNotEmpty())
 <div class="container my-5 py-5">
     <div class="row">
         @foreach ($adds as $add)
@@ -29,5 +45,13 @@
         </div>
     </div> --}}
 </div>
-    
+@else
+<div class="container my-5 py-5">
+  <div class="row">
+    <div class="col-12">
+    <div class="h2 text-center">non ci sono risultati per la ricerca "{{$q}}"</div>
+    </div>
+  </div>
+</div>
+@endif 
 @endsection

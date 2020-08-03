@@ -179,6 +179,19 @@
       </div>
     </div>
   @endforeach --}}
+
+  <div class="container my-5  banner">
+    <div class="row">
+      <div class="col-12 mt-5 pt-5">
+      <div class="ml-md-5 pl-3 pl-md-5">
+        <h3 class=" ml-5 pl-md-2 text-left">Prova presto da mobile</h3>
+        <a href="https://play.google.com/store/search?q=presto&c=apps" class="ml-5 mt-md-1"><img src="/media/google-play-badge.png" alt="" height="55px"></a>
+        <a href="https://www.apple.com/it/ios/app-store/" class="ml-2 mt-md-1"><img src="/media/appstore.png" alt="" height="40px"></a>
+      </div>
+       
+      </div>
+    </div>
+  </div>
  
  
  <h2 class="title-hr text-center my-5 sparisci"><hr class="mr-2">le pagine più visitate<hr class="ml-2"></h2>

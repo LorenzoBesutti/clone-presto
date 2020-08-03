@@ -11990,3 +11990,11 @@ footer {
   font-size: large;
 }
 
+.banner {
+  height: 300px !important;
+  background-image: url("/media/app.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -150px;
+}
+

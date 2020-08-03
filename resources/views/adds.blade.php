@@ -1,4 +1,12 @@
 @extends('layouts.app')
+@section('style')
+    <style>
+      body{
+        background: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
+        height: 100vh;
+      }
+    </style>
+@endsection
 @section('content')
 
 
@@ -10,7 +18,7 @@
     </div>
 </div>
 
-
+@if($adds->isNotEmpty())
 <div class="container my-5 py-5">
     <div class="row">
         @foreach ($adds as $add)
@@ -38,7 +46,15 @@
         </div>
     </div>
 </div>
-
+@else
+<div class="container my-5 py-5">
+  <div class="row">
+    <div class="col-12">
+    <div class="h2 text-center">non ci sono risultati per la categoria "{{$category->name}}"</div>
+    </div>
+  </div>
+</div>
+@endif
 
 
 
