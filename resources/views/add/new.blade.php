@@ -84,8 +84,12 @@
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
                 <h3 class="login-heading mb-4"> {{$user->name}}, inserisci il tuo annuncio!</h3>
+              <h3>DEBUG:: SECRET {{$uniqueSecret}}</h3>
                 <form action="{{route('add.create')}}" method="POST">
                     @csrf
+
+                <input type="hidden" name="uniqueSecret" value="{{$uniqueSecret}}">
+
                     <div class="form-group-row my-2">
                         <label for="category" class="col-md-4 col-form-label text-md-left">Categorie</label>
                         <div class="col-md-6">
@@ -117,7 +121,7 @@
                     <div class="form-group-row my-2">
                         <label for="description" class="col-md-4 col-form-label text-md-left">Annuncio</label>
                         <div class="col-md-6">
-                        <textarea name="description" id="description" cols="40" rows="7" required autofocus class="@error('body') is-invalid @enderror">{{old('description')}}</textarea>
+                        <textarea name="description" id="description" cols="40" rows="7" required autofocus class="@error('description') is-invalid @enderror">{{old('description')}}</textarea>
                             
                             @error('description')
                                  <span class="invalid-feedback" role="alert">
@@ -126,6 +130,22 @@
                             @enderror
                         </div>
                     </div>
+
+                    <div class="form-group row">
+                        <label for="images" class="col-md-12 col-form-label text-md-left">
+                          Immagini
+                        </label>
+                        <div class="col-md-12">
+                            <div class="dropzone" id="drophere"></div>
+
+                            @error('images')
+                            <span class="invalid-feedback" role="alert">
+                            <strong>{{$message}}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
                     <button class="btn btn-primary ml-3 px-5" type="submit">Crea</button>
                     </form>
 

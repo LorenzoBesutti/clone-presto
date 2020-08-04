@@ -40,6 +40,10 @@ class Add extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function images(){
+       return $this->hasMany('App\AddImage');
+    }
+
     static public function ToBeRevisionedCount(){
         return Add::where('is_accepted', null)->count();
     }

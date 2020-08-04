@@ -29,6 +29,7 @@ p {
   color: #333333;
 }
 
+/* .cardcolor{ */
 .header {
   position:relative;
   text-align:center;
@@ -73,6 +74,7 @@ p {
   text-align:center;
   background-color: white;
 }
+
 
 /* Animation */
 
@@ -151,7 +153,7 @@ p {
     position: absolute;
     top:10%;
     left:10%;
-    color: white
+    color: white;
 }
 .subscribe{
     height: 200px;
@@ -223,6 +225,8 @@ p {
 .dropdown-menu {
     width: 100%; 
 }
+
+
 
 @media screen and (max-width: 600px) {
   .titolo{
@@ -460,7 +464,7 @@ p {
 
 
  // font stuff
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900');
 
 
  // colour stuff
@@ -1123,3 +1127,9 @@ footer {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+
+/* } */
+>>>>>>> 4066d93856f16db06382e051683105b5612b5963
