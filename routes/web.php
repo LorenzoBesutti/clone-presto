@@ -32,6 +32,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adds/new' , 'HomeController@newAdd')->name('add.new');
 Route::post('/adds/create', 'HomeController@createAdd')->name('add.create');
 Route::get('/user/profile', 'HomeController@userProfile')->name('profile');
+Route::post('/add/images/upload', 'HomeController@uploadImage')->name('add.images.upload');
+Route::delete('/add/images/remove', 'HomeController@removeImage')->name('add.images.remove');
+Route::get('/add/images', 'HomeController@getImages')->name('add.images');
 
 /* REVISORE */
 

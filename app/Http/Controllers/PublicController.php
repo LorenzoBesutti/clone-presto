@@ -32,7 +32,7 @@ class PublicController extends Controller
     public function addDetail(Add $add){
  
         $user = User::find($add->user_id);
-        $adds = $user->adds()->where('id','!=', $add->id)->orderBy('created_at','desc')->paginate(3);
+        $adds = $user->adds()->where('id','!=', $add->id)->where('is_accepted', true)->orderBy('created_at','desc')->paginate(3);
 
         $announcements = Add::where('category_id', '=', $add->category->id)->where('id','!=', $add->id)->paginate(3);
         

@@ -153,9 +153,13 @@
     <div class="cards">
      <div class="col-12 col-md-6 col-lg-4">
       <div class="Card mx-3 hover_card shadow d-block mx-auto">
+        
         <div class="card__image-holder">
-          <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+          @foreach($add->images as $image)
+          <img class="card__image" src="{{Storage::url($image->file)}}" alt="wave" />
+          @endforeach
         </div>
+        
         <div class="card-title">
           <a href="#" class="">
             <span class="left"></span>
