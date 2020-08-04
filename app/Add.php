@@ -40,8 +40,8 @@ class Add extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function addImages(){
-        $this->hasMany('App\AddImage');
+    public function images(){
+       return $this->hasMany('App\AddImage');
     }
 
     static public function ToBeRevisionedCount(){

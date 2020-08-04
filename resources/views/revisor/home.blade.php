@@ -223,16 +223,16 @@
                
                 <div class="col-12 d-flex flex-column align-items-center justify-content-center">
                     @foreach($add->images as $image)
-                    <div class="row-mb-2">
+                   
                     <div class="col-12 col-md-4 ">
                     <img src="{{Storage::url($image->file)}}" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
                     </div>
-                    <div class="col-12 col-md-8">
+                    {{-- <div class="col-12 col-md-8">
                       {{$image->id}}<br>
                       {{$image->file}}<br>
                       {{Storage::url($image->file)}}<br>
-                    </div>
-                    </div>
+                    
+                    </div> --}}
                     @endforeach
                     
                    
