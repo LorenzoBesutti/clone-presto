@@ -35,8 +35,9 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/5f18af2e46.js" crossorigin="anonymous"></script>
 
+    <script src="https://kit.fontawesome.com/5f18af2e46.js" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>

@@ -145,6 +145,7 @@
       </div>
     </div>
     @endif
+
     @if ($announcements->isNotEmpty())
 
     <div class="container my-5">
@@ -192,6 +193,5 @@
  
   </div>
 </div>
-
 
 @endsection
