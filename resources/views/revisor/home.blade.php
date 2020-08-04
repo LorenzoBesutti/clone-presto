@@ -225,7 +225,7 @@
                     @foreach($add->images as $image)
                    
                     <div class="col-12 col-md-4 ">
-                    <img src="{{Storage::url($image->file)}}" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
+                    <img src="{{$image->getUrl(300, 150)}}" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
                     </div>
                     {{-- <div class="col-12 col-md-8">
                       {{$image->id}}<br>

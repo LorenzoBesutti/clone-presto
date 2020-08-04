@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Add;
 use App\AddImage;
+use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
 use App\Http\Requests\AddRequest;
 use Illuminate\Support\Facades\Auth;
@@ -66,6 +67,18 @@ class HomeController extends Controller
             $newFileName = "public/adds/{$a->id}/{$fileName}";
             Storage::move($image, $newFileName);
 
+            dispatch(new ResizeImage(
+                $newFileName,
+                300,
+                150
+            ));
+
+            dispatch(new ResizeImage(
+                $newFileName,
+                400,
+                300
+            ));
+
             $i->file = $newFileName;
             $i->add_id = $a->id;
 
@@ -91,6 +104,12 @@ class HomeController extends Controller
         
          $uniqueSecret = $request->input('uniqueSecret');
          $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
+
+         dispatch(new ResizeImage(
+             $fileName,
+             120,
+             120
+         ));
 
          session()->push("images.{$uniqueSecret}", $fileName);
 
@@ -127,7 +146,7 @@ class HomeController extends Controller
         foreach ($images as $image) {
             $data[] = [
                 'id' => $image,
-                'src' =>Storage::url($image)
+                'src' =>AddImage::getUrlByFilePath($image, 120, 120)
             ];
         }
 

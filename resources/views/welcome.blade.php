@@ -156,7 +156,7 @@
         
         <div class="card__image-holder">
           @foreach($add->images as $image)
-          <img class="card__image" src="{{Storage::url($image->file)}}" alt="wave" />
+          <img class="card__image" src="{{$image->getUrl(300, 150)}}" alt="wave" />
           @endforeach
         </div>
         
