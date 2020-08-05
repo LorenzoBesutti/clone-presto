@@ -16,15 +16,24 @@
             <ul class="navbar-nav mr-auto">
                 
                 <li class="nav-item ml-3">
-                <a href="{{route('add.new')}}" class="btn btn-info rounded"><img src="/media/plus.png" alt="" height="24px"> Inserisci Annuncio</a>
+                <a href="{{route('add.new')}}" class="btn btn-info rounded"><img src="/media/plus.png" alt="" height="24px"> {{__('ui.inserisciAnnuncio')}}</a>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a id="categoriesDropDown" class="nav-link  ml-4 text-bianco text-white" href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre data-toggle="modal" data-target="#exampleModal">
-                       Seleziona la categoria <i class="fas fa-caret-right ml-2"></i>
+                        {{__('ui.selezionaCategoria')}} <i class="fas fa-caret-right ml-2"></i>
                     </a>
           
                   
+                </li>
+                <li class="nav-item">
+                    @include('components.locale', ['lang' => 'it' , 'nation' => 'it'])
+                </li>
+                <li class="nav-item">
+                    @include('components.locale', ['lang' => 'en' , 'nation' => 'gb'])                       
+                </li>
+                <li class="nav-item">
+                    @include('components.locale', ['lang' => 'es' , 'nation' => 'es'])                       
                 </li>
                 
             </ul>
@@ -33,7 +42,7 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 <li class="nav-item">
-                    <a class="nav-link text-bianco text-white" href="{{ route('public.contact') }}">Contatti</a>
+                <a class="nav-link text-bianco text-white" href="{{ route('public.contact') }}">{{__('ui.contatti')}}</a>
                 </li>
                 @guest
                     <li class="nav-item">
@@ -46,11 +55,19 @@
                     @endif
                 @else
                     @if(Auth::user()->is_revisor)
-                    <li class="nav-item">
-                       <a href="{{route('revisor.home')}}" class="nav-link text-bianco text-white">
-                          Revisor Home
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-bianco text-white" href="{{route('revisor.home')}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            Revisor Home
                            <span class="badge badge-pill badge-warning">{{\App\Add::ToBeRevisionedCount()}}</span>
                         </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{route('revisor.home')}}"><i class="fas fa-check mr-1"></i> Verifica annunci</a>
+                            <a class="dropdown-item" href="{{route('rejectedadds')}}"><i class="fas fa-times mr-1"></i> Annunci rifiutati</a>
+                        </div>
+                       {{-- <a href="{{route('revisor.home')}}" class="nav-link text-bianco text-white">
+                          Revisor Home
+                           <span class="badge badge-pill badge-warning">{{\App\Add::ToBeRevisionedCount()}}</span>
+                        </a> --}}
                     </li>
                     @endif
                     <li class="nav-item dropdown">
@@ -59,7 +76,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{route('profile')}}"><i class="fas fa-user-circle mr-3"></i> Profilo</a>
+                            <a class="dropdown-item" href="{{route('profile')}}"><i class="fas fa-user-circle mr-3"></i> {{__('ui.profilo')}}</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
