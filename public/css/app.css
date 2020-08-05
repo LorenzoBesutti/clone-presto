@@ -10955,6 +10955,16 @@ p {
   color: #333333;
 }
 
+.headercategory {
+  height: 300px;
+}
+
+.bgCategory {
+  background-image: url("/media/headerCategory.jpg");
+  background-size: cover;
+  background-position-y: -100px;
+}
+
 /* .cardcolor{ */
 
 .header {
@@ -12066,6 +12076,17 @@ footer {
 
 .border-none {
   border: none;
+}
+
+.h-container {
+  height: 200px;
+  background-color: red;
+}
+
+.margin-custom {
+  position: absolute;
+  display: inline !important;
+  top: 35% !important;
 }
 
 /*

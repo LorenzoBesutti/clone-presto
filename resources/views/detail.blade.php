@@ -27,17 +27,26 @@
 @section('content')
 
 <div style="height: 100px"></div>
+
     
 <div class="container my-5">
   <div class="card border-0 shadow my-5">
+    <div class="container-fluid bgCategory ">
+      <div class="row-fluid col-12 headercategory">
+  <p></p>
+      </div>
+    </div>
+  
     <div class="card-body">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+
+        {{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner" role="listbox">
+       --}}  {{-- <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
           <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')">
             <div class="carousel-caption d-none d-md-block">
@@ -69,26 +78,71 @@
               <span class="sr-only">Next</span>
             </a>
       </div>
-    </div>
-    <div class="py-5">
+  --}}   {{-- </div> --}}
+   <div class="container mt-3 ">
+     <div class="row">
+       <div class="col-12 col-md-6">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            @foreach($add->images as $key=>$image)
+            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+            <img src="{{$image->getUrl(400,300)}}" class="d-block w-100" alt="...">
+            </div>
+            @endforeach
+            {{-- <div class="carousel-item">
+              <img src="https://source.unsplash.com/300x225/?wave" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://source.unsplash.com/300x225/?wave" class="d-block w-100" alt="...">
+            </div> --}}
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon margin-custom" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon margin-custom" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+       </div>
+       <div class="col-12 col-md-6 h-100 py-3">
+         <p>
+         <h2 class="text-left">{{$add->title}}</h2>
+         </p>
+         <p>
+         <a class="h5 pt-2" href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+        </p>
+         <p class="mt-2">$ 20,00</p>
+         <p class="card-text lead">{{$add->description}}</p>
+         <p class=" mb-0">Caricato da:
+         <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i> 
+         </p>
+         @if (Auth::check() && Auth::user()->name != $add->user->name)
+
+         <button class="btn btn-success w-50  my-5">Contatta il venditore</button>
+     
+         @endif
+       </div>
+     </div>
+   </div>
+
+    {{-- <div class="py-5">
       <div class="container">
       <h2 class="font-weight-light">{{$add->title}}</h2>
-        <p class="lead">{{$add->description}}</p>
-        <hr>
+        
         <h4>Categoria: 
           <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
           <i class="float-right">Caricato il: {{$add->created_at->format('d/m/Y')}}<br>Da: {{$add->user->name}}</i></a> 
         </h4>
+        
+        <p class="lead">{{$add->description}}</p>
 
       </div>
     </div>
-    
+     --}}
 
-    @if (Auth::check() && Auth::user()->name != $add->user->name)
-
-    <button class="btn btn-success w-25 mx-auto mb-5">Contatta il venditore</button>
-
-    @endif
+   
     
     
 
