@@ -185,3 +185,6 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove("navbarDesktop")
     }
 })
+
+
+  

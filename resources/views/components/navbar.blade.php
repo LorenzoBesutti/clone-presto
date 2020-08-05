@@ -55,11 +55,19 @@
                     @endif
                 @else
                     @if(Auth::user()->is_revisor)
-                    <li class="nav-item">
-                       <a href="{{route('revisor.home')}}" class="nav-link text-bianco text-white">
-                          Revisor Home
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-bianco text-white" href="{{route('revisor.home')}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            Revisor Home
                            <span class="badge badge-pill badge-warning">{{\App\Add::ToBeRevisionedCount()}}</span>
                         </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{route('revisor.home')}}"><i class="fas fa-check mr-1"></i> Verifica annunci</a>
+                            <a class="dropdown-item" href="{{route('rejectedadds')}}"><i class="fas fa-times mr-1"></i> Annunci rifiutati</a>
+                        </div>
+                       {{-- <a href="{{route('revisor.home')}}" class="nav-link text-bianco text-white">
+                          Revisor Home
+                           <span class="badge badge-pill badge-warning">{{\App\Add::ToBeRevisionedCount()}}</span>
+                        </a> --}}
                     </li>
                     @endif
                     <li class="nav-item dropdown">

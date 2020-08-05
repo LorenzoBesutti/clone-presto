@@ -12094,6 +12094,10 @@ footer {
   background-color: rgba(0, 172, 193, 0.2) !important;
 }
 
+.mostra {
+  padding-bottom: 120px;
+}
+
 /*
  * The MIT License
  * Copyright (c) 2012 Matias Meno <m@tias.me>

@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
    <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"/>
     @yield('style')
 </head>
 <body>
@@ -41,6 +43,32 @@
      <!--FontAwsome-->
 
      <script src="https://kit.fontawesome.com/08e7b077b9.js" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
+  <script>
+  jQuery(document).ready(function($){
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+        0:{
+          items:1,
+          nav:false
+        },
+        600:{
+          items:2,
+          nav:false
+        },
+        1000:{
+          items:3,
+          nav:false
+        }
+      }
+    })
+  })
+  </script>
     
 </body>
 </html>

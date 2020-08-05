@@ -84,7 +84,7 @@
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
                 <h3 class="login-heading mb-4"> {{$user->name}}, inserisci il tuo annuncio!</h3>
-              <h3>DEBUG:: SECRET {{$uniqueSecret}}</h3>
+              
                 <form action="{{route('add.create')}}" method="POST">
                     @csrf
 

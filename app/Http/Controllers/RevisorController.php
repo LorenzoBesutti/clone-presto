@@ -46,4 +46,10 @@ class RevisorController extends Controller
 
         return redirect()->back();
     }
+
+    public function rejectedAdds(){
+        $adds = Add::where('is_accepted', false)->orderBy('created_at', 'desc')->paginate(6);
+
+        return view('revisor.rejected', compact('adds'));
+    }
 }

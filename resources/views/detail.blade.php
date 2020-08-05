@@ -95,38 +95,18 @@
      </div>
    </div>
 
-    {{-- <div class="py-5">
-      <div class="container">
-      <h2 class="font-weight-light">{{$add->title}}</h2>
-        
-        <h4>Categoria: 
-          <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
-          <i class="float-right">Caricato il: {{$add->created_at->format('d/m/Y')}}<br>Da: {{$add->user->name}}</i></a> 
-        </h4>
-        
-        <p class="lead">{{$add->description}}</p>
-
-      </div>
-    </div>
-     --}}
-
-   
-    
-    
-
-    
-
-    @if ($adds->isNotEmpty())
+   @if ($adds->isNotEmpty())
     <div class="container mt-5">
       <h3 class="text-center">Altri annunci dello stesso utente:</h3>
-
-      <div class="row justify-content-center">
-       @foreach ($adds as $add)
-       <div class="cards">
-        <div class="col-12 col-md-6 col-lg-4">
+    
+   <div class="owl-carousel owl-theme mt-5">
+     @foreach($adds as $add)
+    <div class="item mostra">
+      <div class="cards ">
+        <div class="col-12 col-md-6 col-lg-4 ">
          <div class="Card mx-3 hover_card shadow d-block mx-auto">
            <div class="card__image-holder">
-             <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+             <img class="card__image" src="{{$add->images->first()->getUrl(400,300)}}" alt="wave" />
            </div>
            <div class="card-title">
              <a href="#" class="">
@@ -152,48 +132,53 @@
    
         </div>
        </div>
-        @endforeach
       </div>
-    </div>
-    @endif
+    @endforeach 
+   </div>
+   @endif
+  
+   
     @if ($announcements->isNotEmpty())
 
     <div class="container my-5">
       <h3 class="text-center text-dark">Potrebbero interessarti anche:</h3>
       <div class="row justify-content-center">
+      <div class="owl-carousel owl-theme mt-5">
         @foreach ($announcements as $announcement)
-        <div class="cards">
-          <div class="col-12 col-md-6 col-lg-4">
-           <div class="Card mx-3 hover_card shadow d-block mx-auto">
-             <div class="card__image-holder">
-               <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
-             </div>
-             <div class="card-title">
-               <a href="#" class="">
-                 <span class="left"></span>
-                 <span class="right"></span>
-               </a>
-               <h2 class="text-center">
-                   {{$announcement->title}}
-               </h2>
-             </div>
-             <div class="card-flap flap1">
-               <div class="card-description">
-               {{$announcement->description}}
-              </div>
-               <div class="card-flap flap2">
-                   <a href="{{route('public.adds.category', [$announcement->category->name,$announcement->category->id])}}">{{$announcement->category->name}}</a></strong>
-                   <i>{{$announcement->created_at->format('d/m/Y')}} - {{$announcement->user->name}}</i></a> 
-              <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block mt-3">Dettaglio</a>
-     
+        <div class="item mostra">
+          <div class="cards ">
+            <div class="col-12 col-md-6 col-lg-4 ">
+             <div class="Card mx-3 hover_card shadow d-block mx-auto">
+               <div class="card__image-holder">
+                 <img class="card__image" src="{{$announcement->images->first()->getUrl(400,300)}}" alt="wave" />
+               </div>
+               <div class="card-title">
+                 <a href="#" class="">
+                   <span class="left"></span>
+                   <span class="right"></span>
+                 </a>
+                 <h2 class="text-center">
+                     {{$announcement->title}}
+                 </h2>
+               </div>
+               <div class="card-flap flap1">
+                 <div class="card-description">
+                 {{$announcement->description}}
+                </div>
+                 <div class="card-flap flap2">
+                     <a href="{{route('public.adds.category', [$announcement->category->name,$announcement->category->id])}}">{{$announcement->category->name}}</a></strong>
+                     <i>{{$announcement->created_at->format('d/m/Y')}} - {{$announcement->user->name}}</i></a> 
+                <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block mt-3">Dettaglio</a>
+       
+                 </div>
                </div>
              </div>
+       
+            </div>
            </div>
-     
           </div>
-         </div>
-            
         @endforeach
+      </div>
       </div>
     </div>         
     @endif
