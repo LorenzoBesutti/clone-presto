@@ -37,6 +37,7 @@ p {
 .bgCategory{
   background-image: url('/media/headerCategory.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position-y: -100px;
   
 }
@@ -1155,4 +1156,8 @@ footer {
   position: absolute;
   display: inline !important;
   top: 35% !important;
+}
+
+.cardLuna{
+  background-color: rgba(0,172,193,0.2) !important;
 }
