@@ -22,6 +22,7 @@ Route::get('/add/{add}/detail', 'PublicController@addDetail')->name('public.deta
 Route::get('/search','PublicController@search')->name('search');
 Route::get('/contact', 'PublicController@contact')->name('public.contact');
 Route::post('/contact/send', 'PublicController@contactSubmit')->name('public.submit');
+Route::post('/locale/{locale}', 'PublicController@locale')->name('locale');
 
 
 /* USER LOGGATI */

@@ -4,19 +4,21 @@
 
 @if (session('add.create.success'))
     <div class="alert alert-success">
-        Annuncio caricato correttamente
+        {{__('ui.annuncioOk')}}
     </div>
     
 @endif
 @if (session('access.denied'))
     <div class="alert alert-danger">
-        Accesso non consentito - solo per revisori!
+      {{__('ui.accessoNo')}}
+
     </div>
     
 @endif
 @if (session('thankyou'))
     <div class="alert alert-warning">
-        Grazie per averci contattati, riceverai una risposta il prima possibile!
+      {{__('ui.grazieContatto')}}
+
     </div>
     
 @endif

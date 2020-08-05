@@ -64,4 +64,10 @@ class PublicController extends Controller
 
         return redirect(route('public.index'))->with('thankyou','thank-you');
     }
+
+    public function locale($locale){
+
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
 }
