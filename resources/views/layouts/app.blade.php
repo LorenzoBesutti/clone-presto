@@ -38,12 +38,9 @@
     <script src="https://kit.fontawesome.com/5f18af2e46.js" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 
-<<<<<<< HEAD
-=======
      <!--FontAwsome-->
 
      <script src="https://kit.fontawesome.com/08e7b077b9.js" crossorigin="anonymous"></script>
     
->>>>>>> 4066d93856f16db06382e051683105b5612b5963
 </body>
 </html>

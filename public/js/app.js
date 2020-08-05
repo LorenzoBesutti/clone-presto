@@ -40855,10 +40855,10 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./script */ "./resources/js/script.js");
 
+__webpack_require__(/*! ./addImages */ "./resources/js/addImages.js");
+
 window.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone/dist/dropzone.js");
 Dropzone.autoDiscover = false;
-
-__webpack_require__(/*! ./addImages */ "./resources/js/addImages.js");
 
 /***/ }),
 
