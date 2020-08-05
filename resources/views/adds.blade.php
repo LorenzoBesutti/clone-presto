@@ -93,7 +93,7 @@
           @foreach ($adds as $add)
           <div class=" col-12 col-md-6">
             <a href="#">
-              <img class="img-fluid rounded my-3 my-md-0" src="{{$add->images->first() ? $add->images->first()->getUrl(300,150) : 'http://placehold.it/300x150'}}" alt="">
+              <img class="img-fluid rounded my-3 my-md-0 w-100" src="{{$add->images->first() ? $add->images->first()->getUrl(300,150) : 'http://placehold.it/300x150'}}" alt="">
             </a>
           </div>
           <div class="col-12 col-md-6 card cardLuna py-2 w-100 text-left mb-5">
