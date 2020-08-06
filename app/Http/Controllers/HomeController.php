@@ -7,6 +7,7 @@ use App\AddImage;
 use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
 use App\Http\Requests\AddRequest;
+use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -86,6 +87,7 @@ class HomeController extends Controller
             $i->save();
 
             dispatch(new GoogleVisionSafeSearchImage($i->id));
+            dispatch(new GoogleVisionLabelImage($i->id));
         
         }
 
