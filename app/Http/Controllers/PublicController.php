@@ -34,7 +34,7 @@ class PublicController extends Controller
         $user = User::find($add->user_id);
         $adds = $user->adds()->where('id','!=', $add->id)->where('is_accepted', true)->orderBy('created_at','desc')->paginate(6);
 
-        $announcements = Add::where('category_id', '=', $add->category->id)->where('id','!=', $add->id)->paginate(6);
+        $announcements = Add::where('category_id', '=', $add->category->id)->where('id','!=', $add->id)->where('is_accepted', true)->paginate(6);
         
         return view('detail', compact('add','adds','user','announcements'));
     }

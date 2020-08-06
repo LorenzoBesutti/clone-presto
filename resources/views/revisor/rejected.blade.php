@@ -32,7 +32,7 @@
                 <div class="col-md-4 text-right accept">
                     <form action="{{route('revisor.accept', $add->id)}}" method="POST">
                         @csrf
-                          <button type="submit" class="btn btn-success  position-sticky">Accept</button>
+                          <button type="submit" class="btn btn-success  position-sticky">Accetta</button>
                     </form>
                    </div>
               </div> 

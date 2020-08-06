@@ -10928,12 +10928,20 @@ a.text-dark:focus {
   }
 }
 
+:root {
+  --bottone: #6cb2eb;
+}
+
 #navbar {
   transition: 0.5s linear;
 }
 
 .navbar-border {
   border-bottom: 2px solid #00acc1;
+}
+
+.btn10 {
+  background-color: var(--bottone);
 }
 
 body {
@@ -12096,6 +12104,31 @@ footer {
 
 .mostra {
   padding-bottom: 170px;
+}
+
+.inputWidth {
+  width: 220%;
+}
+
+@media only screen and (max-width: 550px) {
+  .inputWidth {
+    width: 104.5%;
+  }
+}
+
+.smusso {
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px !important;
+}
+
+.smussox {
+  border-top-left-radius: 50px !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .textCustom {
+    font-size: 25px;
+  }
 }
 
 /*

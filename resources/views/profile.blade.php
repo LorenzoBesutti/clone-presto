@@ -52,57 +52,6 @@
     </div>
 </div>
 
-
-
-
-
-{{-- <div class="container my-5 py-5">
-    <div class="row custom ml-5 pl-5">
-        <div class="col-12 col-md-6 imgProfilo">
-            <img src="http://placehold.it/700x400" alt="profilePic" class="img-fluid w-75">
-            <div class="row mt-5">
-                <div class="col-12 ">
-                    <a href="{{route('add.new')}}" class=""><button class="pulse buttonProfile bg-primary text-white">Inserisci un annuncio</button></a>
-                    @if ($user->is_revisor==false)
-                    <a href="{{route('public.contact')}}" class=""><button class="pulse buttonProfile bg-primary text-white">Diventa un revisore</button></a>
-                    @endif
-                </div>
-            </div>
-        </div>
-     <div class="col-12 col-md-6">
-        
-         <div class="card bgCard cardMia">
-             <div class="card-body ">
-              <h3 class="card-title text-center">{{$user->name}}</h3>
-              <hr>
-               <p class="card-text text-center">e-Mail: {{$user->email}}</p>
-             </div>
-             <div class="card-footer">
-               <h3 class="text-center">Social</h3>
-               <hr>
-               <a href="" class="" target="_blank"><i class="fa fa-facebook fa-2x text-dark ml-4"></i></a>
-               <a href="" class="" target="_blank"><i class="fa fa-twitter fa-2x text-dark mx-5"></i></a>
-               <a href="" class="" target="_blank"><i class="fa fa-instagram fa-2x text-dark "></i></a>
-             </div>
-         </div>
-  </div>
-       
-        
-    </div>
-</div>
- --}}
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="container my-md-5 py-md-5">
     <div class="row">
         <div class="col-12">

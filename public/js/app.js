@@ -41046,23 +41046,21 @@ $(document).ready(function () {
     }
   });
 });
-document.addEventListener('scroll', function () {
-  var navbar = document.querySelector('#navbar');
+/* document.addEventListener('scroll', () => {
+	let navbar = document.querySelector('#navbar')
 
-  if (window.scrollY > 430) {
-    navbar.classList.add('bg-light');
-    navbar.classList.add('navbar-border');
-    document.querySelectorAll('.text-bianco').forEach(function (e) {
-      return e.classList.remove('text-white');
-    });
-  } else {
-    navbar.classList.remove('bg-light');
-    navbar.classList.remove('navbar-border');
-    document.querySelectorAll('.text-bianco').forEach(function (e) {
-      return e.classList.add('text-white');
-    });
-  }
-}); //logo presto che routa
+	if (window.scrollY > 430) {
+		navbar.classList.add('bg-light')
+		navbar.classList.add('navbar-border')
+		document.querySelectorAll('.text-bianco').forEach(e => e.classList.remove('text-white'));
+	} else {
+		navbar.classList.remove('bg-light')
+		navbar.classList.remove('navbar-border')
+		document.querySelectorAll('.text-bianco').forEach(e => e.classList.add('text-white'))
+	}
+})
+ */
+//logo presto che routa
 
 var logo = document.querySelector("#logo");
 document.addEventListener('scroll', function () {

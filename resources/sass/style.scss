@@ -1,5 +1,8 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
+:root{
+  --bottone:#6cb2eb;
+}
 
 #navbar{
   transition: 0.5s linear;
@@ -9,7 +12,9 @@
   border-bottom: 2px solid rgba(0,172,193,1);
 }
 
-
+.btn10{
+  background-color: var(--bottone);
+}
 
 body {
   margin:0;
@@ -1160,9 +1165,39 @@ footer {
 
 .cardLuna{
   background-color: rgba(0,172,193,0.2) !important;
+  
 }
 
 .mostra{
   padding-bottom: 170px;
 }
 
+.inputWidth{
+  width: 220%;
+}
+
+@media only screen and (max-width: 550px) {
+
+  .inputWidth{
+    width: 104.5%;
+  }
+
+}
+
+.smusso{
+  border-bottom-right-radius: 50px ;
+  border-top-left-radius: 50px !important;
+  
+}
+.smussox{
+  border-top-left-radius: 50px !important;
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .textCustom{
+    font-size: 25px;
+  }
+
+}

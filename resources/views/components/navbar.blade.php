@@ -1,10 +1,10 @@
-<nav id="navbar" class="navbar navbar-expand-md navbar-light shadow fixed-top">
+<nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light shadow fixed-top">
     <div class="container">
         {{-- <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a> --}}
         <a class="navbar-brand p-0" href="{{route('public.index')}}">
-            <h2 class="font-weight-bold text-white text-bianco">prest<span><img id="logo" class="iconLogo mr-1"
+            <h2 class="font-weight-bold  text-bianco">prest<span><img id="logo" class="iconLogo mr-1"
                         src="/media/helm.png" alt=""></span></h2>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -20,43 +20,44 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a id="categoriesDropDown" class="nav-link  ml-4 text-bianco text-white" href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre data-toggle="modal" data-target="#exampleModal">
+                    <a id="categoriesDropDown" class="nav-link  ml-4 text-bianco " href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre data-toggle="modal" data-target="#exampleModal">
                         {{__('ui.selezionaCategoria')}} <i class="fas fa-caret-right ml-2"></i>
                     </a>
           
                   
                 </li>
-                <li class="nav-item">
+                <div class="d-flex">
+                <li class="nav-item mx-2 mx-md-0 ">
                     @include('components.locale', ['lang' => 'it' , 'nation' => 'it'])
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mx-2 mx-md-0">
                     @include('components.locale', ['lang' => 'en' , 'nation' => 'gb'])                       
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mx-2 mx-md-0">
                     @include('components.locale', ['lang' => 'es' , 'nation' => 'es'])                       
                 </li>
-                
+                </div>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 <li class="nav-item">
-                <a class="nav-link text-bianco text-white" href="{{ route('public.contact') }}">{{__('ui.contatti')}}</a>
+                <a class="nav-link text-bianco " href="{{ route('public.contact') }}">{{__('ui.contatti')}}</a>
                 </li>
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link text-bianco text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link text-bianco " href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link text-bianco text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link text-bianco " href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
                 @else
                     @if(Auth::user()->is_revisor)
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-bianco text-white" href="{{route('revisor.home')}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-bianco " href="{{route('revisor.home')}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             Revisor Home
                            <span class="badge badge-pill badge-warning">{{\App\Add::ToBeRevisionedCount()}}</span>
                         </a>
@@ -64,14 +65,14 @@
                             <a class="dropdown-item" href="{{route('revisor.home')}}"><i class="fas fa-check mr-1"></i> Verifica annunci</a>
                             <a class="dropdown-item" href="{{route('rejectedadds')}}"><i class="fas fa-times mr-1"></i> Annunci rifiutati</a>
                         </div>
-                       {{-- <a href="{{route('revisor.home')}}" class="nav-link text-bianco text-white">
+                       {{-- <a href="{{route('revisor.home')}}" class="nav-link text-bianco ">
                           Revisor Home
                            <span class="badge badge-pill badge-warning">{{\App\Add::ToBeRevisionedCount()}}</span>
                         </a> --}}
                     </li>
                     @endif
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-bianco text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-bianco " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 

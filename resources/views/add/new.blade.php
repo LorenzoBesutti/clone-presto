@@ -83,7 +83,7 @@
           <div class="container ">
             <div class="row">
               <div class="col-md-9 col-lg-8 mx-auto">
-                <h3 class="login-heading mb-4"> {{$user->name}}, inserisci il tuo annuncio!</h3>
+                <h3 class="login-heading mb-4 mt-5 "> {{$user->name}}, inserisci il tuo annuncio!</h3>
               
                 <form action="{{route('add.create')}}" method="POST">
                     @csrf
@@ -93,7 +93,7 @@
                     <div class="form-group-row my-2">
                         <label for="category" class="col-md-4 col-form-label text-md-left">Categorie</label>
                         <div class="col-md-6">
-                            <select name="category" id="category">
+                            <select class="inputWidth" name="category" id="category">
                                 @foreach ($categories as $category)
                             <option value="{{$category->id}}" {{old('category') == $category->id ? 'selcted' : ''}}>{{$category->name}}
                             </option>
@@ -109,7 +109,7 @@
                     <div class="form-group-row my-2">
                         <label for="title" class="col-md-4 col-form-label text-md-left">Titolo</label>
                         <div class="col-md-6 ">
-                            <input placeholder=" " type="text" class="form-control bordo2_password @error('title') is-invalid @enderror" name="title" id="title" value="{{old('title')}} " required autofocus>
+                            <input placeholder=" " type="text" class="inputWidth bg-transparent bordo2_password @error('title') is-invalid @enderror" name="title" id="title" value="{{old('title')}} " required autofocus>
         
                             @error('title')
                                 <span class="invalid-feedback" role="alert">
@@ -121,7 +121,7 @@
                     <div class="form-group-row my-2">
                         <label for="description" class="col-md-4 col-form-label text-md-left">Annuncio</label>
                         <div class="col-md-6">
-                        <textarea name="description" id="description" cols="40" rows="7" required autofocus class="@error('description') is-invalid @enderror">{{old('description')}}</textarea>
+                        <textarea class="inputWidth" name="description" id="description" {{-- cols="57"  --}}rows="7" required autofocus class="@error('description') is-invalid @enderror">{{old('description')}}</textarea>
                             
                             @error('description')
                                  <span class="invalid-feedback" role="alert">
@@ -132,11 +132,11 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="images" class="col-md-12 col-form-label text-md-left">
+                        <label for="images" class="col-md-12 col-form-label text-md-left ml-3">
                           Immagini
                         </label>
                         <div class="col-md-12">
-                            <div class="dropzone" id="drophere"></div>
+                            <div class="dropzone ml-3" id="drophere"></div>
 
                             @error('images')
                             <span class="invalid-feedback" role="alert">
@@ -146,7 +146,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary ml-3 px-5" type="submit">Crea</button>
+                    <button class="btn btn-info text-white d-block mx-auto mt-4 ml-3 px-5" type="submit">Crea</button>
                     </form>
 
               </div>

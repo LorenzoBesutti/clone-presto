@@ -45,7 +45,7 @@
      <script src="https://kit.fontawesome.com/08e7b077b9.js" crossorigin="anonymous"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  
+  @stack('script')
   <script>
   jQuery(document).ready(function($){
     $('.owl-carousel').owlCarousel({

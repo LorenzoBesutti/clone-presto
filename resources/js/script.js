@@ -154,7 +154,7 @@ $(document).ready(function () {
 
 
 
-document.addEventListener('scroll', () => {
+/* document.addEventListener('scroll', () => {
 	let navbar = document.querySelector('#navbar')
 
 	if (window.scrollY > 430) {
@@ -167,7 +167,7 @@ document.addEventListener('scroll', () => {
 		document.querySelectorAll('.text-bianco').forEach(e => e.classList.add('text-white'))
 	}
 })
-
+ */
 
 
 //logo presto che routa

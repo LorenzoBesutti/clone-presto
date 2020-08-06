@@ -91,12 +91,12 @@
        <div class="col-12 col-md-8 mt-5">
         <div class="row">
           @foreach ($adds as $add)
-          <div class=" col-12 col-md-6">
+          <div class=" col-12 col-md-6  ">
             <a href="#">
-              <img class="img-fluid rounded my-3 my-md-0 w-100" src="{{$add->images->first() ? $add->images->first()->getUrl(300,150) : 'http://placehold.it/300x150'}}" alt="">
+              <img class="img-fluid rounded my-3 my-md-0 w-100 h-100" src="{{$add->images->first() ? $add->images->first()->getUrl(400,300) : 'http://placehold.it/300x150'}}" alt="">
             </a>
           </div>
-          <div class="col-12 col-md-6 card cardLuna py-2 w-100 text-left mb-5">
+          <div class="col-12 col-md-6 card cardLuna py-2 w-100 text-left h-100">
             <h3>{{$add->title}}<span><i class="fa fa-heart float-right text-warning"></i></span></h3>
             <p class="mb-0">$ 20,00</p>
             <div class="mb-3 mt-0">

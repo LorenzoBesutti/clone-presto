@@ -36,198 +36,58 @@
      </div>
     </form> 
     </div>
-     <div class="col-12 col-md-6">
-
-      <ul>
-
-      </ul>
-     </div>
+     
 
     
   </div>
 </div>
 
-
-
-{{-- <div class="container mt-5 pt-5 sfondo_research">
-  <div class="row mr-5 pr-5 d_flex">
-    <div class="col-12 col-md-4 offset-md-4 mr-5 pr-5 inline_form">
-     
-        <div class="form-group ">
-           <form class="inline_form" action="{{route('search')}}" method="GET">
-
-            <input name="q" class="p-2 px-5 text-center mr-2"   type="text" placeholder="  motori,cucina..." name="search">
-            <button class="py-2 px-4" type="submit"><i class="fa fa-search "></i></button>
-     
-          </form> 
-        </div>
-      <ul>
-        <li class="none" >
-
-
-        </li>
-      
-        <li class="nav-item dropdown lista_puntini sfondo_link">
-          <a id="categoriesDropDown" class="nav-link dropdown-toggle text-center mr-4 seleziona_categoria" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-             Seleziona la categoria <i class="fas fa-caret-right ml-5"></i>
-          </a>
-
-          <div class="dropdown-menu dropdown-toggle " aria-labelledby="categoriesDropDown">
-              @foreach($categories as $category)
-          <a href="{{route('public.adds.category', [$category->name, $category->id])}}" class="nav-link">
-          {{$category->name}}</a>
-              @endforeach
-           </div>
-      </li> --}}
-  
-
-      {{-- </ul>
-    </div>
-  </div>
-</div> --}}
-
-{{-- <div class="container my-5 py-5">
-    <div class="row">
-        @foreach ($adds as $add)
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="fotoannuncio"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  {{$add->title}}
-                  </h4>
-                 <p class="card-text">{{$add->description}}</p>
-              </div>
-              <div class="card-footer d-flex justify-content-between">
-              <strong>Category: <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">
-                {{$add->category->name}}</a></strong>
-              <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i>
-              </div>
-            </div>
-          </div>
-        @endforeach
-        
-    </div>
-</div>
- --}}
 
  <h2 class="title-hr text-center mb-5"><hr class="mr-2">ultimi annunci<hr class="ml-2"></h2>
  
- <div class="container">
-   <div class="row justify-content-center">
-     @foreach($adds as $add)
-     <div class="card  col-12 col-md-6 col-lg-3 my-5 mx-4 p-0 shadow-lg" style="border-radius:50px 0px; " >
-     <img class="card-img-top img-fluid  position-relative" style="border-radius:50px 0px 0px 0px;" src="{{$add->images->first()->getUrl(300, 150)}}" alt="Card image cap">
-      <i class="fa fa-heart fa-2x text-warning position-absolute " style="margin-left: 80%; margin-top:20px;"></i> 
-       <div class="card-body" style="background-color: rgba(250, 250, 3, 0.05);">
-       <h5 class="card-title p-0">{{$add->title}}</h5>
-        <div class="row mb-4 mt-2">
-          <div class="col-6  text-secondary">
-            <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
-           
-          </div>
-            
-          <div class="col-6 text-right text-primary font-weight-bold">
-            $ 20,00
-          </div>
-    
-        </div>
-        <div class="row">
-          <div class="col-12">
-            
-            <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
-          </div>
-        </div>
-        
-        <div class="col-12 my-4 pl-0">
-          <i class="fas fa-star text-warning"></i>
+ 
+
+<div class="container">
+  <div class="row justify-content-center">
+    @foreach($adds as $add)
+    <div class="col-12 col-md-6 col-lg-4 my-4">
+    <div class="card smusso h-100 shadow mx-auto" style="width: 18rem;">
+      <img src="{{$add->images->first()->getUrl(300, 150)}}" class="card-img-top smussox" alt="...">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title p-0 textCustom">{{$add->title}}</h5>
+        <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+
+        <i class="text-right">{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+      <div class="mb-1">
+        <i class="fas fa-star text-warning"></i>
           <i class="fas fa-star text-warning"></i>
           <i class="fas fa-star text-warning"></i>
           <i class="fas fa-star text-warning"></i>
           <i class="fas fa-star text-light"></i>
-        </div>
-        <p class="card-text">{{$add->description}}</p>
-        <a href="{{route('public.detail', compact('add'))}}" class="btn border-primary w-100 text-center text-primary mb-5">Scopri di più</a>
       </div>
-     </div>
-     @endforeach
-   </div>
- 
-</div>
- 
- {{-- <div class="container">
-   <div class="row justify-content-center">
-    @foreach ($adds as $add) --}}
-    
-    {{-- <div class="cards">
-     <div class="col-12 col-md-6 col-lg-4">
-      <div class="Card mx-3 hover_card shadow d-block mx-auto">
-        
-        <div class="card__image-holder">
-          @foreach($add->images as $image)
-          <img class="card__image" src="{{$image->getUrl(300, 150)}}" alt="wave" />
-          @endforeach
-        </div>
-        
-        <div class="card-title">
-          <a href="#" class="">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2 class="text-center">
-              {{$add->title}}
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-          {{$add->description}}
-         </div>
-          <div class="card-flap flap2">
-              <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
-              <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
-         <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block mt-3">Dettaglio</a>
-
-          </div>
-        </div>
-      </div>
-
-     </div>
-    </div> --}}
-    {{--  @endforeach
-   </div>
- </div>  --}}
-
-  {{-- @foreach ($adds as $add)
-    
-    <div class="cards d-inline mx-5 px-4">
-
-      <div class="Card my-5 mx-3 hover_card shadow">
-        <div class="card__image-holder">
-          <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
-        </div>
-        <div class="card-title">
-          <a href="#" class="">
-            <span class="left"></span>
-            <span class="right"></span>
-          </a>
-          <h2 class="text-center">
-              {{$add->title}}
-          </h2>
-        </div>
-        <div class="card-flap flap1">
-          <div class="card-description">
-          {{$add->description}}
-         </div>
-          <div class="card-flap flap2">
-              <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
-              <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
-         <a href="{{route('public.detail', compact('add'))}}" class="btn btn-primary d-block mt-3">Dettaglio</a>
-
-          </div>
-        </div>
+      <p class="card-text">{{$add->description}}</p>
+      <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center  mt-auto">Scopri di più</a>
       </div>
     </div>
-  @endforeach --}}
+  </div>
+     @endforeach
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
 
 
   <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">Articoli<hr class="ml-2"></h2>
@@ -311,5 +171,24 @@ Contenedor Slider
   <ul id="control-buttons" class="control-buttons"></ul>
 </section>
 
+@push('script')
+<script>
+  let navbar = document.querySelector('#navbar')
+  navbar.classList.remove('bg-light')
+  document.querySelectorAll('.text-bianco').forEach(e => e.classList.add('text-white'));
+   document.addEventListener('scroll', () => {
+	
+	if (window.scrollY > 430) {
+		navbar.classList.add('bg-light')
+		navbar.classList.add('navbar-border')
+		document.querySelectorAll('.text-bianco').forEach(e => e.classList.remove('text-white'));
+	} else {
+		navbar.classList.remove('bg-light')
+		navbar.classList.remove('navbar-border')
+		document.querySelectorAll('.text-bianco').forEach(e => e.classList.add('text-white'))
+	}
+})
 
+</script>
+@endpush
 @endsection
