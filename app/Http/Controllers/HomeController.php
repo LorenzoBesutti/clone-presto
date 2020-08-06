@@ -10,6 +10,7 @@ use App\Http\Requests\AddRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use App\Jobs\GoogleVisionSafeSearchImage;
 
 class HomeController extends Controller
 {
@@ -83,6 +84,8 @@ class HomeController extends Controller
             $i->add_id = $a->id;
 
             $i->save();
+
+            dispatch(new GoogleVisionSafeSearchImage($i->id));
         
         }
 

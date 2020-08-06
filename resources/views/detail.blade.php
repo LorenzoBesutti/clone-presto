@@ -145,7 +145,7 @@
       <div class="row justify-content-center">
       <div class="owl-carousel owl-theme mt-5">
         @foreach ($announcements as $announcement)
-        <div class="item mostra">
+        <div class="item mostra ">
           <div class="cards ">
             <div class="col-12 col-md-6 col-lg-4 ">
              <div class="Card mx-3 hover_card shadow d-block mx-auto">
