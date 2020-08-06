@@ -2,13 +2,6 @@
 
 namespace App\Jobs;
 
-<<<<<<< HEAD
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
-=======
 use App\AddImage;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
@@ -16,32 +9,22 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
->>>>>>> 6095107fdeb89f7bcd2ae48451cfb8a7023a1988
 
 class GoogleVisionSafeSearchImage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-<<<<<<< HEAD
-=======
 
     private $add_image_id;
 
->>>>>>> 6095107fdeb89f7bcd2ae48451cfb8a7023a1988
     /**
      * Create a new job instance.
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function __construct()
-    {
-        //
-=======
     public function __construct($add_image_id)
     {
         $this->add_image_id = $add_image_id;
->>>>>>> 6095107fdeb89f7bcd2ae48451cfb8a7023a1988
     }
 
     /**
@@ -51,9 +34,6 @@ class GoogleVisionSafeSearchImage implements ShouldQueue
      */
     public function handle()
     {
-<<<<<<< HEAD
-        //
-=======
         $i = AddImage::find($this->add_image_id);
 
         if (!$i){
@@ -88,6 +68,5 @@ class GoogleVisionSafeSearchImage implements ShouldQueue
     $i->racy = $likelihoodName[$racy];
 
     $i->save();
->>>>>>> 6095107fdeb89f7bcd2ae48451cfb8a7023a1988
     }
 }
