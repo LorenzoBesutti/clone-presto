@@ -235,6 +235,16 @@
                       racy: {{$image->racy}}<br>
                       {{-- {{$image->file}}<br>
                       {{Storage::url($image->file)}}<br> --}}
+                      <b>Labels</b><br>
+                      <ul>
+                          @if ($image->labels)
+                          @foreach ($image->labels as $label)
+                            <li>{{$label}}</li>
+                              
+                          @endforeach
+                              
+                          @endif
+                      </ul>
                     
                     </div>
                     @endforeach
