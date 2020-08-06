@@ -235,7 +235,7 @@
                       racy: {{$image->racy}}<br>
                       {{-- {{$image->file}}<br>
                       {{Storage::url($image->file)}}<br> --}}
-                      <b>Labels</b><br>
+                      <b>labels</b><br>
                       <ul>
                           @if ($image->labels)
                           @foreach ($image->labels as $label)
