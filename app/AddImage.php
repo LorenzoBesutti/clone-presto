@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\Storage;
 
 class AddImage extends Model
 {
-    protected $casts = ['labels'=>'array'];
+    protected $casts = [
+      'labels'=>'array',
+    ];
 
     public function add(){
       return  $this->belongsTo('App\Add');

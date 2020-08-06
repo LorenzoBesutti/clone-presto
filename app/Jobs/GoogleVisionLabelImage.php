@@ -9,7 +9,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
-use Google\Cloud\Core\ServiceBuilder;
+use Google\Cloud\Core\ServiceBuilder; 
 
 class GoogleVisionLabelImage implements ShouldQueue
 {
