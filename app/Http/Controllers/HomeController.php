@@ -10,6 +10,7 @@ use App\Http\Requests\AddRequest;
 use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use App\Jobs\GoogleVisionRemoveFaces;
 use Illuminate\Support\Facades\Storage;
 use App\Jobs\GoogleVisionSafeSearchImage;
 
@@ -86,9 +87,13 @@ class HomeController extends Controller
 
             $i->save();
 
-            dispatch(new GoogleVisionSafeSearchImage($i->id));
-            dispatch(new GoogleVisionLabelImage($i->id));
-        
+            
+            GoogleVisionSafeSearchImage::withChain([
+                new GoogleVisionLabelImage($i->id),
+                new GoogleVisionRemoveFaces($i->id),
+                new ResizeImage($i->file, 300, 150),
+                new ResizeImage($i->file, 400, 300)
+            ])->dispatch($i->id);        
         }
 
         File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
