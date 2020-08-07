@@ -60,13 +60,6 @@ class GoogleVisionRemoveFaces implements ShouldQueue
             $h = $bounds[2][1] - $bounds[0][1];
 
             $image = Image::load($srcPath);
-
-            $image->watermark('resources/img/watermark.png')
-            ->watermarkPosition(Manipulations::POSITION_LEFT)
-            ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT)
-            ->watermarkHeight(50, Manipulations::UNIT_PERCENT) 
-            ->watermarkFit(Manipulations::FIT_CONTAIN)     
-            ->watermarkWidth(100, Manipulations::UNIT_PERCENT);
                    
 
             $image->watermark(base_path('resources/img/smile.png'))
@@ -75,6 +68,13 @@ class GoogleVisionRemoveFaces implements ShouldQueue
             ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
             ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
             ->watermarkFit(Manipulations::FIT_STRETCH);
+
+            // $image->watermark('watermark.png')
+            // ->watermarkPosition(Manipulations::POSITION_LEFT)
+            // ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT)
+            // ->watermarkHeight(50, Manipulations::UNIT_PERCENT) 
+            // ->watermarkFit(Manipulations::FIT_CONTAIN)     
+            // ->watermarkWidth(100, Manipulations::UNIT_PERCENT);
            
 
             
