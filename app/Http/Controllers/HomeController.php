@@ -63,6 +63,8 @@ class HomeController extends Controller
 
         $images = array_diff($images, $removedImages);
 
+        
+
         foreach ($images as $image) {
             $i = new AddImage();
 
@@ -70,17 +72,7 @@ class HomeController extends Controller
             $newFileName = "public/adds/{$a->id}/{$fileName}";
             Storage::move($image, $newFileName);
 
-            dispatch(new ResizeImage(
-                $newFileName,
-                300,
-                150
-            ));
-
-            dispatch(new ResizeImage(
-                $newFileName,
-                400,
-                300
-            ));
+           
 
             $i->file = $newFileName;
             $i->add_id = $a->id;
