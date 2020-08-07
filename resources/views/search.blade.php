@@ -19,51 +19,32 @@
 </div>
 
 @if($adds->isNotEmpty())
-<div class="container my-5 py-5">
-    <div class="row justify-content-center">
-        @foreach ($adds as $add)
-        <div class="card  col-12 col-md-6 col-lg-3 my-5 mx-4 p-0 shadow-lg" style="border-radius:50px 0px; " >
-        <img class="card-img-top img-fluid  position-relative" style="border-radius:50px 0px 0px 0px;" src="{{$add->images->first() ? $add->images->first()->getUrl(300,150) : 'http://placehold.it/300x150'}}" alt="Card image cap">
-           <i class="fa fa-heart fa-2x text-warning position-absolute " style="margin-left: 80%; margin-top:20px;"></i> 
-            <div class="card-body" style="background-color: rgba(250, 250, 3, 0.05);">
-            <h5 class="card-title p-0">{{$add->title}}</h5>
-             <div class="row mb-4 mt-2">
-               <div class="col-6  text-secondary">
-                 <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
-                
-               </div>
-                 
-               <div class="col-6 text-right text-primary font-weight-bold">
-                 $ 20,00
-               </div>
-         
-             </div>
-             <div class="row">
-               <div class="col-12">
-                 
-                 <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
-               </div>
-             </div>
-             
-             <div class="col-12 my-4 pl-0">
-               <i class="fas fa-star text-warning"></i>
-               <i class="fas fa-star text-warning"></i>
-               <i class="fas fa-star text-warning"></i>
-               <i class="fas fa-star text-warning"></i>
-               <i class="fas fa-star text-light"></i>
-             </div>
-             <p class="card-text">{{$add->description}}</p>
-             <a href="{{route('public.detail', compact('add'))}}" class="btn border-primary w-100 text-center text-primary mb-5">Scopri di più</a>
-           </div>
-          </div>
-        @endforeach
-        
-    </div>
-    {{-- <div class="row justify-content-center">
-      <div class="col-md-8">
-          {{$adds->links()}}
+
+<div class="container">
+  <div class="row justify-content-center">
+    @foreach($adds as $add)
+    <div class="col-12 col-md-6 col-lg-4 my-4">
+    <div class="card smusso h-100 shadow mx-auto" style="width: 18rem;">
+      <img src="{{$add->images->first()->getUrl(300, 150)}}" class="card-img-top smussox" alt="...">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title p-0 textCustom">{{$add->title}}</h5>
+        <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+
+        <i class="text-right">{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+      <div class="mb-1">
+        <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-light"></i>
       </div>
-    </div> --}}
+      <p class="card-text bio">{{$add->description}}</p>
+      <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center  mt-auto">Scopri di più</a>
+      </div>
+    </div>
+  </div>
+     @endforeach
+  </div>
 </div>
 
 @else

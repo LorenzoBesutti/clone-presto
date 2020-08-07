@@ -15,12 +15,12 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 
-                <li class="nav-item ml-3">
+                <li class="nav-item ml-md-3 my-2 my-md-0">
                 <a href="{{route('add.new')}}" class="btn btn-info rounded"><img src="/media/plus.png" alt="" height="24px"> {{__('ui.inserisciAnnuncio')}}</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a id="categoriesDropDown" class="nav-link  ml-4 text-bianco " href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre data-toggle="modal" data-target="#exampleModal">
+                    <a id="categoriesDropDown" class="nav-link ml-md-4 text-bianco " href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre data-toggle="modal" data-target="#exampleModal">
                         {{__('ui.selezionaCategoria')}} <i class="fas fa-caret-right ml-2"></i>
                     </a>
           

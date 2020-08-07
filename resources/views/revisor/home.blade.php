@@ -228,23 +228,36 @@
                     <img src="{{$image->getUrl(300, 150)}}" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
                     </div>
                     <div class="col-12 col-md-8">
-                      adult: {{$image->adult}}<br>
-                      medical: {{$image->medical}}<br>
-                      spoof: {{$image->spoof}}<br>
-                      violence: {{$image->violence}}<br>
-                      racy: {{$image->racy}}<br>
-                      {{-- {{$image->file}}<br>
-                      {{Storage::url($image->file)}}<br> --}}
-                      <b>labels</b><br>
-                      <ul>
+                        <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr class="text-center bgAnnuncio">
+                                  <td class="px-1">Contenuto adulto</td>
+                                  <td>Medical</td>
+                                  <td>Caricature</td>
+                                  <td>Violenza</td>
+                                  <td>Razzismo</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="bordi-tabella"><span id="semaforo">{{$image->adult}}</span></td>
+                                    <td class="bordi-tabella"><span id="semaforo">{{$image->medical}}</span></td>
+                                    <td class="bordi-tabella"><span id="semaforo">{{$image->spoof}}</td>
+                                    <td class="bordi-tabella"><span id="semaforo">{{$image->violence}}</td>
+                                    <td class="bordi-tabella"><span id="semaforo">{{$image->racy}}</td>
+                                  </tr>
+                            </tbody>
+                        </table>
+                    </div>
                           @if ($image->labels)
+                          <div class="mb-5">
                           @foreach ($image->labels as $label)
-                            <li>{{$label}}</li>
+                            <span class="bgGrigio px-1 ml-1 rounded">#{{$label}}
+                            </span> 
                               
                           @endforeach
+                        </div>
                               
                           @endif
-                      </ul>
                     
                     </div>
                     @endforeach
@@ -290,10 +303,6 @@
        </div>
    </div>
      
-    
-
-
-  
 
 
 @else

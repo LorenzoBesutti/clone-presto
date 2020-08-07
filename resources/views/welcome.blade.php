@@ -156,6 +156,9 @@ Contenedor Slider
   <ul id="control-buttons" class="control-buttons"></ul>
 </section>
 
+
+
+
 @push('script')
 <script>
   AOS.init();

@@ -41077,6 +41077,29 @@ var bio = document.querySelectorAll('.bio').forEach(function (e) {
     var string = e.innerHTML.split(" ").slice(0, 12);
     e.innerHTML = string.join(" ") + ' [...]';
   }
+}); //semafori revisore
+
+var semaforo = document.querySelectorAll('#semaforo');
+semaforo.forEach(function (e) {
+  console.log(e.innerHTML);
+
+  if (e.innerHTML == "VERY_UNLIKELY" || e.innerHTML == "UNLIKELY") {
+    e.innerHTML = "<i class='fas fa-circle' style='color:green'></i>";
+  }
+});
+semaforo.forEach(function (e) {
+  console.log(e.innerHTML);
+
+  if (e.innerHTML == "POSSIBLE") {
+    e.innerHTML = "<i class='fas fa-circle' style='color:yellow'></i>";
+  }
+});
+semaforo.forEach(function (e) {
+  console.log(e.innerHTML);
+
+  if (e.innerHTML == "VERY_LIKELY" || e.innerHTML == "LIKELY") {
+    e.innerHTML = "<i class='fas fa-circle' style='color:yellow'></i>";
+  }
 });
 
 /***/ }),

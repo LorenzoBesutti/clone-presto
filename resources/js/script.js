@@ -195,5 +195,29 @@ let bio = document.querySelectorAll('.bio').forEach(e =>{
     }
 })
 
+//semafori revisore
+
+let semaforo = document.querySelectorAll('#semaforo')
+
+semaforo.forEach(e =>{
+	console.log(e.innerHTML);
+	if(e.innerHTML == "VERY_UNLIKELY" || e.innerHTML == "UNLIKELY"){
+		e.innerHTML="<i class='fas fa-circle' style='color:green'></i>"
+	}
+})
+
+semaforo.forEach(e =>{
+	console.log(e.innerHTML);
+	if(e.innerHTML == "POSSIBLE"){
+		e.innerHTML="<i class='fas fa-circle' style='color:yellow'></i>"
+	}
+})
+
+semaforo.forEach(e =>{
+	console.log(e.innerHTML);
+	if(e.innerHTML == "VERY_LIKELY" || e.innerHTML == "LIKELY"){
+		e.innerHTML="<i class='fas fa-circle' style='color:yellow'></i>"
+	}
+})
 
 
