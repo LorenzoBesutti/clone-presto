@@ -9,6 +9,10 @@
 body {
   padding: 0;
   margin: 0;
+  background: linear-gradient(180deg,rgb(27, 145, 180,0.7),rgba(255,255,255,1));
+
+           background-repeat: no-repeat;
+           background-size: cover;
 }
 
 #notfound {
@@ -120,9 +124,9 @@ body {
     <div class="notfound">
         <div class="notfound-404">
             <h1>Oops!</h1>
-            <h2>404 - Page not Found</h2>
+            <h2>404 - Pagina non trovata</h2>
         </div>
-        <a href="{{route('public.index')}}"> Go back Home</a>
+        <a href="{{route('public.index')}}"> Torna alla Home</a>
     </div>
 </div>
 @endsection

@@ -1,16 +1,10 @@
 @extends('layouts.app')
 @section('style')
 <style>
-/* .card-header {
-    padding: 0.75rem 1.25rem !important;
-    margin-bottom: 0 !important;
-    background-color: rgba(250, 250, 3, 0.05) !important;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;
-  } */
 
   
-      body{
-        background: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
+  body{
+        background: linear-gradient(180deg,rgb(27, 145, 180,0.7),rgba(255,255,255,1));
         background-repeat: no-repeat;
         height: 100vh;
       }
@@ -22,7 +16,7 @@
 <div class="container my-5 py-5">
     <div class="row">
         <div class="col-12">
-        <h1 class="text-center">Annunci per categorie: {{$category->name}}</h1>
+        <h1 class="text-center">{{__('ui.categoria')}} {{$category->name}}</h1>
         </div>
     </div>
 </div>
@@ -30,13 +24,13 @@
 <div class=" container mt-5">
      <div class="row">
        <div class="col-12 col-md-4 ">
-        <h5 class=""> Filtra la tua Ricerca</h5>
+        <h5 class=""> {{__('ui.filtra')}}</h5>
         <div class="accordion bg-warning sticky-top mt-4" id="">
           <div class="card">
             <div class="card-header" id="">
               <h5 class="mb-0 ">
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Selezione la tua categoria
+                  {{__('ui.seleziona')}}
                 </button>
               </h5>
             </div>
@@ -62,7 +56,7 @@
             <div class="card-header" id="headingTwo">
               <h5 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-               Seleziona il Prezzo
+                  {{__('ui.selezionaPrezzo')}}
               </button>
               </h5>
             </div>
@@ -108,7 +102,7 @@
               </div>
             <p>{{$add->description}}</p>
             @if (Auth::check() && Auth::user()->name != $add->user->name)
-              <button class="btn btn-success">Conttata il venditore</button>
+              <button class="btn btn-success">{{__('ui.contatta')}}</button>
             @endif
             <p class="mt-3">
               <i class="fab fa-facebook-square fa-2x text-primary"></i>
@@ -137,7 +131,7 @@
 <div class="container my-5 py-5">
   <div class="row">
     <div class="col-12">
-    <div class="h2 text-center">non ci sono risultati per la categoria "{{$category->name}}"</div>
+    <div class="h2 text-center">{{__('ui.categoriaNo')}} "{{$category->name}}"</div>
     </div>
   </div>
 </div>

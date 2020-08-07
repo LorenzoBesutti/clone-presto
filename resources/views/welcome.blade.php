@@ -29,7 +29,7 @@
       <form class="text-center" action="{{route('search')}}" method="GET">
         
       <div class="form-group">
-        <h4 class="mb-4 mr-5 pr-4">Cerca tra i nostri annunci</h4>
+        <h4 class="mb-4 mr-5 pr-4">{{__('ui.cerca')}}</h4>
          <input name="q" class="p-2 w-50 rounded-pill mr-2 shadow"   type="text" placeholder="motori, cucina..." name="search">
          <button class="py-2 px-4 rounded-custom search shadow" type="submit"><i class="fa fa-search "></i></button>
   
@@ -43,7 +43,7 @@
 </div>
 
 
- <h2 class="title-hr text-center mb-5"><hr class="mr-2">ultimi annunci<hr class="ml-2"></h2>
+ <h2 class="title-hr text-center mb-5"><hr class="mr-2">{{__('ui.ultimi')}}<hr class="ml-2"></h2>
  
  
 
@@ -66,7 +66,7 @@
           <i class="fas fa-star text-light"></i>
       </div>
       <p class="card-text bio">{{$add->description}}</p>
-      <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center  mt-auto">Scopri di più</a>
+      <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center  mt-auto">{{__('ui.dettaglio')}}</a>
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@
 </div>
 
 
-  <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">articoli<hr class="ml-2"></h2>
+  <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">{{__('ui.articoli')}}<hr class="ml-2"></h2>
 
   <div class="container my-5 py-5">
     <div class="row">
@@ -86,7 +86,7 @@
         <p class="lead">
           PRESTO MAGAZINE
         </p>
-        <h3 class="text-left font-weight-bold">CI MERITIAMO UNA SECONDA OCCASIONE</h3>
+        <h3 class="text-left font-weight-bold">{{__('ui.occasione')}}</h3>
         <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugiat tempora ullam 
           voluptatum magnam, cum, dolorem culpa esse, qui perspiciatis sed eum iusto odio quam! Harum tenetur neque 
           voluptate cum!
@@ -98,7 +98,7 @@
   <div class="container mt-5 banner">
     <div class="row h-100 align-items-center">
       <div class="col-12 col-md-5 text-center">
-        <h3 class="">Prova presto da mobile</h3>
+        <h3 class="">{{__('ui.mobile')}}</h3>
         <a href="" class=""><img src="/media/google-play-badge.png" alt="" height="55px"></a>
         <a href="" class=""><img src="/media/appstore.png" alt="" height="40px"></a>       
       </div>
@@ -106,7 +106,7 @@
   </div>
  
  
- <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">le pagine più visitate<hr class="ml-2"></h2>
+ <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">{{__('ui.visitate')}}<hr class="ml-2"></h2>
 
 <!-- ==================================== 
 Contenedor Slider 
@@ -117,7 +117,7 @@ Contenedor Slider
     <a href="" class=""><img src="/media/50off.jpeg" title="" alt="50off"></a>
 
     <div class="caption">
-      <h2 class="slider-title">offerta del 50% </h2>
+      <h2 class="slider-title">{{__('ui.5opercento')}} </h2>
       <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat est. Alias illo hic quo nobis, aspernatur iste ut voluptate.</p>
     </div>
   </li>
@@ -126,7 +126,7 @@ Contenedor Slider
     <a href="" class=""><img src="/media/cashback.jpeg" title="" alt="cashback"></a>
 
     <div class="caption">
-      <h2 class="slider-title"> 10% cashback</h2>
+      <h2 class="slider-title"> {{__('ui.cashback')}}</h2>
       <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto placeat aliquid tempore harum, similique!</p>
     </div>
   </li>
@@ -135,7 +135,7 @@ Contenedor Slider
     <a href="" class=""><img src="/media/reso.jpeg" title="" alt="reso" width="800"></a>
 
     <div class="caption">
-      <h2 class="slider-title">istruzioni per il reso</h2>
+      <h2 class="slider-title">{{__('ui.reso')}}</h2>
       <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta laudantium voluptatem minima! Dolorum tempore dolores excepturi omnis provident. Commodi quis aperiam maiores, dolore a perferendis!</p>
     </div>
   </li>
@@ -144,7 +144,7 @@ Contenedor Slider
     <a href="" class=""><img src="/media/inscadenza.jpeg" title="" alt="inscadenza" width="900" class=""></a>
 
     <div class="caption">
-      <h2 class="slider-title">offerte in scadenza</h2>
+      <h2 class="slider-title">{{__('ui.scadenza')}}</h2>
       <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore dignissimos laudantium.</p>
     </div>
   </li>

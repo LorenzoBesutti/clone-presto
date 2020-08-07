@@ -1167,6 +1167,14 @@ footer {
   top: 35% !important;
 }
 
+@media screen and (max-width:550){
+  .margin-custom{
+    position: absolute;
+    display: inline !important;
+    
+  }
+}
+
 .cardLuna{
   background-color: rgba(0,172,193,0.2) !important;
   
@@ -1179,10 +1187,16 @@ footer {
 .inputWidth{
   width: 220%;
 }
+.inputWidthContact{
+  width: 75%;
+}
 
 @media only screen and (max-width: 550px) {
 
   .inputWidth{
+    width: 104.5%;
+  }
+  .inputWidthContact{
     width: 104.5%;
   }
 
@@ -1212,4 +1226,13 @@ footer {
 
 .bgGrigio{
   background-color: #ddd;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('/media/presto.mp4') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
 }

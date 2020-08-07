@@ -176,7 +176,7 @@
         
         <form class="form-signin">
             <div class="card-header bgAnnuncio">
-                <div class="text-md-right ">Annuncio # {{$add->id}}</div>
+                <div class="text-md-right ">{{__('ui.annuncio')}} # {{$add->id}}</div>
                 </div>
           <div class="card-body">
             
@@ -185,7 +185,7 @@
 
             <div class="row mt-5">
                 <label class="col-md-2">
-                    <h5 class="text-center">Utente</h5>
+                    <h5 class="text-center">{{__('ui.utente')}}</h5>
                 </label>
                 <div class="col-md-10">
                     # {{$add->user->id}},
@@ -199,7 +199,7 @@
 
               <div class="row ">
                 <div class="col-md-2">
-                    <h5 class="text-center">Titolo<h5>
+                    <h5 class="text-center">{{__('ui.Titolo')}}<h5>
                 </div>
                 <div class="col-md-10">
                     {{$add->title}}
@@ -209,7 +209,7 @@
               
             <div class="row">
                 <div class="col-md-2">
-                    <h5 class="text-center">Descrizione<h5>
+                    <h5 class="text-center">{{__('ui.descr')}}<h5>
                 </div>
                 <div class="col-md-10">
                     {{$add->description}}
@@ -232,11 +232,11 @@
                         <table class="table">
                             <tbody>
                                 <tr class="text-center bgAnnuncio">
-                                  <td class="px-1">Contenuto adulto</td>
-                                  <td>Medical</td>
-                                  <td>Caricature</td>
-                                  <td>Violenza</td>
-                                  <td>Razzismo</td>
+                                  <td class="px-1">{{__('ui.adulto')}}</td>
+                                  <td>{{__('ui.medico')}}</td>
+                                  <td>{{__('ui.caric')}}</td>
+                                  <td>{{__('ui.viol')}}</td>
+                                  <td>{{__('ui.razz')}}</td>
                                 </tr>
                                 <tr class="text-center">
                                     <td class="bordi-tabella"><span id="semaforo">{{$image->adult}}</span></td>
@@ -284,7 +284,7 @@
        <div class="col-md-4 reject">
          <form action="{{route('revisor.reject', $add->id)}}" method="POST">
             @csrf
-              <button type="submit" class="btn btn-danger px-3">Reject</button>
+              <button type="submit" class="btn btn-danger px-3">{{__('ui.rifiuta')}}</button>
         </form> 
        </div>
     </div>  
@@ -298,7 +298,7 @@
      <div class="col-md-4 text-right accept">
         <form action="{{route('revisor.accept', $add->id)}}" method="POST">
             @csrf
-              <button type="submit" class="btn btn-success  position-sticky">Accept</button>
+              <button type="submit" class="btn btn-success  position-sticky">{{__('ui.rccett')}}</button>
         </form>
        </div>
    </div>
@@ -309,7 +309,7 @@
 
   <div class="container mt-5">
       <div class="row justify-content-center">
-    <h3 class="text-center text-white mt-5">Non ci sono annunci da revisionare!</h3>
+    <h3 class="text-center text-white mt-5">{{__('ui.norevisione')}}</h3>
      </div>
  </div>
 @endif    

@@ -49,11 +49,11 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-4 text-center mt-5 mb-2">
-            <h4 class="footer-list-header textFooter">Navigazione</h4>
-          <p><a href='' class="generic-anchor footer-list-anchor">CHI SIAMO</a></p>
-          <p><a href='' class="generic-anchor footer-list-anchor">OFFERTE</a></p>
-          <p><a href='' class="generic-anchor footer-list-anchor">DIVENTA UN REVISORE</a></p>
-          <p><a href='' class="generic-anchor footer-list-anchor">LAVORA CON NOI</a></p>
+            <h4 class="footer-list-header textFooter">{{__('ui.navigazione')}}</h4>
+          <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.chi')}}</a></p>
+          <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.offerte')}}</a></p>
+          <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.diventa')}}</a></p>
+          <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.lavoraconnoi')}}</a></p>
       </div>
       <div class="col-12 col-md-4 text-center my-auto mb-2">
         
@@ -64,11 +64,11 @@
       </div>
       <div class="col-12 col-md-4 text-center mt-5 mb-2">
         <h4 class="footer-list-header textFooter">Help</h4></li>
-        <p><a href='' class="generic-anchor footer-list-anchor">CONTATTI</a></p>
+        <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.contatto')}}</a></p>
         <p><a href='' class="generic-anchor footer-list-anchor">FAQ</a></p>
-        <p><a href='' class="generic-anchor footer-list-anchor">DOVE SIAMO</a></p>
+        <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.dove')}}</a></p>
         <p><a href='' class="generic-anchor footer-list-anchor">NEWSLETTER</a></p>
-        <p><a href='' class="generic-anchor footer-list-anchor">STATO DEGLI ORDINI</a></p>
+        <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.statoordini')}}</a></p>
       </div>
     </div>
   </div>
