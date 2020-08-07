@@ -26,14 +26,14 @@
     <div class="row justify-content-center my-5">
         <div class="col-md-8">
             <div class="card-wrap">
-                <h1 class="text-center pt-4 text-white">Contattaci</h1>
+                <h1 class="text-center pt-4 text-white">{{__('ui.contattaci')}}</h1>
 
                 <div class="card-body py-5">
                     <form method="POST" action="{{ route('public.submit') }}">
                         @csrf
 
                         <div class="form-group row ">
-                            <label for="password" class=" col-md-4 col-form-label text-md-right text-white"><h6>Nome e Cognome</h6></label>
+                            <label for="password" class=" col-md-4 col-form-label text-md-right text-white"><h6>{{__('ui.nome')}}</h6></label>
                            
                             <div class="col-md-6 col">
                                 <input name="name" id="password" type="text" class="bordo1_password w-75 bg-transparent"  required placeholder="Name&Surname">
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="form-group row ">
-                            <label for="email" class=" col-md-4 col-form-label text-md-right text-white"><h6>Telefono</h6></label>
+                            <label for="email" class=" col-md-4 col-form-label text-md-right text-white"><h6>{{__('ui.telefono')}}</h6></label>
                            
                             <div class="col-md-6 col">
                                 <input name="phone" id="email" type="phone" class="bordo1_password w-75 bg-transparent"  placeholder="mobile" required autocomplete="email" autofocus>
@@ -63,10 +63,10 @@
                         </div>
 
                         <div class="form-group row ">
-                            <label for="body" class=" col-md-4 col-form-label text-md-right text-white"><h6>Chiedi</h6></label>
+                            <label for="body" class=" col-md-4 col-form-label text-md-right text-white"><h6>{{__('ui.chiedi')}}</h6></label>
                            
                             <div class="col-md-6 col">
-                                <textarea name="description" class="inputWidth" id="description"  rows="7" required autofocus class="@error('body') is-invalid @enderror">{{old('description')}}</textarea>
+                                <textarea name="description" class="inputWidthContact" id="description"  rows="7" required autofocus class="@error('body') is-invalid @enderror">{{old('description')}}</textarea>
                                 @error('description')
                                 <span class="invalid-feedback" role="alert">
                                   <strong>{{$message}}</strong>
@@ -81,7 +81,7 @@
 
                         
 
-                       <button type="submit" class="btn btn-warning d-block mx-auto mt-4">Invia<i class="fas fa-caret-right ml-2"></i></button>
+                       <button type="submit" class="btn btn-warning d-block mx-auto mt-4">{{__('ui.Invia')}}<i class="fas fa-caret-right ml-2"></i></button>
 
                                 
                             

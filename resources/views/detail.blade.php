@@ -80,7 +80,7 @@
          </p>
          @if (Auth::check() && Auth::user()->name != $add->user->name)
 
-         <button class="btn btn-success w-50 ml-5 ml-md-0 my-5">Contatta il venditore</button>
+         <button class="btn btn-success w-50 ml-5 ml-md-0 my-5">{{__('ui.contatta')}}</button>
      
          @endif
          @auth
@@ -88,8 +88,8 @@
     @if (Auth::user()->name == $add->user->name)
 
     <div class="d-flex justify-content-center">
-    <button class="btn btn-warning w-50 my-5 mr-4 float-left">Modifica annuncio</button>
-    <button class="btn btn-danger w-50 my-5 float-right">Rimuovi annuncio</button>
+    <button class="btn btn-warning w-50 my-5 mr-4 float-left">{{__('ui.modifica')}}</button>
+    <button class="btn btn-danger w-50 my-5 float-right">{{__('ui.elimina')}}</button>
     </div>  
 
   @endif
@@ -101,7 +101,7 @@
 
    @if ($adds->isNotEmpty())
     <div class="container">
-      <h3 class="text-center">Altri annunci dello stesso utente:</h3>
+      <h3 class="text-center">{{__('ui.dallostesso')}}:</h3>
     
    <div class="owl-carousel owl-theme mt-5">
      @foreach($adds as $add)
@@ -130,7 +130,7 @@
     @if ($announcements->isNotEmpty())
 
     <div class="container mb-5 mt-3">
-      <h3 class="text-center text-dark">Potrebbero interessarti anche:</h3>
+      <h3 class="text-center text-dark">{{__('ui.stessacat')}}:</h3>
       
       <div class="owl-carousel owl-theme mt-5">
         @foreach ($announcements as $announcement)
