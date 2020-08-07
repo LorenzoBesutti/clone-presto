@@ -1,16 +1,10 @@
 @extends('layouts.app')
 @section('style')
 <style>
-/* .card-header {
-    padding: 0.75rem 1.25rem !important;
-    margin-bottom: 0 !important;
-    background-color: rgba(250, 250, 3, 0.05) !important;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important;
-  } */
 
   
-      body{
-        background: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
+  body{
+        background: linear-gradient(180deg,rgb(27, 145, 180,0.7),rgba(255,255,255,1));
         background-repeat: no-repeat;
         height: 100vh;
       }

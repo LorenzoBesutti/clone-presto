@@ -12106,6 +12106,13 @@ footer {
   top: 35% !important;
 }
 
+@media screen and (max-width: 550) {
+  .margin-custom {
+    position: absolute;
+    display: inline !important;
+  }
+}
+
 .cardLuna {
   background-color: rgba(0, 172, 193, 0.2) !important;
 }

@@ -66,7 +66,7 @@
                             <label for="body" class=" col-md-4 col-form-label text-md-right text-white"><h6>Chiedi</h6></label>
                            
                             <div class="col-md-6 col">
-                                <textarea name="description" id="description" cols="40" rows="7" required autofocus class="@error('body') is-invalid @enderror">{{old('description')}}</textarea>
+                                <textarea name="description" class="inputWidth" id="description"  rows="7" required autofocus class="@error('body') is-invalid @enderror">{{old('description')}}</textarea>
                                 @error('description')
                                 <span class="invalid-feedback" role="alert">
                                   <strong>{{$message}}</strong>

@@ -41098,7 +41098,7 @@ semaforo.forEach(function (e) {
   console.log(e.innerHTML);
 
   if (e.innerHTML == "VERY_LIKELY" || e.innerHTML == "LIKELY") {
-    e.innerHTML = "<i class='fas fa-circle' style='color:yellow'></i>";
+    e.innerHTML = "<i class='fas fa-circle' style='color:red'></i>";
   }
 });
 
@@ -41122,8 +41122,8 @@ semaforo.forEach(function (e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

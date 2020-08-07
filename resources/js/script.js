@@ -216,7 +216,7 @@ semaforo.forEach(e =>{
 semaforo.forEach(e =>{
 	console.log(e.innerHTML);
 	if(e.innerHTML == "VERY_LIKELY" || e.innerHTML == "LIKELY"){
-		e.innerHTML="<i class='fas fa-circle' style='color:yellow'></i>"
+		e.innerHTML="<i class='fas fa-circle' style='color:red'></i>"
 	}
 })
 
