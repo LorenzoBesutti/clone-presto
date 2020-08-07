@@ -11833,7 +11833,7 @@ div.Card.show div.flap2 {
 }
 
 .search:hover {
-  background-color: #1196BF;
+  background-color: #6cb2eb;
   color: white;
 }
 
@@ -12012,20 +12012,28 @@ footer {
 }
 
 .banner {
-  height: 300px !important;
+  height: 300px;
   background-image: url("/media/app.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -150px;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 768px) {
   .banner {
     height: 400px !important;
-    background-image: url("/media/app.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: 0px -150px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .banner {
+    height: 400px !important;
+    background-position: -80px -150px;
+  }
+
+  .banner h3 {
+    font-size: 20px;
   }
 }
 

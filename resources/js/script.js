@@ -187,4 +187,13 @@ document.addEventListener('scroll', () => {
 })
 
 
+let bio = document.querySelectorAll('.bio').forEach(e =>{
+    if (e.innerHTML.split(" ").length > 12) {
+
+        let string = e.innerHTML.split(" ").slice(0,12);
+        e.innerHTML = string.join(" ") + ' [...]';
+    }
+})
+
+
 

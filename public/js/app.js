@@ -41072,6 +41072,12 @@ document.addEventListener('scroll', function () {
     navbar.classList.remove("navbarDesktop");
   }
 });
+var bio = document.querySelectorAll('.bio').forEach(function (e) {
+  if (e.innerHTML.split(" ").length > 12) {
+    var string = e.innerHTML.split(" ").slice(0, 12);
+    e.innerHTML = string.join(" ") + ' [...]';
+  }
+});
 
 /***/ }),
 
@@ -41093,8 +41099,8 @@ document.addEventListener('scroll', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

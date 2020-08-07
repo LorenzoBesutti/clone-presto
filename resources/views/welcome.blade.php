@@ -30,7 +30,7 @@
         
       <div class="form-group">
         <h4 class="mb-4 mr-5 pr-4">Cerca tra i nostri annunci</h4>
-         <input name="q" class="p-2 text-center padding-custom rounded-pill mr-2 shadow"   type="text" placeholder="motori, cucina..." name="search">
+         <input name="q" class="p-2 w-50 rounded-pill mr-2 shadow"   type="text" placeholder="motori, cucina..." name="search">
          <button class="py-2 px-4 rounded-custom search shadow" type="submit"><i class="fa fa-search "></i></button>
   
      </div>
@@ -51,7 +51,7 @@
   <div class="row justify-content-center">
     @foreach($adds as $add)
     <div class="col-12 col-md-6 col-lg-4 my-4">
-    <div class="card smusso h-100 shadow mx-auto" style="width: 18rem;">
+    <div class="card smusso h-100 shadow mx-auto" data-aos="flip-up" style="width: 18rem;">
       <img src="{{$add->images->first()->getUrl(300, 150)}}" class="card-img-top smussox" alt="...">
       <div class="card-body d-flex flex-column">
         <h5 class="card-title p-0 textCustom">{{$add->title}}</h5>
@@ -65,7 +65,7 @@
           <i class="fas fa-star text-warning"></i>
           <i class="fas fa-star text-light"></i>
       </div>
-      <p class="card-text">{{$add->description}}</p>
+      <p class="card-text bio">{{$add->description}}</p>
       <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center  mt-auto">Scopri di più</a>
       </div>
     </div>
@@ -75,22 +75,7 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
- 
- 
-
-
-  <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">Articoli<hr class="ml-2"></h2>
+  <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">articoli<hr class="ml-2"></h2>
 
   <div class="container my-5 py-5">
     <div class="row">
@@ -98,24 +83,24 @@
         <img src="/media/articolo.jpg" alt="articolo" class="img-fluid w-100">
       </div>
       <div class="col-12 col-md-6">
-        <p class="mt-5 text-left">
+        <p class="lead">
           PRESTO MAGAZINE
         </p>
         <h3 class="text-left font-weight-bold">CI MERITIAMO UNA SECONDA OCCASIONE</h3>
-        <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugiat tempora ullam voluptatum magnam, cum, dolorem culpa esse, qui perspiciatis sed eum iusto odio quam! Harum tenetur neque voluptate cum!</p>
+        <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugiat tempora ullam 
+          voluptatum magnam, cum, dolorem culpa esse, qui perspiciatis sed eum iusto odio quam! Harum tenetur neque 
+          voluptate cum!
+        </p>
       </div>
     </div>
   </div>
 
-  <div class="container my-5 banner">
-    <div class="row">
-      <div class="col-12 mt-5 pt-5">
-      <div class="ml-md-5 pl-3 pl-md-5">
-        <h3 class=" ml-5 pl-md-2 text-left">Prova presto da mobile</h3>
-        <a href="https://play.google.com/store/search?q=presto&c=apps" class="ml-5 mt-md-1"><img src="/media/google-play-badge.png" alt="" height="55px"></a>
-        <a href="https://www.apple.com/it/ios/app-store/" class="ml-2 mt-md-1"><img src="/media/appstore.png" alt="" height="40px"></a>
-      </div>
-       
+  <div class="container mt-5 banner">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 col-md-5 text-center">
+        <h3 class="">Prova presto da mobile</h3>
+        <a href="" class=""><img src="/media/google-play-badge.png" alt="" height="55px"></a>
+        <a href="" class=""><img src="/media/appstore.png" alt="" height="40px"></a>       
       </div>
     </div>
   </div>
@@ -173,6 +158,8 @@ Contenedor Slider
 
 @push('script')
 <script>
+  AOS.init();
+
   let navbar = document.querySelector('#navbar')
   navbar.classList.remove('bg-light')
   document.querySelectorAll('.text-bianco').forEach(e => e.classList.add('text-white'));
@@ -186,7 +173,8 @@ Contenedor Slider
 		navbar.classList.remove('bg-light')
 		navbar.classList.remove('navbar-border')
 		document.querySelectorAll('.text-bianco').forEach(e => e.classList.add('text-white'))
-	}
+  }
+  
 })
 
 </script>
