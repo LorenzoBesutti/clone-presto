@@ -54,6 +54,7 @@
           <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.offerte')}}</a></p>
           <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.diventa')}}</a></p>
           <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.lavoraconnoi')}}</a></p>
+      <p><a href='{{route('admin.home')}}' class="generic-anchor footer-list-anchor">Admin Page</a></p>
       </div>
       <div class="col-12 col-md-4 text-center my-auto mb-2">
         

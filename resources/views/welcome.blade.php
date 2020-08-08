@@ -3,20 +3,27 @@
     
 
 @if (session('add.create.success'))
-    <div class="alert alert-success">
+    <div class="alert alert-success text-center">
         {{__('ui.annuncioOk')}}
     </div>
     
 @endif
 @if (session('access.denied'))
-    <div class="alert alert-danger">
+    <div class="alert alert-danger text-center">
       {{__('ui.accessoNo')}}
 
     </div>
     
 @endif
+@if (session('admin.access.denied'))
+    <div class="alert alert-danger text-center">
+      Accesso consentito al solo Admin
+
+    </div>
+    
+@endif
 @if (session('thankyou'))
-    <div class="alert alert-warning">
+    <div class="alert alert-warning text-center">
       {{__('ui.grazieContatto')}}
 
     </div>

@@ -44,3 +44,9 @@ Route::post('/revisor/adds/{id}/accept', 'RevisorController@accept')->name('revi
 Route::post('/revisor/adds/{id}/reject', 'RevisorController@reject')->name('revisor.reject');
 Route::post('/revisor/adds/{id}/undo', 'RevisorController@undo')->name('revisor.undo');
 Route::get('/revisor/rejectedAdds', 'RevisorController@rejectedAdds')->name('rejectedadds');
+
+/* ADMIN */
+Route::get('/admin/home', 'AdminController@index')->name('admin.home');
+Route::post('/admin/{id}/is_revisor', 'AdminController@makeRevisor')->name('makeRevisor');
+Route::post('/admin/{id}/is_not_revisor', 'AdminController@removeRevisor')->name('removeRevisor');
+

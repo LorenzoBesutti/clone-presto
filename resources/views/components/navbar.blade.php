@@ -77,6 +77,9 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            @if(Auth::user()->is_admin)
+                            <a class="dropdown-item" href="{{route('admin.home')}}"><i class="fas fa-users-cog mr-3"></i> Admin Home</a>
+                            @endif
                             <a class="dropdown-item" href="{{route('profile')}}"><i class="fas fa-user-circle mr-3"></i> {{__('ui.profilo')}}</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
