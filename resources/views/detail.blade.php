@@ -3,6 +3,9 @@
 @section('style')
 
 <style>
+  .tasti{
+    width:25vh;
+  }
 
   body {
   background: url('/media/detail.jpeg') no-repeat center center fixed;
@@ -88,11 +91,11 @@
     @if (Auth::user()->name == $add->user->name)
 
     <div class="d-flex justify-content-center">
-    <a href="{{route('add.edit', compact('add'))}}" class="btn btn-warning w-25 my-5 mr-4 float-left">{{__('ui.modifica')}}</a>
+    <a href="{{route('add.edit', compact('add'))}}" class="btn btn-warning tasti my-5 mr-4 float-left text-dark">{{__('ui.modifica')}}</a>
     <form action="{{route('add.removeAdd', compact('add'))}}" method="post">
       @method('DELETE')
     @csrf
-    <button class="btn btn-danger w-75 my-5 float-right">{{__('ui.elimina')}}</button>
+    <button class="btn tasti btn-danger my-5 float-right">{{__('ui.elimina')}}</button>
   </form>
     </div>  
 

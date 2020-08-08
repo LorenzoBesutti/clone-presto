@@ -82,8 +82,8 @@ header .overlay {
         <div class="col-12 col-md-6 mb-4">
             <img src="http://placehold.it/700x400" alt="profilePic" class="img-fluid w-75 mx-auto d-block">
         </div>
-        <div class="col-12 col-md-6">
-            <div class="card bgCard w-100 ml-md-5">
+        <div class="col-12 col-md-6 ">
+            <div class="card bgCard w-100 ml-md-5 ml-3 ">
                 <div class="card-body ">
                  <h3 class="card-title text-center text-dark ">{{$user->name}}</h3>
                  <hr>

@@ -1,6 +1,14 @@
 @extends('layouts.app')
 @section('style')
-    
+    <style>
+      .cerca{
+        width:30vh;
+      }
+      .revisore{
+        width:30vh;
+      }
+
+    </style>
 @endsection
 @section('content')
 
@@ -16,7 +24,7 @@
 <div class="container my-5 py-5">
     <div class="row">
         <div class="col-12">
-            <input class="p-1 w-25 rounded-pill mb-4 shadow" onkeyup="myFunction()" type="text" placeholder="Cerca" id="cerca">
+            <input class="p-1 cerca rounded-pill mb-4 shadow" onkeyup="myFunction()" type="text" placeholder="Cerca" id="cerca">
 
             <div class="table-responsive rounded">
                 <table class="table table-hover">
@@ -40,14 +48,14 @@
                                 <form action="{{route('removeRevisor', $user->id)}}" method="POST">
                                
                                     @csrf
-                                   <button class="btn btn-danger w-50">Rimuovi da revisore</button>
+                                   <button class="btn btn-danger revisore">Rimuovi da revisore</button>
                                 </form>
                                     
                                 @else
                             <form action="{{route('makeRevisor', $user->id)}}" method="POST">
                                
                                  @csrf
-                                <button class="btn btn-info w-50">Rendi revisore</button>
+                                <button class="btn btn-info revisore">Rendi revisore</button>
                             </form>
     
                                 @endif

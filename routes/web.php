@@ -40,6 +40,7 @@ Route::get('/add/{add}/editAdd', 'HomeController@editAdd')->name('add.edit');
 Route::put('/add/{add}/updateAdd', 'HomeController@updateAdd')->name('add.update');
 Route::delete('/add/{add}/remove', 'HomeController@removeAdd')->name('add.removeAdd');
 
+
 /* REVISORE */
 
 Route::get('/revisor/home', 'RevisorController@index')->name('revisor.home');

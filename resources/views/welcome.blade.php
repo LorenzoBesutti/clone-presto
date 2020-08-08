@@ -60,6 +60,7 @@
     <div class="col-12 col-md-6 col-lg-4 my-4">
     <div class="card smusso h-100 shadow mx-auto" data-aos="flip-up" style="width: 18rem;">
       <img src="{{$add->images->first()->getUrl(300, 150)}}" class="card-img-top smussox" alt="...">
+      
       <div class="card-body d-flex flex-column">
         <h5 class="card-title p-0 textCustom">{{$add->title}}</h5>
         <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>

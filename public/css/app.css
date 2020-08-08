@@ -12177,10 +12177,7 @@ footer {
 @media (pointer: coarse) and (hover: none) {
   header {
     background: url("/media/presto.mp4") black no-repeat center center scroll;
-  }
-
-  header video {
-    display: none;
+    background-size: auto;
   }
 }
 
