@@ -37,8 +37,16 @@
                   <i class="text-right">{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
                 
                 <p class="card-text bio my-3">{{$add->description}}</p>
-                <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center  mt-auto">Vedi</a>
-                <a href="{{route('public.detail', compact('add'))}}" class="btn btn-danger text-white w-100 text-center  mt-2">Rimuovi</a>
+                <form action="{{route('revisor.accept', $add->id)}}" method="POST">
+                  @csrf
+                  <button type="submit" class="btn btn-info mx-auto d-block text-white w-75">{{__('ui.rccett')}}</button>
+              </form>
+              <form action="{{route('add.delete', compact('add'))}}" method="post">
+                @method('DELETE')
+                  @csrf
+                  <button class="btn btn-danger w-75 mx-auto d-block mt-2">{{__('ui.elimina')}}</button>
+              </form>
+               {{--  <a href="" class="btn btn-danger text-white w-100 text-center  mt-2" data-toggle="modal" data-target="#exampleModal2">Rimuovi</a> --}}
 
                 </div>
               </div>
@@ -57,3 +65,4 @@
     </div>
 
 @endsection
+

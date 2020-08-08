@@ -36,6 +36,7 @@ Route::get('/user/profile', 'HomeController@userProfile')->name('profile');
 Route::post('/add/images/upload', 'HomeController@uploadImage')->name('add.images.upload');
 Route::delete('/add/images/remove', 'HomeController@removeImage')->name('add.images.remove');
 Route::get('/add/images', 'HomeController@getImages')->name('add.images');
+Route::delete('/add/{add}/delete', 'HomeController@deleteAdd')->name('add.delete');
 
 /* REVISORE */
 
@@ -44,6 +45,8 @@ Route::post('/revisor/adds/{id}/accept', 'RevisorController@accept')->name('revi
 Route::post('/revisor/adds/{id}/reject', 'RevisorController@reject')->name('revisor.reject');
 Route::post('/revisor/adds/{id}/undo', 'RevisorController@undo')->name('revisor.undo');
 Route::get('/revisor/rejectedAdds', 'RevisorController@rejectedAdds')->name('rejectedadds');
+Route::delete('/add/{add}/delete', 'RevisorController@deleteAdd')->name('add.delete');
+
 
 /* ADMIN */
 Route::get('/admin/home', 'AdminController@index')->name('admin.home');

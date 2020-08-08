@@ -154,5 +154,12 @@ class HomeController extends Controller
 
         return response()->json($data);
     }
+
+    public function deleteAdd(Add $add){
+        
+        $add->delete();
+
+        return redirect('/');
+    }
 }
 

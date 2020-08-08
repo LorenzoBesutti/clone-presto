@@ -52,4 +52,12 @@ class RevisorController extends Controller
 
         return view('revisor.rejected', compact('adds'));
     }
+
+    public function deleteAdd(Add $add){
+        
+        
+        $add->delete();
+
+        return redirect('/');
+    }
 }
