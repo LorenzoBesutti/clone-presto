@@ -16,9 +16,11 @@
 <div class="container my-5 py-5">
     <div class="row">
         <div class="col-12">
-            <div class="table-responsive">
-                <table class="table table-hover table-dark">
-                    <thead>
+            <input class="p-1 w-25 rounded-pill mb-4 shadow" onkeyup="myFunction()" type="text" placeholder="Cerca" id="cerca">
+
+            <div class="table-responsive rounded">
+                <table class="table table-hover">
+                    <thead class="bgAnnuncio">
                       <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nome</th>
@@ -28,7 +30,7 @@
                     </thead>
                     <tbody>
                         @foreach ($users as $user)
-                        <tr>
+                        <tr class="trova">
                         <th>{{$user->id}}</th>
                             <td>{{$user->name}}</td>
                             <td>{{$user->email}}</td>
@@ -63,6 +65,23 @@
 @push('script')
 <script>
 
+function myFunction() {
+
+var input, filter, td, tr, a, i;
+input = document.getElementById('cerca');
+filter = input.value.toUpperCase();
+tr = document.getElementsByClassName('trova');
+
+for (i = 0; i < tr.length; i++) {
+    a = tr[i].innerHTML;
+
+  if (a.toUpperCase().indexOf(filter) > -1) {
+    tr[i].style.display = "";
+  } else {
+    tr[i].style.display = "none";
+  }
+ }
+}
 
 </script>
 @endpush

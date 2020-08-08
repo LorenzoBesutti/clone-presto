@@ -12184,6 +12184,11 @@ footer {
   }
 }
 
+.bgAnnuncio {
+  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
+  color: white;
+}
+
 /*
  * The MIT License
  * Copyright (c) 2012 Matias Meno <m@tias.me>
