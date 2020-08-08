@@ -36,7 +36,9 @@ Route::get('/user/profile', 'HomeController@userProfile')->name('profile');
 Route::post('/add/images/upload', 'HomeController@uploadImage')->name('add.images.upload');
 Route::delete('/add/images/remove', 'HomeController@removeImage')->name('add.images.remove');
 Route::get('/add/images', 'HomeController@getImages')->name('add.images');
-Route::delete('/add/{add}/delete', 'HomeController@deleteAdd')->name('add.delete');
+Route::get('/add/{add}/editAdd', 'HomeController@editAdd')->name('add.edit');
+Route::put('/add/{add}/updateAdd', 'HomeController@updateAdd')->name('add.update');
+Route::delete('/add/{add}/remove', 'HomeController@removeAdd')->name('add.removeAdd');
 
 /* REVISORE */
 

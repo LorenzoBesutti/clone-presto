@@ -155,11 +155,41 @@ class HomeController extends Controller
         return response()->json($data);
     }
 
-    public function deleteAdd(Add $add){
+
+    public function editAdd(Add $add, Request $request){
+
+        
+        $uniqueSecret = $request->old('uniqueSecret',
+        base_convert(sha1(uniqid(mt_rand())), 16, 36)
+        );
+
+        return view('add.edit', compact('add', 'uniqueSecret'));
+    }
+
+    public function updateAdd(Add $add, Request $request){
+
+        
+        
+        $add->title=$request->input('title');
+        $add->description=$request->input('description');
+        $add->category_id=$request->input('category');
+        $add->user_id=Auth::id();
+        $add->update();
+
+        $uniqueSecret = $request->input('uniqueSecret');
+
+
+        return redirect('/');
+    }
+
+
+
+
+    public function removeAdd(Add $add){
         
         $add->delete();
 
-        return redirect('/');
+        return redirect(route('public.index'));
     }
 }
 

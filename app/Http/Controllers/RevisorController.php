@@ -58,6 +58,6 @@ class RevisorController extends Controller
         
         $add->delete();
 
-        return redirect('/');
+        return redirect()->back();
     }
 }
