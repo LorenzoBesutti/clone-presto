@@ -97,7 +97,7 @@ class HomeController extends Controller
     public function userProfile(){
 
         $user=Auth::user();
-        $adds = $user->adds()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(6);
+        $adds = $user->adds()->where('is_accepted', true)->orderBy('created_at','desc')->simplePaginate(6);
 
         return view('profile', compact('user','adds'));
     }

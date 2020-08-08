@@ -24,7 +24,7 @@ class PublicController extends Controller
     public function addsByCategory($name,$category_id){
 
         $category = Category::find($category_id);
-        $adds = $category->adds()->where('is_accepted', true)->orderBy('created_at','desc')->paginate(6);
+        $adds = $category->adds()->where('is_accepted', true)->orderBy('created_at','desc')->simplePaginate(6);
 
         return view('adds', compact('category','adds'));
     }
@@ -32,9 +32,9 @@ class PublicController extends Controller
     public function addDetail(Add $add){
  
         $user = User::find($add->user_id);
-        $adds = $user->adds()->where('id','!=', $add->id)->where('is_accepted', true)->orderBy('created_at','desc')->paginate(6);
+        $adds = $user->adds()->where('id','!=', $add->id)->where('is_accepted', true)->orderBy('created_at','desc')->simplePaginate(6);
 
-        $announcements = Add::where('category_id', '=', $add->category->id)->where('id','!=', $add->id)->where('is_accepted', true)->paginate(6);
+        $announcements = Add::where('category_id', '=', $add->category->id)->where('id','!=', $add->id)->where('is_accepted', true)->simplePaginate(6);
         
         return view('detail', compact('add','adds','user','announcements'));
     }

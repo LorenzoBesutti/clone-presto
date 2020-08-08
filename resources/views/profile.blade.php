@@ -155,10 +155,14 @@ header .overlay {
         @endforeach
         
     </div>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+          
             {{$adds->links()}}
+          
         </div>
+      </div>
       </div>
 </div>
 

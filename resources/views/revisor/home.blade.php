@@ -45,15 +45,15 @@
 }
 }
 
-.show{
+.allora{
     display: none;
-}
+} 
 
 @media screen and (max-width:780px){
     .show{
         display: block;
 }
-}
+} 
 
     </style>
 @endsection
@@ -164,14 +164,14 @@
                     </div>
                 </div>
 
-                <div class="show text-center mb-3">
+                <div class="allora text-center mb-3">
                     <form action="{{route('revisor.accept', $add->id)}}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-success px-3 w-50">{{__('ui.rccett')}}</button>
                     </form>
                 </div>
 
-                <div class="text-center show mb-3">
+                <div class="text-center allora mb-3">
                     <form action="{{route('revisor.reject', $add->id)}}" method="POST">
                         @csrf
                           <button type="submit" class="btn btn-danger px-3 w-50">{{__('ui.rifiuta')}}</button>

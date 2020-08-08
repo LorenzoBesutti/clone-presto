@@ -119,14 +119,14 @@
   
 
 <div class="container">
-<div class="row">
-  <div class="col-12">
-    
-      {{$adds->links()}}
-    
+  <div class="row justify-content-center">
+    <div class="col-12 d-flex justify-content-center">
+      
+        {{$adds->links()}}
+      
+    </div>
   </div>
-</div>
-</div>
+  </div>
 @else
 <div class="container my-5 py-5">
   <div class="row">
