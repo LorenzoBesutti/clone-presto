@@ -10936,8 +10936,20 @@ a.text-dark:focus {
   transition: 0.5s linear;
 }
 
+@media (max-width: 768px) {
+  #navbar {
+    background-color: white !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-bianco {
+    color: #343a40 !important;
+  }
+}
+
 .navbar-border {
-  border-bottom: 2px solid #00acc1;
+  border-bottom: 2px solid var(--bottone);
 }
 
 .btn10 {

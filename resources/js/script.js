@@ -153,23 +153,6 @@ $(document).ready(function () {
 });
 
 
-
-/* document.addEventListener('scroll', () => {
-	let navbar = document.querySelector('#navbar')
-
-	if (window.scrollY > 430) {
-		navbar.classList.add('bg-light')
-		navbar.classList.add('navbar-border')
-		document.querySelectorAll('.text-bianco').forEach(e => e.classList.remove('text-white'));
-	} else {
-		navbar.classList.remove('bg-light')
-		navbar.classList.remove('navbar-border')
-		document.querySelectorAll('.text-bianco').forEach(e => e.classList.add('text-white'))
-	}
-})
- */
-
-
 //logo presto che routa
 
 let logo = document.querySelector("#logo")
@@ -197,27 +180,19 @@ let bio = document.querySelectorAll('.bio').forEach(e =>{
 
 //semafori revisore
 
-let semaforo = document.querySelectorAll('#semaforo')
+let semaforo = document.querySelectorAll('.semaforo')
 
 semaforo.forEach(e =>{
 	console.log(e.innerHTML);
 	if(e.innerHTML == "VERY_UNLIKELY" || e.innerHTML == "UNLIKELY"){
 		e.innerHTML="<i class='fas fa-circle' style='color:green'></i>"
 	}
-})
-
-semaforo.forEach(e =>{
-	console.log(e.innerHTML);
-	if(e.innerHTML == "POSSIBLE"){
+	else if	(e.innerHTML == "POSSIBLE"){
 		e.innerHTML="<i class='fas fa-circle' style='color:yellow'></i>"
 	}
-})
 
-semaforo.forEach(e =>{
-	console.log(e.innerHTML);
-	if(e.innerHTML == "VERY_LIKELY" || e.innerHTML == "LIKELY"){
+	else if(e.innerHTML == "VERY_LIKELY" || e.innerHTML == "LIKELY"){
 		e.innerHTML="<i class='fas fa-circle' style='color:red'></i>"
 	}
 })
-
 

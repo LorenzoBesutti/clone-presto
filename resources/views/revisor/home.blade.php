@@ -37,36 +37,21 @@
     right:450px;
     display: flex;
   }
-  /* .blocco1{
-    position: fixed !important;
-    z-index: 999;
-    
-  } */
-.reject{
-    position:absolute;
-    position: fixed;
-    left:380px;
-    top: 420px;
+
+
+@media screen and (max-width:780px){
+    .hide{
+        display: none;
 }
-.accept{
-    position:absolute;
-    position: fixed;
-    right:380px;
-    top: 420px;
 }
 
-@media screen and (max-width:700px){
-    .reject{
-    position:absolute;
-    position: fixed;
-    left:77%;
-    top: 40%;
+.show{
+    display: none;
 }
-.accept{
-    position:absolute;
-    position: fixed;
-    right:5%;
-    top: 30%;
+
+@media screen and (max-width:780px){
+    .show{
+        display: block;
 }
 }
 
@@ -76,128 +61,29 @@
 
 
 @if($add)
-{{-- 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-          <div class="card">
-              <div class="card-header">Annuncio # {{$add->id}}</div>
-
-            <div class="card-body">
-                
-                <div class="row">
-                    <div class="col-md-2">
-                        <h3>Utente</h3>
-                    </div>
-                    <div class="col-md-10">
-                        # {{$add->user->id}},
-                        {{$add->user->name}},
-                        {{$add->user->email}},
-                    </div>
-                </div>
-
-                <hr>
 
 
-                <div class="row">
-                    <div class="col-md-2">
-                        <h3>Titolo<h3>
-                    </div>
-                    <div class="col-md-10">
-                        {{$add->title}}
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="row">
-                    <div class="col-md-2">
-                        <h3>Descrizione</h3>
-                    </div>
-                    <div class="col-md-10">
-                        {{$add->description}}
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-2">
-                        <h3>Immagini</h3>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="row mb-2">
-                            <div class="col-md-4">
-                                <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded">
-                            </div>
-                            <div class="col-md-8">
-                                ... ... ...
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-md-4">
-                                <img src="https://via.placeholder.com/300x150.png" alt="" class="rounded">
-                            </div>
-                            <div class="col-md-8">
-                                ... ... ...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-           </div>
-
-
-           <div class="row justify-content-center mt-5">
-               <div class="col-md-6">
-                  <form action="{{route('revisor.reject', $add->id)}}" method="POST">
-                    @csrf
-                      <button type="submit" class="btn btn-danger">Reject</button>
-                  </form>
-               </div>
-               <div class="col-md-6 text-right">
-                   <form action="{{route('revisor.accept', $add->id)}}" method="POST">
-                    @csrf
-                      <button type="submit" class="btn btn-success">Accept</button>
-                    </form>
-               </div>
-           </div>
-
-
-
-
-
-            </div>
-        </div>
-    </div>
-</div>
- --}}
 <div class="container mt-5">
-    <div class="row position-relative">
-      <div class="col-lg-10 col-xl-9 mx-auto">
-        <div class="card card-signin flex-row my-5">
-        
-        <form class="form-signin">
+    <div class="row">
+      <div class="col-12 mx-auto">
+        <div class="card my-5">
             <div class="card-header bgAnnuncio">
-                <div class="text-md-right ">{{__('ui.annuncio')}} # {{$add->id}}</div>
-                </div>
-          <div class="card-body">
-            
-           
-              
+                <div class="text-right ">{{__('ui.annuncio')}} # {{$add->id}}</div>
+            </div>
 
-            <div class="row mt-5">
+            <div class="row px-3 mt-4 mt-md-5">
                 <label class="col-md-2">
                     <h5 class="text-center">{{__('ui.utente')}}</h5>
                 </label>
                 <div class="col-md-10">
-                    # {{$add->user->id}},
+                    #{{$add->user->id}},
                     {{$add->user->name}},
-                    {{$add->user->email}},
+                    {{$add->user->email}}
                     <hr class="hrRevisor">
                 </div>
             </div>
-              
-              
-
-              <div class="row ">
+            
+            <div class="row px-3">
                 <div class="col-md-2">
                     <h5 class="text-center">{{__('ui.Titolo')}}<h5>
                 </div>
@@ -206,8 +92,8 @@
                     <hr class="hrRevisor">
                 </div>
             </div>
-              
-            <div class="row">
+            
+            <div class="row px-3">
                 <div class="col-md-2">
                     <h5 class="text-center">{{__('ui.descr')}}<h5>
                 </div>
@@ -216,92 +102,98 @@
                     <hr class="hrRevisor">
                 </div>
             </div>
+          <div class="card-body">
 
-          <div class="container">
-            <div class="row mt-4 mx-auto">
-                
-               
-                <div class="col-12 d-flex flex-column align-items-center justify-content-center">
-                    @foreach($add->images as $image)
-                   
-                    <div class="col-12 col-md-4 ">
-                    <img src="{{$image->getUrl(300, 150)}}" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5 "> 
-                    </div>
-                    <div class="col-12 col-md-8">
-                        <div class="table-responsive">
-                        <table class="table">
-                            <tbody>
-                                <tr class="text-center bgAnnuncio">
-                                  <td class="px-1">{{__('ui.adulto')}}</td>
-                                  <td>{{__('ui.medico')}}</td>
-                                  <td>{{__('ui.caric')}}</td>
-                                  <td>{{__('ui.viol')}}</td>
-                                  <td>{{__('ui.razz')}}</td>
-                                </tr>
-                                <tr class="text-center">
-                                    <td class="bordi-tabella"><span id="semaforo">{{$image->adult}}</span></td>
-                                    <td class="bordi-tabella"><span id="semaforo">{{$image->medical}}</span></td>
-                                    <td class="bordi-tabella"><span id="semaforo">{{$image->spoof}}</td>
-                                    <td class="bordi-tabella"><span id="semaforo">{{$image->violence}}</td>
-                                    <td class="bordi-tabella"><span id="semaforo">{{$image->racy}}</td>
-                                  </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                          @if ($image->labels)
-                          <div class="mb-5">
-                          @foreach ($image->labels as $label)
-                            <span class="bgGrigio px-1 ml-1 rounded">#{{$label}}
-                            </span> 
-                              
-                          @endforeach
+                <div class="container-fluid">
+                    <div class="row mt-md-4 justify-content-center">
+                        <div class="col-2 position-relative text-center hide">
+                            <form action="{{route('revisor.reject', $add->id)}}" method="POST">
+                                @csrf
+                                  <button type="submit" class="btn btn-danger px-3 position-fixed">{{__('ui.rifiuta')}}</button>
+                            </form> 
                         </div>
-                              
-                          @endif
-                    
-                    </div>
-                    @endforeach
-                    
-                   
-                </div>
-               
 
-            </div>
+                        <div class="col-12 col-md-8">
+
+                        @foreach($add->images as $image)
+                        
+                            <div class="col-12 text-center">
+                            <img src="{{$image->getUrl(300, 150)}}" alt="" class="rounded img-fluid mt-5 mt-md-0 mb-5"> 
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive rounded">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr class="text-center bgAnnuncio">
+                                            <td class="px-1">{{__('ui.adulto')}}</td>
+                                            <td>{{__('ui.medico')}}</td>
+                                            <td>{{__('ui.caric')}}</td>
+                                            <td>{{__('ui.viol')}}</td>
+                                            <td>{{__('ui.razz')}}</td>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <td class="bordi-tabella"><span class="semaforo">{{$image->adult}}</span></td>
+                                                <td class="bordi-tabella"><span class="semaforo">{{$image->medical}}</span></td>
+                                                <td class="bordi-tabella"><span class="semaforo">{{$image->spoof}}</td>
+                                                <td class="bordi-tabella"><span class="semaforo">{{$image->violence}}</td>
+                                                <td class="bordi-tabella"><span class="semaforo">{{$image->racy}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                @if ($image->labels)
+                                    <div class="mb-5">
+                                        @foreach ($image->labels as $label)
+                                            <span class="bgGrigio px-1 ml-1 rounded">#{{$label}}</span>   
+                                        @endforeach
+                                    </div> 
+                                @endif
+                            
+                            </div>
+
+                        @endforeach
+                        </div>
+
+                        <div class="col-2 position-relative hide">
+                            <form action="{{route('revisor.accept', $add->id)}}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-success px-3 position-fixed">{{__('ui.rccett')}}</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="show text-center mb-3">
+                    <form action="{{route('revisor.accept', $add->id)}}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-success px-3 w-50">{{__('ui.rccett')}}</button>
+                    </form>
+                </div>
+
+                <div class="text-center show mb-3">
+                    <form action="{{route('revisor.reject', $add->id)}}" method="POST">
+                        @csrf
+                          <button type="submit" class="btn btn-danger px-3 w-50">{{__('ui.rifiuta')}}</button>
+                    </form> 
+                </div>
+
         </div>
-          
-          
-              
-            
-          </div>
-        </form>
         </div>
       </div>
     </div>
-  </div>
+</div>
    
    {{--  <div class="row justify-content-center mt-1"> --}}
-      <div class="blocco1">
-       <div class="col-md-4 reject">
-         <form action="{{route('revisor.reject', $add->id)}}" method="POST">
-            @csrf
-              <button type="submit" class="btn btn-danger px-3">{{__('ui.rifiuta')}}</button>
-        </form> 
-       </div>
-    </div>  
+       {{-- <div class="col-md-4 ">
+
+       </div> --}}
        {{-- <div class="col-md-4 text-center">
         <form action="{{route('revisor.undo', $add->id)}}" method="POST">
             @csrf
               <button type="submit" class="btn btn-warning">UNDO</button>
         </form>
        </div> --}}
-    <div>
-     <div class="col-md-4 text-right accept">
-        <form action="{{route('revisor.accept', $add->id)}}" method="POST">
-            @csrf
-              <button type="submit" class="btn btn-success  position-sticky">{{__('ui.rccett')}}</button>
-        </form>
-       </div>
-   </div>
      
 
 

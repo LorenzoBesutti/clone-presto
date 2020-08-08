@@ -4,12 +4,25 @@
   --bottone:#6cb2eb;
 }
 
+
 #navbar{
   transition: 0.5s linear;
 }
 
+@media (max-width: 768px) {
+  #navbar {
+    background-color: white !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-bianco {
+    color: #343a40 !important;
+  }
+}
+
 .navbar-border{
-  border-bottom: 2px solid rgba(0,172,193,1);
+  border-bottom: 2px solid var(--bottone);
 }
 
 .btn10{

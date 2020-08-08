@@ -41045,22 +41045,7 @@ $(document).ready(function () {
       zindex++;
     }
   });
-});
-/* document.addEventListener('scroll', () => {
-	let navbar = document.querySelector('#navbar')
-
-	if (window.scrollY > 430) {
-		navbar.classList.add('bg-light')
-		navbar.classList.add('navbar-border')
-		document.querySelectorAll('.text-bianco').forEach(e => e.classList.remove('text-white'));
-	} else {
-		navbar.classList.remove('bg-light')
-		navbar.classList.remove('navbar-border')
-		document.querySelectorAll('.text-bianco').forEach(e => e.classList.add('text-white'))
-	}
-})
- */
-//logo presto che routa
+}); //logo presto che routa
 
 var logo = document.querySelector("#logo");
 document.addEventListener('scroll', function () {
@@ -41079,25 +41064,15 @@ var bio = document.querySelectorAll('.bio').forEach(function (e) {
   }
 }); //semafori revisore
 
-var semaforo = document.querySelectorAll('#semaforo');
+var semaforo = document.querySelectorAll('.semaforo');
 semaforo.forEach(function (e) {
   console.log(e.innerHTML);
 
   if (e.innerHTML == "VERY_UNLIKELY" || e.innerHTML == "UNLIKELY") {
     e.innerHTML = "<i class='fas fa-circle' style='color:green'></i>";
-  }
-});
-semaforo.forEach(function (e) {
-  console.log(e.innerHTML);
-
-  if (e.innerHTML == "POSSIBLE") {
+  } else if (e.innerHTML == "POSSIBLE") {
     e.innerHTML = "<i class='fas fa-circle' style='color:yellow'></i>";
-  }
-});
-semaforo.forEach(function (e) {
-  console.log(e.innerHTML);
-
-  if (e.innerHTML == "VERY_LIKELY" || e.innerHTML == "LIKELY") {
+  } else if (e.innerHTML == "VERY_LIKELY" || e.innerHTML == "LIKELY") {
     e.innerHTML = "<i class='fas fa-circle' style='color:red'></i>";
   }
 });
@@ -41122,8 +41097,8 @@ semaforo.forEach(function (e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
