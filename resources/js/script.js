@@ -172,9 +172,9 @@ document.addEventListener('scroll', () => {
 //lunghezza testo card
 
 document.querySelectorAll('.bio').forEach(e =>{
-    if (e.innerHTML.split(" ").length > 12) {
+    if (e.innerHTML.split(" ").length > 10) {
 
-        let string = e.innerHTML.split(" ").slice(0,11);
+        let string = e.innerHTML.split(" ").slice(0,10);
         e.innerHTML = string.join(" ") + ' [...]';
     }
 })

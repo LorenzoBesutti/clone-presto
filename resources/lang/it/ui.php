@@ -12,6 +12,7 @@ return [
     'profilo' => 'Profilo',
     'annuncioOk' => 'Annuncio caricato correttamente!',
     'accessoNo' => 'Accesso non consentito - solo Revisori',
+    'grazieContatto' => 'Grazie per la tua richiesta!',
     'cerca' => 'Cerca tra i nostri annunci',
     'ultimi' => 'Ultimi Annunci',
     'articoli' => 'Articoli',

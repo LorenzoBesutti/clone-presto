@@ -73,6 +73,7 @@
             <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
               <div>
               <h2 class="text-left">{{$add->title}}</h2>
+              <p class="h4 font-weight-bolder">€{{$add->price}}</p>
               <a class="h5 pt-2" href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
               {{-- <p class="mt-2">$ 20,00</p> --}}
               <p class="card-text lead">{{$add->description}}</p>

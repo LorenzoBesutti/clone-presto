@@ -24,8 +24,9 @@ class AddRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=>'required|max:100',
-            'description'=>'required|max:500'
+            'title'=>'required|max:100|min:1',
+            'description'=>'required|max:500|min:11',
+            'price'=>'required'
         ];
     }
 }

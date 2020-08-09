@@ -13,7 +13,6 @@ return [
     'annuncioOk' => 'Anuncio cargado corectamente!',
     'accessoNo' => 'Acceso Prohibido - solo Revisores',
     'grazieContatto' => 'Gracias por tu contacto!',
-    'grazieContatto' => 'Thank you for your request!',
     'cerca' => 'Busca tus anuncios',
     'ultimi' => 'Ultimo Anuncios',
     'articoli' => 'Revista',

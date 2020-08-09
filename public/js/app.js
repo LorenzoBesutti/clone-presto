@@ -41059,8 +41059,8 @@ document.addEventListener('scroll', function () {
 }); //lunghezza testo card
 
 document.querySelectorAll('.bio').forEach(function (e) {
-  if (e.innerHTML.split(" ").length > 12) {
-    var string = e.innerHTML.split(" ").slice(0, 11);
+  if (e.innerHTML.split(" ").length > 10) {
+    var string = e.innerHTML.split(" ").slice(0, 10);
     e.innerHTML = string.join(" ") + ' [...]';
   }
 }); // $("#showText").click(function(){
@@ -41101,8 +41101,8 @@ semaforo.forEach(function (e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
