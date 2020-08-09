@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PublicController@index')->name('public.index');
 Route::get('/category/{name}/{id}/adds', 'PublicController@addsByCategory')->name('public.adds.category');
 Route::get('/add/{add}/detail', 'PublicController@addDetail')->name('public.detail');
+Route::get('/add/{announcement}/detail', 'PublicController@announcementDetail')->name('public.ann.detail');
 Route::get('/search','PublicController@search')->name('search');
 Route::get('/contact', 'PublicController@contact')->name('public.contact');
 Route::post('/contact/send', 'PublicController@contactSubmit')->name('public.submit');
