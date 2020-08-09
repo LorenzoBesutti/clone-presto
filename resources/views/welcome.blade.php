@@ -95,6 +95,7 @@
 </div>
 
 
+
   <h2 class="title-hr text-center my-5 py-5 sparisci"><hr class="mr-2">{{__('ui.articoli')}}<hr class="ml-2"></h2>
 
   <div class="container my-5 py-5">
@@ -199,6 +200,7 @@ Contenedor Slider
   }
   
 })
+
 
 </script>
 @endpush

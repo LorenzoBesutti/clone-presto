@@ -10984,6 +10984,14 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -100px;
+  height: 300px;
+}
+
+@media (max-width: 600px) {
+  .bgCategory {
+    height: 200px;
+    background-position-y: 0px;
+  }
 }
 
 /* .cardcolor{ */
@@ -11225,7 +11233,7 @@ p {
 
 @media screen and (max-width: 600px) {
   .sottotitolo {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
@@ -12110,19 +12118,6 @@ footer {
 .h-container {
   height: 200px;
   background-color: red;
-}
-
-.margin-custom {
-  position: absolute;
-  display: inline !important;
-  top: 35% !important;
-}
-
-@media screen and (max-width: 550) {
-  .margin-custom {
-    position: absolute;
-    display: inline !important;
-  }
 }
 
 .cardLuna {

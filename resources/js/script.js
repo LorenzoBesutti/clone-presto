@@ -169,14 +169,20 @@ document.addEventListener('scroll', () => {
 	}
 })
 
+//lunghezza testo card
 
-let bio = document.querySelectorAll('.bio').forEach(e =>{
+document.querySelectorAll('.bio').forEach(e =>{
     if (e.innerHTML.split(" ").length > 12) {
 
-        let string = e.innerHTML.split(" ").slice(0,12);
+        let string = e.innerHTML.split(" ").slice(0,11);
         e.innerHTML = string.join(" ") + ' [...]';
     }
 })
+
+// $("#showText").click(function(){
+// 	console.log('prova');	
+//   });
+
 
 //semafori revisore
 
@@ -195,4 +201,5 @@ semaforo.forEach(e =>{
 		e.innerHTML="<i class='fas fa-circle' style='color:red'></i>"
 	}
 })
+
 
