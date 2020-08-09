@@ -7,13 +7,12 @@
         color: black !important;
         border-radius: 0;
     }
-    .bg-custom{
+    /* .bg-custom{
         background: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(255,255,255,1));
-    }
+    } */
     body{
-        background: linear-gradient(180deg,rgb(27, 145, 180,0.7),rgba(255,255,255,1));
+        background: linear-gradient(180deg,rgb(27, 145, 180,0.4),rgba(255,255,255,1));
         background-repeat: no-repeat;
-        height: 100vh;
       }
 </style>
     

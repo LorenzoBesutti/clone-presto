@@ -2,9 +2,8 @@
 @section('style')
     <style>
       body{
-        background: linear-gradient(180deg,rgb(27, 145, 180,0.7),rgba(255,255,255,1));
+        background: linear-gradient(180deg,rgb(27, 145, 180,0.4),rgba(255,255,255,1));
         background-repeat: no-repeat;
-        height: 100vh;
       }
     </style>
 @endsection
@@ -56,6 +55,7 @@
   </div>
 </div>
 @endif 
+
 
  
 @endsection

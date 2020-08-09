@@ -57,7 +57,14 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -100px;
-  
+  height: 300px;
+}
+
+@media (max-width: 600px) {
+  .bgCategory {
+    height: 200px;
+    background-position-y: 0px;
+  }
 }
 
 /* .cardcolor{ */
@@ -268,7 +275,7 @@ p {
 }
 @media screen and (max-width: 600px) {
   .sottotitolo{
-    font-size: 30px;
+    font-size: 25px;
     // margin-left: -20px;
   }
   
@@ -1174,19 +1181,19 @@ footer {
   background-color: red;
 }
 
-.margin-custom{
-  position: absolute;
-  display: inline !important;
-  top: 35% !important;
-}
+// .margin-custom{
+//   position: absolute;
+//   display: inline !important;
+//   top: 35% !important;
+// }
 
-@media screen and (max-width:550){
-  .margin-custom{
-    position: absolute;
-    display: inline !important;
+// @media screen and (max-width:550){
+//   .margin-custom{
+//     position: absolute;
+//     display: inline !important;
     
-  }
-}
+//   }
+// }
 
 .cardLuna{
   background-color: rgba(0,172,193,0.2) !important;
@@ -1253,3 +1260,12 @@ footer {
   background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
   color:white;
 }
+
+// .limit{
+//   overflow: hidden;
+// text-overflow: ellipsis;
+// display: -webkit-box;
+// -webkit-line-clamp: 3;
+// -webkit-box-orient: vertical;
+// }
+

@@ -3,10 +3,14 @@
 <style>
 
   
-  body{
-        background: linear-gradient(180deg,rgb(27, 145, 180,0.7),rgba(255,255,255,1));
+body{
+        background: linear-gradient(180deg,rgb(27, 145, 180,0.4),rgba(255,255,255,1));
         background-repeat: no-repeat;
-        height: 100vh;
+      }
+
+      .ricerca{
+        width:30vh;
+        margin-left: 30px;
       }
     </style>
 @endsection
@@ -21,7 +25,8 @@
     </div>
 </div>
 @if($adds->isNotEmpty())
-<div class=" container mt-5">
+
+{{-- <div class=" container mt-5">
      <div class="row">
        <div class="col-12 col-md-4 ">
         <h5 class=""> {{__('ui.filtra')}}</h5>
@@ -115,8 +120,41 @@
         </div>
        </div>
      </div>
-</div>
+</div> --}}
   
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <input class="p-1 rounded-pill mb-4 shadow ricerca" onkeyup="myFunction()" type="text" placeholder="Cerca nella categoria" id="cerca">
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    @foreach($adds as $add)
+    <div class="col-12 col-md-6 col-lg-4 my-4 cerca">
+    <div class="card smusso h-100 shadow mx-auto" style="width: 18rem;">
+      <img src="{{$add->images->first()->getUrl(300, 150)}}" class="card-img-top smussox" alt="...">
+      
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title p-0 textCustom">{{$add->title}}</h5>
+        <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
+
+        <i class="text-right">{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+      <div class="mb-1">
+        <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-light"></i>
+      </div>
+      <p class="card-text bio">{{$add->description}}</p>
+      <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center  mt-auto">{{__('ui.dettaglio')}}</a>
+      </div>
+    </div>
+  </div>
+     @endforeach
+  </div>
+</div>
 
 <div class="container">
   <div class="row justify-content-center">
@@ -138,48 +176,28 @@
 @endif
 
 
- 
+<script>
+
+function myFunction() {
+
+var input, filter, td, cards, a, i;
+input = document.getElementById('cerca');
+filter = input.value.toUpperCase();
+cards = document.getElementsByClassName('cerca');
+
+for (i = 0; i < cards.length; i++) {
+    a = cards[i].innerText;
+
+  if (a.toUpperCase().indexOf(filter) > -1) {
+    cards[i].style.display = "";
+  } else {
+    cards[i].style.display = "none";
+  }
+ }
+}
 
 
-
-
-
-
-
-
-<!--non so che codice é questo!-->
-{{-- </div>
-</div>
-</div> --}}
-
-{{-- <div class="container my-5 py-5">
-    <div class="row">
-        @foreach ($adds as $add)
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="fotoannuncio"></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  {{$add->title}}
-                  </h4>
-                 <p class="card-text">{{$add->description}}</p>
-              </div>
-              <div class="card-footer d-flex justify-content-between">
-              <strong>Category: <a href="{{route('public.adds.category', [$add->category->name , $add->category->id])}}">{{$add->category->name}}</a></strong>
-              <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i>
-              </div>
-            </div>
-          </div>
-        @endforeach
-        
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            {{$adds->links()}}
-        </div>
-    </div>
-</div> --}}
-
+</script>
 
 
 

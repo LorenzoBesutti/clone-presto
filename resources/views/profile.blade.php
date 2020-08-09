@@ -1,12 +1,10 @@
 @extends('layouts.app')
 @section('style')
     <style>
-       body{
-        background: linear-gradient(180deg,rgb(27, 145, 180,0.7),rgba(255,255,255,1));
-
-           background-repeat: no-repeat;
-           background-size: cover;
-       } 
+      body{
+        background: linear-gradient(180deg,rgba(27, 145, 180,0.4),rgba(255,255,255,1));
+        background-repeat: no-repeat;
+      }
        header {
   position: relative;
   background-color: black;
@@ -29,6 +27,7 @@ header video {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  opacity: 0.5;
 }
 
 header .container {
@@ -42,9 +41,11 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: 0.5;
   z-index: 1;
+}
+
+.profileBtn{
+  width: 200px;
 }
 
     </style>
@@ -67,42 +68,33 @@ header .overlay {
   </header>
 
 
-{{-- <div class="container my-5 py-5">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="text-center">Profilo Utente</h1>
-        </div>
-    </div>
-</div> --}}
-
-
 
 <div class="container mt-5 pt-5">
-    <div class="row justify-content-center ">
+    <div class="row justify-content-center">
         <div class="col-12 col-md-6 mb-4">
-            <img src="http://placehold.it/700x400" alt="profilePic" class="img-fluid w-75 mx-auto d-block">
+            <img src="http://placehold.it/400x300" alt="profilePic" class="img-fluid mx-auto d-block">
         </div>
-        <div class="col-12 col-md-6 ">
-            <div class="card bgCard w-100 ml-md-5 ml-3 ">
+        <div class="col-12 col-md-6">
+            <div class="card bgCard w-100 mx-auto d-block ">
                 <div class="card-body ">
                  <h3 class="card-title text-center text-dark ">{{$user->name}}</h3>
                  <hr>
-                  <p class="card-text text-center text-dark h5">e-Mail: {{$user->email}}</p>
+                  <p class="card-text text-center text-dark h5">e-mail: {{$user->email}}</p>
                 </div>
                 <div class="card-footer">
                   
                   <div class="d-flex justify-content-center">
-                  <a href="" class="d-inline mx-auto" target="_blank"><i class="fa fa-facebook fa-2x text-dark   "></i></a>
-                  <a href="" class="d-inline mx-auto" target="_blank"><i class="fa fa-twitter fa-2x text-dark  "></i></a>
-                  <a href="" class="d-inline mx-auto" target="_blank"><i class="fa fa-instagram fa-2x text-dark  "></i></a>
+                  <a href="" class="d-inline mx-auto"><i class="fa fa-facebook fa-2x text-dark   "></i></a>
+                  <a href="" class="d-inline mx-auto"><i class="fa fa-twitter fa-2x text-dark  "></i></a>
+                  <a href="" class="d-inline mx-auto"><i class="fa fa-instagram fa-2x text-dark  "></i></a>
                   </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 mx-auto">
-                    <a href="{{route('add.new')}}" class=""><button class="ml-5 ml-md-0 px-4 pulse buttonProfile bg-primary text-white">{{__('ui.inserisci')}}</button></a>
+                <div class="col-12">
+                    <a href="{{route('add.new')}}" class="btn px-4 mx-auto profileBtn d-block bg-info text-white mt-5 mb-3">{{__('ui.inserisci')}}</a>
                     @if ($user->is_revisor==false)
-                    <a href="{{route('public.contact')}}" class=""><button class="ml-5 ml-md-0 pulse buttonProfile bg-primary text-white">{{__('ui.diventa')}}</button></a>
+                    <a href="{{route('public.contact')}}" class="btn px-4 mx-auto profileBtn d-block bg-success text-white">{{__('ui.diventa')}}</a>
                     @endif
                 </div>
             </div>
@@ -145,13 +137,6 @@ header .overlay {
               </div>
             </div>
           </div>
-          {{-- <div class="col-lg-3 col-md-4 col-6">
-            <h3 class="text-center text-white">{{$add->title}}</h3>
-
-            <a href="{{route('public.detail', compact('add'))}}" class="d-block mb-4 h-100 ">
-                  <img class="img-fluid img-thumbnail sposta" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
-            </a>
-          </div> --}}
         @endforeach
         
     </div>
@@ -167,7 +152,7 @@ header .overlay {
 </div>
 
 @push('script')
-<script>
+{{-- <script>
   
   
 
@@ -188,7 +173,7 @@ header .overlay {
   
 })
 
-</script>
+</script> --}}
 @endsection
 
 

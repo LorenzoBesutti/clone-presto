@@ -41056,13 +41056,17 @@ document.addEventListener('scroll', function () {
   } else {
     navbar.classList.remove("navbarDesktop");
   }
-});
-var bio = document.querySelectorAll('.bio').forEach(function (e) {
+}); //lunghezza testo card
+
+document.querySelectorAll('.bio').forEach(function (e) {
   if (e.innerHTML.split(" ").length > 12) {
-    var string = e.innerHTML.split(" ").slice(0, 12);
+    var string = e.innerHTML.split(" ").slice(0, 11);
     e.innerHTML = string.join(" ") + ' [...]';
   }
-}); //semafori revisore
+}); // $("#showText").click(function(){
+// 	console.log('prova');	
+//   });
+//semafori revisore
 
 var semaforo = document.querySelectorAll('.semaforo');
 semaforo.forEach(function (e) {
@@ -41097,8 +41101,8 @@ semaforo.forEach(function (e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

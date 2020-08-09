@@ -8,6 +8,10 @@
         width:30vh;
       }
 
+      body{
+        background: linear-gradient(180deg,rgb(27, 145, 180,0.4),rgba(255,255,255,1));
+        background-repeat: no-repeat;
+      }
     </style>
 @endsection
 @section('content')
@@ -21,7 +25,7 @@
     </div>
 </div>
 
-<div class="container my-5 py-5">
+<div class="container my-5">
     <div class="row">
         <div class="col-12">
             <input class="p-1 cerca rounded-pill mb-4 shadow" onkeyup="myFunction()" type="text" placeholder="Cerca" id="cerca">
@@ -55,7 +59,7 @@
                             <form action="{{route('makeRevisor', $user->id)}}" method="POST">
                                
                                  @csrf
-                                <button class="btn btn-info revisore">Rendi revisore</button>
+                                <button class="btn btn-success revisore">Rendi revisore</button>
                             </form>
     
                                 @endif

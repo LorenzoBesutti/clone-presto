@@ -46,7 +46,7 @@
 } 
 
 @media screen and (max-width:780px){
-    .show{
+    .allora{
         display: block;
 }
 } 

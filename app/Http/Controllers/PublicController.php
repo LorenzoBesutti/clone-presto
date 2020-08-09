@@ -24,7 +24,7 @@ class PublicController extends Controller
     public function addsByCategory($name,$category_id){
 
         $category = Category::find($category_id);
-        $adds = $category->adds()->where('is_accepted', true)->orderBy('created_at','desc')->simplePaginate(6);
+        $adds = $category->adds()->where('is_accepted', true)->orderBy('created_at','desc')->simplePaginate(9);
 
         return view('adds', compact('category','adds'));
     }
