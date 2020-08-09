@@ -35,9 +35,9 @@
                     <thead class="bgAnnuncio">
                       <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Nome</th>
+                        <th scope="col">{{__('ui.name')}}</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Gestisci</th>
+                        <th scope="col">{{__('ui.gestisci')}}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -52,14 +52,14 @@
                                 <form action="{{route('removeRevisor', $user->id)}}" method="POST">
                                
                                     @csrf
-                                   <button class="btn btn-danger revisore">Rimuovi da revisore</button>
+                                   <button class="btn btn-danger revisore">{{__('ui.rendiNo')}}</button>
                                 </form>
                                     
                                 @else
                             <form action="{{route('makeRevisor', $user->id)}}" method="POST">
                                
                                  @csrf
-                                <button class="btn btn-success revisore">Rendi revisore</button>
+                                <button class="btn btn-success revisore">{{__('ui.rendi')}}</button>
                             </form>
     
                                 @endif

@@ -124,9 +124,9 @@ body {
     <div class="notfound">
         <div class="notfound-404">
             <h1>Oops!</h1>
-            <h2>404 - Pagina non trovata</h2>
+            <h2>404 - {{__('ui.nonTrovata')}}</h2>
         </div>
-        <a href="{{route('public.index')}}"> Torna alla Home</a>
+        <a href="{{route('public.index')}}"> {{__('ui.home')}}</a>
     </div>
 </div>
 @endsection

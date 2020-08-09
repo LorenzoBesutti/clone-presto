@@ -115,6 +115,7 @@ header .overlay {
     </div>
 </div>
 
+<<<<<<< HEAD
 <div class="container">
   <div class="row justify-content-center">
     @foreach($adds as $add)
@@ -137,6 +138,42 @@ header .overlay {
       <p class="card-text bio">{{$add->description}}</p>
       <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center  mt-auto">{{__('ui.dettaglio')}}</a>
       </div>
+=======
+<div class="container my-5 py-5">
+    <div class="row justify-content-center">
+        @foreach ($adds as $add)
+    
+        <div class="col-12 col-md-6 col-lg-4 my-4">
+          <div class="card smusso h-100 shadow mx-auto d-block"  style="width: 18rem;">
+            
+            <img src="{{$add->images->first()->getUrl(300, 150)}}" class="card-img-top smussox" alt="...">
+            
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title p-0 textCustom">{{$add->title}}</h5>
+              <p>
+                <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a>
+                 <span class="float-right">
+                   
+                    €{{$add->price}}
+                  
+                 </span>
+              </p>
+              <i class="text-left mb-2">{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i>
+            <div class="mb-1">
+              <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-light"></i>
+            </div>
+            <p class="card-text bio">{{$add->description}}</p>
+            <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center mt-auto">{{__('ui.dettaglio')}}</a>
+            </div>
+          </div>
+        </div>
+        @endforeach
+    </div>
+>>>>>>> 3412de51d2ddf109b75ed5aae7faee862f81004d
     </div>
   </div>
      @endforeach

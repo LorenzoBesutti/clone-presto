@@ -81,7 +81,7 @@
 
                         
 
-                       <button type="submit" class="btn btn-warning d-block mx-auto mt-4">{{__('ui.Invia')}}<i class="fas fa-caret-right ml-2"></i></button>
+                       <button type="submit" class="btn btn-warning d-block mx-auto mt-4">{{__('ui.invia')}}<i class="fas fa-caret-right ml-2"></i></button>
 
                                 
                             

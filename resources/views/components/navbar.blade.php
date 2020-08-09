@@ -62,8 +62,8 @@
                            <span class="badge badge-pill badge-warning">{{\App\Add::ToBeRevisionedCount()}}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{route('revisor.home')}}"><i class="fas fa-check mr-1"></i> Verifica annunci</a>
-                            <a class="dropdown-item" href="{{route('rejectedadds')}}"><i class="fas fa-times mr-1"></i> Annunci rifiutati</a>
+                            <a class="dropdown-item" href="{{route('revisor.home')}}"><i class="fas fa-check mr-1"></i> {{__('ui.verifica')}}</a>
+                            <a class="dropdown-item" href="{{route('rejectedadds')}}"><i class="fas fa-times mr-1"></i> {{__('ui.rifiuto')}}</a>
                         </div>
                        {{-- <a href="{{route('revisor.home')}}" class="nav-link text-bianco ">
                           Revisor Home

@@ -137,9 +137,15 @@ body{
       
       <div class="card-body d-flex flex-column">
         <h5 class="card-title p-0 textCustom">{{$add->title}}</h5>
-        <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
-
-        <i class="text-right">{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+        <p>
+          <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a>
+           <span class="float-right">
+             
+              €{{$add->price}}
+            
+           </span>
+        </p>
+        <i class="text-left mb-2">{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i> 
       <div class="mb-1">
         <i class="fas fa-star text-warning"></i>
           <i class="fas fa-star text-warning"></i>

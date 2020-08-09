@@ -8,6 +8,18 @@
     </div>
     
 @endif
+@if (session('update'))
+    <div class="alert alert-success text-center">
+        {{__('ui.uploadOk')}}
+    </div>
+    
+@endif
+@if (session('deleted'))
+    <div class="alert alert-success text-center">
+        {{__('ui.deleteOk')}}
+    </div>
+    
+@endif
 @if (session('access.denied'))
     <div class="alert alert-danger text-center">
       {{__('ui.accessoNo')}}
@@ -36,7 +48,7 @@
       <form class="text-center" action="{{route('search')}}" method="GET">
         
       <div class="form-group">
-        <h4 class="mb-4 mr-5 pr-4">{{__('ui.cerca')}}</h4>
+        <h4 class="mb-4 pr-4 ultimaClasse">{{__('ui.cerca')}}</h4>
          <input name="q" class="p-2 w-50 rounded-pill mr-2 shadow"   type="text" placeholder="motori, cucina..." name="search">
          <button class="py-2 px-4 rounded-custom search shadow" type="submit"><i class="fa fa-search "></i></button>
   
@@ -63,9 +75,15 @@
       
       <div class="card-body d-flex flex-column">
         <h5 class="card-title p-0 textCustom">{{$add->title}}</h5>
-        <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a></strong>
-
-        <i class="text-right">{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i></a> 
+        <p>
+        <a href="{{route('public.adds.category', [$add->category->name,$add->category->id])}}">{{$add->category->name}}</a>
+         <span class="float-right">
+           
+            €{{$add->price}}
+          
+         </span>
+      </p>
+      <i class="text-left mb-2">{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i>
       <div class="mb-1">
         <i class="fas fa-star text-warning"></i>
           <i class="fas fa-star text-warning"></i>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddIsFavouriteColumnToAddsTable extends Migration
+class AddPriceColumnToAddsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddIsFavouriteColumnToAddsTable extends Migration
     public function up()
     {
         Schema::table('adds', function (Blueprint $table) {
-            $table->boolean('is_favourite')->default(false);
+            $table->string('price')->default(0);
         });
     }
 
@@ -26,7 +26,7 @@ class AddIsFavouriteColumnToAddsTable extends Migration
     public function down()
     {
         Schema::table('adds', function (Blueprint $table) {
-            $table->dropColumn('is_favourite');
+            $table->dropColumn('price');
         });
     }
 }

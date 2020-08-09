@@ -74,6 +74,23 @@ return [
     'soloNome'=> 'Name',
     'conferma'=> 'Confirm Password',
     'registra'=> 'Register',
+    'caricatoDa'=>'Uploaded by',
+    'name' => 'Name',
+    'gestisci' => 'Handle',
+    'rendi' => 'Make revisor',
+    'rendiNo' => 'Unmake revisor',
+    'rifiuto' => 'Rejected ads',
+    'nonTrovata'=>'PAGE NOT FOUND',
+    'home'=>'Go back Home',
+    'verifica' => 'Ads to review',
+    'uploadOk' => 'Ad correctly edited',
+    'deleteOk' => 'Ad deleted',
+
+
+
+
+
+
 
 
 

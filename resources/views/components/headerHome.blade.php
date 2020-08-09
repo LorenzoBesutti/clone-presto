@@ -12,7 +12,7 @@
       <div class="typing-demo">
      <h1 class="font-weight-bold text-white display-4 titolo" >prest<span><img id="logo" class="mr-1"
       height="70"      src="/media/helm.png" alt=""></span></h1>
-     <h3 class="sottotitolo">{{__('ui.slug1')}} <span class="h3 text-warning sottotitolo">{{__('ui.slug2')}} </span>{{__('ui.slug3')}}</h3>
+     <h3 class="sottotitolo">{{__('ui.slug1')}} <span class=" text-warning sottotitolo">{{__('ui.slug2')}} </span>{{__('ui.slug3')}}</h3>
      
      {{-- un<span class="h3 text-warning sottotiolo"> mare</span> di annunci --}}
       </div>

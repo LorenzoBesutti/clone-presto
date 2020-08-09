@@ -13,7 +13,6 @@ return [
     'annuncioOk' => 'Anuncio cargado corectamente!',
     'accessoNo' => 'Acceso Prohibido - solo Revisores',
     'grazieContatto' => 'Gracias por tu contacto!',
-    'grazieContatto' => 'Thank you for your request!',
     'cerca' => 'Busca tus anuncios',
     'ultimi' => 'Ultimo Anuncios',
     'articoli' => 'Revista',
@@ -75,6 +74,22 @@ return [
     'soloNome'=> 'Nombre',
     'conferma'=> 'Conferma Password',
     'registra'=> 'Registrarse',
+    'caricatoDa'=>'Cargado por',
+    'name' => 'Nombre',
+    'gestisci' => 'Gestionar',
+    'rendi' => 'Hazlo revisor',
+    'rendiNo' => 'Eliminar del revisor',
+    'rifiuto' => 'Anuncios Rechazados',
+    'nonTrovata'=>'PAGINA NO EXISTENTE',
+    'home'=>'Vuelvas a la Home',
+    'verifica' => 'Anuncios para verificar',
+    'uploadOk' => 'Anuncio editado corectamente',
+    'deleteOk' => 'Anuncio eliminado',
+
+
+
+
+
 
 
     

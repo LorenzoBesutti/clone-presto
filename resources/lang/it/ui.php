@@ -12,6 +12,7 @@ return [
     'profilo' => 'Profilo',
     'annuncioOk' => 'Annuncio caricato correttamente!',
     'accessoNo' => 'Accesso non consentito - solo Revisori',
+    'grazieContatto' => 'Grazie per la tua richiesta!',
     'cerca' => 'Cerca tra i nostri annunci',
     'ultimi' => 'Ultimi Annunci',
     'articoli' => 'Articoli',
@@ -74,6 +75,21 @@ return [
     'soloNome'=> 'Nome',
     'conferma'=> 'Conferma Password',
     'registra'=> 'Registrati',
+    'caricatoDa'=>'Caricato da',
+    'name' => 'Nome',
+    'gestisci' => 'Gestisci',
+    'rendi' => 'Rendi revisore',
+    'rendiNo' => 'Rimuovi da revisore',
+    'rifiuto' => 'Annunci rifiutati',
+    'verifica' => 'Verifica Annunci',
+    'uploadOk' => 'Annuncio modificato correttamente',
+    'nonTrovata'=>'PAGINA NON TROVATA',
+    'home'=>'Torna alla Home',
+    'deleteOk' => 'Annuncio eliminato',
+
+
+
+
 
 
 

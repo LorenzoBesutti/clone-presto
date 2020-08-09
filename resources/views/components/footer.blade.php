@@ -6,7 +6,7 @@
             <h4 class="footer-list-header textFooter">{{__('ui.navigazione')}}</h4>
           <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.chi')}}</a></p>
           <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.offerte')}}</a></p>
-          <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.diventa')}}</a></p>
+      <p><a href='{{route('public.contact')}}' class="generic-anchor footer-list-anchor">{{__('ui.diventa')}}</a></p>
           <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.lavoraconnoi')}}</a></p>
       <p><a href='{{route('admin.home')}}' class="generic-anchor footer-list-anchor">Admin Page</a></p>
       </div>
@@ -17,7 +17,7 @@
       </div>
       <div class="col-12 col-md-4 text-center mt-0 mt-md-5 mb-2">
         <h4 class="footer-list-header textFooter">Help</h4></li>
-        <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.contatto')}}</a></p>
+        <p><a href='{{route('public.contact')}}' class="generic-anchor footer-list-anchor">{{__('ui.contatto')}}</a></p>
         <p><a href='' class="generic-anchor footer-list-anchor">FAQ</a></p>
         <p><a href='' class="generic-anchor footer-list-anchor">{{__('ui.dove')}}</a></p>
         <p><a href='' class="generic-anchor footer-list-anchor">NEWSLETTER</a></p>

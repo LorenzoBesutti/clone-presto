@@ -53,6 +53,7 @@ class HomeController extends Controller
         $a->title=$request->input('title');
         $a->description=$request->input('description');
         $a->category_id=$request->input('category');
+        $a->price=$request->input('price');
         $a->user_id=Auth::id();
         $a->save();
 
@@ -173,13 +174,14 @@ class HomeController extends Controller
         $add->title=$request->input('title');
         $add->description=$request->input('description');
         $add->category_id=$request->input('category');
+        $add->price=$request->input('price');
         $add->user_id=Auth::id();
         $add->update();
 
         $uniqueSecret = $request->input('uniqueSecret');
 
 
-        return redirect('/');
+        return redirect('/')->with('update','update');
     }
 
 
@@ -189,7 +191,7 @@ class HomeController extends Controller
         
         $add->delete();
 
-        return redirect(route('public.index'));
+        return redirect(route('public.index'))->with('deleted','deleted');
     }
 
    

@@ -64,6 +64,18 @@
                         </div>
                     </div>
                     <div class="form-group-row my-2">
+                        <label for="price" class="col-md-4 col-form-label text-md-left">Prezzo</label>
+                        <div class="col-md-6 ">
+                            <input placeholder=" " type="text" class="inputWidth bg-transparent bordo2_password @error('price') is-invalid @enderror" name="price" id="price" value="{{old('price')}} " required autofocus>
+        
+                            @error('price')
+                                <span class="invalid-feedback" role="alert">
+                                   <strong>{{$message}}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="form-group-row my-2">
                         <label for="description" class="col-md-4 col-form-label text-md-left">{{__('ui.body')}}</label>
                         <div class="col-md-6">
                         <textarea class="inputWidth" name="description" id="description" {{-- cols="57"  --}}rows="7" required autofocus class="@error('description') is-invalid @enderror">{{old('description')}}</textarea>

@@ -38,6 +38,25 @@ class PublicController extends Controller
         
         return view('detail', compact('add','adds','user','announcements'));
     }
+
+    public function announcementDetail(Add $announcement){
+ 
+        $user = User::find($add->user_id);
+        $adds = $user->adds()->where('id','!=', $add->id)->where('is_accepted', true)->orderBy('created_at','desc')->simplePaginate(6);
+ 
+        $announcements = Add::where('category_id', '=', $add->category->id)->where('id','!=', $add->id)->where('is_accepted', true)->simplePaginate(6);
+        
+        return view('anndetail', compact('announcement','user','announcements','add','adds'));
+    }
+
+
+
+
+
+
+
+
+
     public function search(Request $request){
         
         $q=$request->input('q');
