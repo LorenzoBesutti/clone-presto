@@ -171,17 +171,35 @@ document.addEventListener('scroll', () => {
 
 //lunghezza testo card
 
-document.querySelectorAll('.bio').forEach(e =>{
-    if (e.innerHTML.split(" ").length > 10) {
+// document.querySelectorAll('.bio').forEach(e =>{
+//     if (e.innerHTML.split(" ").length > 10) {
 
-        let string = e.innerHTML.split(" ").slice(0,10);
-        e.innerHTML = string.join(" ") + ' [...]';
+//         let string = e.innerHTML.split(" ").slice(0,10);
+//         e.innerHTML = string.join(" ") + ' [...]';
+//     }
+// })
+
+
+document.querySelectorAll('.bio').forEach(e =>{
+    if (e.innerText.length > 90) {
+		e.classList.add('limit')
     }
 })
 
-// $("#showText").click(function(){
-// 	console.log('prova');	
-//   });
+document.querySelectorAll('#toggleLimit').forEach( e =>{
+	if (e.parentElement.querySelector('.bio').innerText.length > 90) {
+		e.classList.remove('btnLimitDisplay')
+    }
+})
+
+document.querySelectorAll('#toggleLimit').forEach(e =>{
+  e.addEventListener('click', ()=>{
+    let bio = e.parentElement.querySelector('.bio')
+	bio.classList.toggle('limit')
+	e.classList.toggle('fa-rotate-180')
+	e.classList.toggle('btnMargin')
+})
+})
 
 
 //semafori revisore

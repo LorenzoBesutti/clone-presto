@@ -41057,16 +41057,31 @@ document.addEventListener('scroll', function () {
     navbar.classList.remove("navbarDesktop");
   }
 }); //lunghezza testo card
+// document.querySelectorAll('.bio').forEach(e =>{
+//     if (e.innerHTML.split(" ").length > 10) {
+//         let string = e.innerHTML.split(" ").slice(0,10);
+//         e.innerHTML = string.join(" ") + ' [...]';
+//     }
+// })
 
 document.querySelectorAll('.bio').forEach(function (e) {
-  if (e.innerHTML.split(" ").length > 10) {
-    var string = e.innerHTML.split(" ").slice(0, 10);
-    e.innerHTML = string.join(" ") + ' [...]';
+  if (e.innerText.length > 90) {
+    e.classList.add('limit');
   }
-}); // $("#showText").click(function(){
-// 	console.log('prova');	
-//   });
-//semafori revisore
+});
+document.querySelectorAll('#toggleLimit').forEach(function (e) {
+  if (e.parentElement.querySelector('.bio').innerText.length > 90) {
+    e.classList.remove('btnLimitDisplay');
+  }
+});
+document.querySelectorAll('#toggleLimit').forEach(function (e) {
+  e.addEventListener('click', function () {
+    var bio = e.parentElement.querySelector('.bio');
+    bio.classList.toggle('limit');
+    e.classList.toggle('fa-rotate-180');
+    e.classList.toggle('btnMargin');
+  });
+}); //semafori revisore
 
 var semaforo = document.querySelectorAll('.semaforo');
 semaforo.forEach(function (e) {
@@ -41101,8 +41116,8 @@ semaforo.forEach(function (e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/andregp91/Desktop/prestoSimpleCode/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\david\wa\presto_simplecode\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -44,6 +44,7 @@
           <i class="fas fa-star text-light"></i>
       </div>
       <p class="card-text bio">{{$add->description}}</p>
+      <i class="fas fa-2x fa-sort-down ml-auto mb-3 btnLimit btnLimitDisplay" id="toggleLimit"></i>
       <a href="{{route('public.detail', compact('add'))}}" class="btn btn-info text-white w-100 text-center  mt-auto">{{__('ui.dettaglio')}}</a>
       </div>
     </div>

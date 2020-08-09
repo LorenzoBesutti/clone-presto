@@ -1275,11 +1275,30 @@ footer {
   color:white;
 }
 
-// .limit{
-//   overflow: hidden;
-// text-overflow: ellipsis;
-// display: -webkit-box;
-// -webkit-line-clamp: 3;
-// -webkit-box-orient: vertical;
-// }
+//toggle lunghezza descrizione card
 
+.limit{
+  overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+}
+
+.btnLimit{
+  cursor: pointer;
+  margin-top: -24px;
+  color: #6cb2eb;
+}
+
+.btnLimit:hover{
+  color: #4AA0E6;
+}
+
+.btnLimitDisplay{
+  display: none !important;
+}
+
+.btnMargin{
+  margin-top: -6px;
+}
