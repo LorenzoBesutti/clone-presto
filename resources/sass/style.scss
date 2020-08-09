@@ -1302,3 +1302,19 @@ display: -webkit-box;
 .btnMargin{
   margin-top: -6px;
 }
+
+//lunghezza cards
+
+.cardDmn{
+  width: 18rem;
+  min-height: 460px;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .cardDmn{
+    width: 18rem;
+    min-height: auto;
+  }
+
+}

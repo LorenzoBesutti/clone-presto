@@ -120,7 +120,7 @@ header .overlay {
         @foreach ($adds as $add)
     
         <div class="col-12 col-md-6 col-lg-4 my-4">
-          <div class="card smusso h-100 shadow mx-auto d-block"  style="width: 18rem;">
+          <div class="card smusso shadow mx-auto d-block cardDmn">
             
             <img src="{{$add->images->first()->getUrl(300, 150)}}" class="card-img-top smussox" alt="...">
             

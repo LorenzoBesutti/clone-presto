@@ -132,7 +132,7 @@ body{
   <div class="row justify-content-center">
     @foreach($adds as $add)
     <div class="col-12 col-md-6 col-lg-4 my-4 cerca">
-    <div class="card smusso h-100 shadow mx-auto" style="width: 18rem;">
+    <div class="card smusso shadow mx-auto cardDmn">
       <img src="{{$add->images->first()->getUrl(300, 150)}}" class="card-img-top smussox" alt="...">
       
       <div class="card-body d-flex flex-column">
