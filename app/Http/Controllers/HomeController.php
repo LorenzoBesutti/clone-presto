@@ -179,7 +179,7 @@ class HomeController extends Controller
         $uniqueSecret = $request->input('uniqueSecret');
 
 
-        return redirect('/');
+        return redirect('/')->with('update','update');
     }
 
 
@@ -189,7 +189,7 @@ class HomeController extends Controller
         
         $add->delete();
 
-        return redirect(route('public.index'));
+        return redirect(route('public.index'))->with('deleted','deleted');
     }
 
    

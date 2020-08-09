@@ -13,11 +13,13 @@
     </style>
 @endsection
 @section('content')
+
+
     
     <div class="container my-5 py-5">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">Annunci rifiutati</h1>
+                <h1 class="text-center">{{__('ui.rifiuto')}}</h1>
             </div>
         </div>
     </div>

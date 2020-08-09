@@ -8,6 +8,18 @@
     </div>
     
 @endif
+@if (session('update'))
+    <div class="alert alert-success text-center">
+        {{__('ui.uploadOk')}}
+    </div>
+    
+@endif
+@if (session('deleted'))
+    <div class="alert alert-success text-center">
+        {{__('ui.deleteOk')}}
+    </div>
+    
+@endif
 @if (session('access.denied'))
     <div class="alert alert-danger text-center">
       {{__('ui.accessoNo')}}

@@ -78,7 +78,7 @@
         </p>
          <p class="mt-2">$ 20,00</p>
          <p class="card-text lead">{{$add->description}}</p>
-         <p class=" mb-0">Caricato da:
+         <p class=" mb-0">{{__('ui.caricatoDa')}}:
          <i>{{$add->created_at->format('d/m/Y')}} - {{$add->user->name}}</i> 
          </p>
          @if (Auth::check() && Auth::user()->name != $add->user->name)

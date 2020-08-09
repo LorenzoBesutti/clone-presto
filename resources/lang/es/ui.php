@@ -75,6 +75,22 @@ return [
     'soloNome'=> 'Nombre',
     'conferma'=> 'Conferma Password',
     'registra'=> 'Registrarse',
+    'caricatoDa'=>'Cargado por',
+    'name' => 'Nombre',
+    'gestisci' => 'Gestionar',
+    'rendi' => 'Hazlo revisor',
+    'rendiNo' => 'Eliminar del revisor',
+    'rifiuto' => 'Anuncios Rechazados',
+    'nonTrovata'=>'PAGINA NO EXISTENTE',
+    'home'=>'Vuelvas a la Home',
+    'verifica' => 'Anuncios para verificar',
+    'uploadOk' => 'Anuncio editado corectamente',
+    'deleteOk' => 'Anuncio eliminado',
+
+
+
+
+
 
 
     
